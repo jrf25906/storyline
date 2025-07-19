@@ -1,9 +1,10 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { BudgetOverviewScreen } from '../BudgetOverviewScreen';
-import { useBudgetStore } from '../../../stores/budgetStore';
-import { useAuthStore } from '../../../stores/authStore';
+import { BudgetOverviewScreen } from '@screens/budget/BudgetOverviewScreen';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useAuthStore } from '@stores/authStore';
+import { SafeThemeProvider } from '@components/common/SafeThemeProvider';
 
 // Mock the stores
 jest.mock('../../../stores/budgetStore');
@@ -65,9 +66,11 @@ describe('BudgetOverviewScreen', () => {
 
   const renderScreen = () => {
     return render(
-      <NavigationContainer>
-        <BudgetOverviewScreen navigation={mockNavigate as any} route={{} as any} />
-      </NavigationContainer>
+      <SafeThemeProvider>
+        <NavigationContainer>
+          <BudgetOverviewScreen navigation={mockNavigate as any} route={{} as any} />
+        </NavigationContainer>
+      </SafeThemeProvider>
     );
   };
 

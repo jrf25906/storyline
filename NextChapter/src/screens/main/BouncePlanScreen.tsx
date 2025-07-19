@@ -10,25 +10,25 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { useBouncePlanStore } from '../../stores/bouncePlanStore';
-import { useAuth } from '../../context/AuthContext';
-import { useOffline } from '../../context/OfflineContext';
-import { BOUNCE_PLAN_TASKS, WEEK_TITLES, getWeekFromDay } from '../../constants/bouncePlanTasks';
-import TaskCard from '../../components/feature/bounce-plan/TaskCard';
-import TaskDetailModal from '../../components/feature/bounce-plan/TaskDetailModal';
+import { useTheme } from '@context/ThemeContext';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useAuth } from '@context/AuthContext';
+import { useOffline } from '@context/OfflineContext';
+import { BOUNCE_PLAN_TASKS, WEEK_TITLES, getWeekFromDay } from '@constants/bouncePlanTasks';
+import TaskCard from '@components/feature/bounce-plan/TaskCard';
+import TaskDetailModal from '@components/feature/bounce-plan/TaskDetailModal';
 import { 
   NetworkStatusBar, 
   withErrorBoundary
-} from '../../components/common';
+} from '@components/common';
 import { 
   H1,
   H2,
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
-import { Spacing } from '../../theme';
+} from '@components/common/Typography';
+import { Spacing } from '@theme';
 // Database sync is now handled by the store
 
 function BouncePlanScreen() {
@@ -319,7 +319,7 @@ function BouncePlanScreen() {
 export default withErrorBoundary(BouncePlanScreen, {
   errorMessage: {
     title: 'Bounce Plan loading issue',
-    message: "Your progress is saved. Please try refreshing the screen."
+    message: 'Your progress is saved. Please try refreshing the screen.'
   }
 });
 

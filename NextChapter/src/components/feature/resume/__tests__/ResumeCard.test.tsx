@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import { ResumeCard } from '../ResumeCard';
-import { Resume } from '../../../../types/resume';
+import { ResumeCard } from '@components/feature/resume/ResumeCard';
+import { Resume } from '@types/resume';
 
 describe('ResumeCard', () => {
   const mockResume: Resume = {

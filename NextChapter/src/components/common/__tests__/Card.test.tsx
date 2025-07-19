@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { View, Text } from 'react-native';
-import Card from '../Card';
-import { ThemeProvider } from '../../../context/ThemeContext';
-import { Colors, Spacing, Borders, Shadows } from '../../../theme';
+import Card from '@components/common/Card';
+import { ThemeProvider } from '@context/ThemeContext';
+import { Colors, Spacing, Borders, Shadows } from '@theme';
 
 // Helper to render with theme
 const renderWithTheme = (component: React.ReactElement, isDark = false) => {

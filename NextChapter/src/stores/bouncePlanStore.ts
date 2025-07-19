@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { BouncePlanTask } from '../types/database';
+import { BouncePlanTask } from '@types/database';
 import { 
   loadBouncePlanProgress, 
   syncBouncePlanProgress, 
@@ -9,7 +9,7 @@ import {
   resetBouncePlanProgress,
   getBouncePlanStats,
   TaskUpdate 
-} from '../services/database/bouncePlan';
+} from '@services/database/bouncePlan';
 
 interface TaskProgress {
   taskId: string;

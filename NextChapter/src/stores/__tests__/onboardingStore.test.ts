@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useOnboardingStore } from '../onboardingStore';
-import { OnboardingService } from '../../services/onboarding';
+import { useOnboardingStore } from '@stores/onboardingStore';
+import { OnboardingService } from '@services/onboarding';
 
 // Mock the OnboardingService
 jest.mock('../../services/onboarding');

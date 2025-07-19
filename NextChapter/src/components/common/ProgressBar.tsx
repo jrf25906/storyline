@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, ViewStyle, Animated } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Borders } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Borders } from '@theme';
 
 interface ProgressBarProps {
   progress: number; // 0 to 1
@@ -50,9 +50,9 @@ export default function ProgressBar({
 
   const progressWidth = animated
     ? animatedProgress.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['0%', '100%'],
-      })
+      inputRange: [0, 1],
+      outputRange: ['0%', '100%'],
+    })
     : `${progressPercentage}%`;
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
-import { CalmingLoadingIndicator } from '../CalmingLoadingIndicator';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { CalmingLoadingIndicator } from '@components/common/CalmingLoadingIndicator';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(

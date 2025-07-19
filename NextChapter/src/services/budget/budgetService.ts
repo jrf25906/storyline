@@ -1,5 +1,5 @@
-import { supabase } from '../api/supabase';
-import { BudgetData } from '../../types/budget';
+import { supabase } from '@services/api/supabase';
+import { BudgetData } from '@types/budget';
 import CryptoJS from 'crypto-js';
 
 // Encryption key - in production, this should be stored securely

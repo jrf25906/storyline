@@ -1,6 +1,6 @@
 import { Database } from '@nozbe/watermelondb';
 import { synchronize } from '@nozbe/watermelondb/sync';
-import { supabase } from '../../../api/supabase';
+import { supabase } from '@services/api/supabase';
 import { 
   Profile,
   JobApplication,
@@ -11,8 +11,8 @@ import {
   LayoffDetails,
   UserGoal,
   WellnessActivity
-} from '../models';
-import { encryptFinancialData, decryptFinancialData } from '../encryption';
+} from '@services/database/watermelon/models';
+import { encryptFinancialData, decryptFinancialData } from '@services/database/watermelon/encryption';
 import { Q } from '@nozbe/watermelondb';
 
 interface SyncResult {

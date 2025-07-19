@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useBouncePlanStoreMock as useBouncePlanStore } from '../bouncePlanStore.mock';
+import { useBouncePlanStoreMock as useBouncePlanStore } from '@stores/bouncePlanStore.mock';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { actAsync, waitInAct, flushPromisesAndTimers } from '../../test-utils/test-act-utils';
+import { actAsync, waitInAct, flushPromisesAndTimers } from '@test-utils/test-act-utils';
 
 // Get mocked AsyncStorage
 const mockAsyncStorage = AsyncStorage as jest.Mocked<typeof AsyncStorage>;

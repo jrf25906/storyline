@@ -12,9 +12,9 @@ import {
   Platform,
   ViewStyle,
 } from 'react-native';
-import { JobApplication, JobApplicationStatus } from '../../../types/database';
-import { useTheme } from '../../../context/ThemeContext';
-import JobCard from './JobCard';
+import { JobApplication, JobApplicationStatus } from '@types/database';
+import { useTheme } from '@context/ThemeContext';
+import JobCard from '@components/feature/job-tracker/JobCard';
 
 // Enable LayoutAnimation on Android
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -142,13 +142,13 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({
             const panResponder = createPanResponder(application);
             const animatedStyle = draggedItem.current?.id === application.id
               ? {
-                  transform: [
-                    { translateX: draggedItem.current.pan.x },
-                    { translateY: draggedItem.current.pan.y },
-                  ],
-                  zIndex: 1000,
-                  elevation: 5,
-                }
+                transform: [
+                  { translateX: draggedItem.current.pan.x },
+                  { translateY: draggedItem.current.pan.y },
+                ],
+                zIndex: 1000,
+                elevation: 5,
+              }
               : {};
             
             return (

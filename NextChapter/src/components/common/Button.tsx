@@ -1,8 +1,8 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, ActivityIndicator, ViewStyle, TextStyle, View, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Borders, Shadows, Motion } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Borders, Shadows, Motion } from '@theme';
 
 interface ButtonProps {
   title: string;

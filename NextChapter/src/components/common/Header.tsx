@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useTheme } from '../../context/ThemeContext';
+import { useTheme } from '@context/ThemeContext';
 
 interface HeaderProps {
   title: string;

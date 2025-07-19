@@ -2,22 +2,23 @@ import React from 'react';
 import { View, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
-import { ProfileStackScreenProps } from '../../types/navigation';
-import { useTheme } from '../../context/ThemeContext';
-import { useAuthStore } from '../../stores/authStore';
-import Card from '../../components/common/Card';
-import { createStyles } from './ProfileScreen.styles';
+import { ProfileStackScreenProps } from '@types/navigation';
+import { useTheme } from '@context/ThemeContext';
+import { useAuthStore } from '@stores/authStore';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import Card from '@components/common/Card';
+import { createStyles } from '@screens/profile/ProfileScreen.styles';
 import { 
   H1,
   H2,
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
+} from '@components/common/Typography';
 
 type ProfileScreenProps = ProfileStackScreenProps<'ProfileOverview'>;
 
-export default function ProfileScreen({ navigation }: ProfileScreenProps) {
+const ProfileScreen = ({ navigation }: ProfileScreenProps) => {
   const { theme } = useTheme();
   const styles = createStyles(theme);
   const { user } = useAuthStore();
@@ -109,4 +110,6 @@ export default function ProfileScreen({ navigation }: ProfileScreenProps) {
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
+
+export default withErrorBoundary(ProfileScreen);

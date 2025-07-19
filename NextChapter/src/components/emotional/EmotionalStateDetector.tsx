@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { useEmotionalState } from '../../context/EmotionalStateContext';
-import { useAccessibility } from '../../hooks/useAccessibility';
-import { Typography } from '../common/Typography';
-import { Colors, Spacing } from '../../theme';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { useAccessibility } from '@hooks/useAccessibility';
+import { Typography } from '@components/common/Typography';
+import { Colors, Spacing } from '@theme';
 
 interface EmotionalStateDetectorProps {
   children: React.ReactNode;

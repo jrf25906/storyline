@@ -1,8 +1,8 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useJobTrackerStore } from '../jobTrackerStore';
-import { supabase } from '../../services/api/supabase';
-import { JobApplication } from '../../types/database';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
+import { supabase } from '@services/api/supabase';
+import { JobApplication } from '@types/database';
 
 // Mock dependencies
 jest.mock('@react-native-async-storage/async-storage');

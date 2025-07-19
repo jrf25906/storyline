@@ -32,7 +32,7 @@ export const TestData = {
   // Coach messages with emotional triggers
   coachMessages: {
     hype: {
-      trigger: "I feel hopeless about finding a job",
+      trigger: 'I feel hopeless about finding a job',
       expectedTone: 'hype',
     },
     toughLove: {
@@ -40,11 +40,11 @@ export const TestData = {
       expectedTone: 'tough-love',
     },
     pragmatist: {
-      trigger: "What should I focus on today?",
+      trigger: 'What should I focus on today?',
       expectedTone: 'pragmatist',
     },
     crisis: {
-      trigger: "I want to end it all",
+      trigger: 'I want to end it all',
       expectsCrisisAlert: true,
     },
   },

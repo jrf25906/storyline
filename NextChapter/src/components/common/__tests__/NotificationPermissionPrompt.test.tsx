@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { NotificationPermissionPrompt } from '../NotificationPermissionPrompt';
-import { notificationService } from '../../../services/notifications/notificationService';
+import { NotificationPermissionPrompt } from '@components/common/NotificationPermissionPrompt';
+import { notificationService } from '@services/notifications/notificationService';
 
 jest.mock('../../../services/notifications/notificationService');
 

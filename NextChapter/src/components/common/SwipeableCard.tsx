@@ -8,10 +8,10 @@ import {
   TouchableOpacity,
   PanResponder,
 } from 'react-native';
-import { useCardPressAnimation } from '../../hooks/useAnimations';
-import { Colors } from '../../theme/colors';
-import { Typography } from '../../theme/typography';
-import { Spacing } from '../../theme/spacing';
+import { useCardPressAnimation } from '@hooks/useAnimations';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;

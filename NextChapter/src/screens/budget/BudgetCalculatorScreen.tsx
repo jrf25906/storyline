@@ -9,9 +9,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useTheme } from '../../context/ThemeContext';
-import { useBudgetStore } from '../../stores/budgetStore';
-import { budgetService } from '../../services/budget/budgetService';
+import { useTheme } from '@context/ThemeContext';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import { useBudgetStore } from '@stores/budgetStore';
+import { budgetService } from '@services/budget/budgetService';
 
 interface BudgetData {
   income: {
@@ -28,7 +29,7 @@ interface BudgetData {
   };
 }
 
-export const BudgetCalculatorScreen: React.FC = () => {
+const BudgetCalculatorScreen: React.FC = () => {
   const { theme } = useTheme();
   const navigation = useNavigation();
   const { saveBudgetData, calculateRunway } = useBudgetStore();
@@ -110,7 +111,7 @@ export const BudgetCalculatorScreen: React.FC = () => {
       if (runwayResult.isLowRunway) {
         Alert.alert(
           'Critical Financial Situation',
-          `Your runway is less than 1 month. Immediate action needed.`,
+          'Your runway is less than 1 month. Immediate action needed.',
           [{ text: 'OK' }]
         );
       }
@@ -355,3 +356,5 @@ export const BudgetCalculatorScreen: React.FC = () => {
     </View>
   );
 };
+
+export default withErrorBoundary(BudgetCalculatorScreen);

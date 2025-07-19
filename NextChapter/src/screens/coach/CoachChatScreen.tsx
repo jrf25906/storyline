@@ -11,17 +11,17 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
-import { useTheme } from '../../context/ThemeContext';
-import { useCoachStore } from '../../stores/coachStore';
-import { useAuthStore } from '../../stores/authStore';
-import { CoachHeader } from '../../components/coach/CoachHeader';
-import { MessageBubble } from '../../components/coach/MessageBubble';
-import { MessageInput } from '../../components/coach/MessageInput';
-import { TypingIndicator } from '../../components/coach/TypingIndicator';
-import { Typography } from '../../components/common/Typography';
-import { CoachTone } from '../../types/database';
-import { CoachMessage } from '../../types/coach';
-import { withErrorBoundary } from '../../components/common';
+import { useTheme } from '@context/ThemeContext';
+import { useCoachStore } from '@stores/coachStore';
+import { useAuthStore } from '@stores/authStore';
+import { CoachHeader } from '@components/coach/CoachHeader';
+import { MessageBubble } from '@components/coach/MessageBubble';
+import { MessageInput } from '@components/coach/MessageInput';
+import { TypingIndicator } from '@components/coach/TypingIndicator';
+import { Typography } from '@components/common/Typography';
+import { CoachTone } from '@types/database';
+import { CoachMessage } from '@types/coach';
+import { withErrorBoundary } from '@components/common';
 
 type CoachStackParamList = {
   CoachChat: undefined;
@@ -232,6 +232,6 @@ const styles = StyleSheet.create({
 export default withErrorBoundary(CoachChatScreen, {
   errorMessage: {
     title: 'Coach connection issue',
-    message: "Your coach is taking a quick break. Please try again in a moment."
+    message: 'Your coach is taking a quick break. Please try again in a moment.'
   }
 });

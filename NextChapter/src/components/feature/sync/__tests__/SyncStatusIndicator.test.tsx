@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { SyncStatusIndicator } from '../SyncStatusIndicator';
-import { syncManager } from '../../../../services/database/sync/syncManager';
-import { useNetworkStatus } from '../../../../hooks/useNetworkStatus';
+import { SyncStatusIndicator } from '@components/feature/sync/SyncStatusIndicator';
+import { syncManager } from '@services/database/sync/syncManager';
+import { useNetworkStatus } from '@hooks/useNetworkStatus';
 
 // Mock dependencies
 jest.mock('../../../../services/database/sync/syncManager');

@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { Animated } from 'react-native';
-import Badge from '../Badge';
-import { Colors, Typography, Spacing, Motion } from '../../../theme';
-import { ThemeProvider } from '../../../context/ThemeContext';
-import { lightTheme, darkTheme } from '../../../theme';
+import Badge from '@components/common/Badge';
+import { Colors, Typography, Spacing, Motion } from '@theme';
+import { ThemeProvider } from '@context/ThemeContext';
+import { lightTheme, darkTheme } from '@theme';
 
 // Mock Animated.timing for testing animations
 const mockAnimatedTiming = jest.fn(() => ({

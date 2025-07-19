@@ -365,3 +365,6 @@ jest.setTimeout(10000); // 10 second timeout for async tests
 
 // Import custom matchers
 require('./src/test-utils/styleHelpers');
+
+// Import additional test setup
+require('./src/test-utils/jest-setup');

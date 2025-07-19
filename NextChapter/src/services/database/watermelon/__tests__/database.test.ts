@@ -1,14 +1,14 @@
 import { Database } from '@nozbe/watermelondb';
 import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite';
-import { database, initializeWatermelonDB, resetDatabase } from '../database';
-import { schema } from '../schema';
+import { database, initializeWatermelonDB, resetDatabase } from '@services/database/watermelon/database';
+import { schema } from '@services/database/watermelon/schema';
 import { 
   Profile,
   JobApplication,
   BudgetEntry,
   MoodEntry,
   BouncePlanTask
-} from '../models';
+} from '@services/database/watermelon/models';
 
 // Mock SQLiteAdapter
 jest.mock('@nozbe/watermelondb/adapters/sqlite', () => {

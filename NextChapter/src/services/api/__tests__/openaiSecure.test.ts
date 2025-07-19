@@ -1,5 +1,5 @@
-import { SecureOpenAIService } from '../openaiSecure';
-import { EnvironmentService } from '../../security/environment';
+import { SecureOpenAIService } from '@services/api/openaiSecure';
+import { EnvironmentService } from '@services/security/environment';
 
 // Mock fetch
 global.fetch = jest.fn();
@@ -239,13 +239,13 @@ describe('SecureOpenAIService', () => {
     });
 
     it('should detect tough-love tone triggers', async () => {
-      const message = "They screwed me over, this is rigged";
+      const message = 'They screwed me over, this is rigged';
       const tone = await secureOpenAI.detectTone(message);
       expect(tone).toBe('tough-love');
     });
 
     it('should default to pragmatist tone', async () => {
-      const message = "I need help updating my resume";
+      const message = 'I need help updating my resume';
       const tone = await secureOpenAI.detectTone(message);
       expect(tone).toBe('pragmatist');
     });

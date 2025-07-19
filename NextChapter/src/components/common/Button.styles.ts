@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Spacing, Typography, Borders, Shadows } from '../../theme';
+import { Colors, Spacing, Typography, Borders, Shadows } from '@theme';
 
 export const createButtonStyles = (isDark: boolean) => {
   return StyleSheet.create({

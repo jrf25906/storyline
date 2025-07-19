@@ -8,8 +8,8 @@ import {
   UserProperties,
   QueuedAnalyticsEvent,
   AnalyticsConfig,
-} from './types';
-import { hashFinancialData } from './utils';
+} from '@services/analytics/types';
+import { hashFinancialData } from '@services/analytics/utils';
 
 const STORAGE_KEYS = {
   USER_ID: '@next_chapter/analytics_user_id',

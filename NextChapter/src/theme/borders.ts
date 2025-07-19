@@ -1,6 +1,6 @@
 // Next Chapter - Border & Shadow System
 // "Grounded Optimism" Design Language
-import { Colors } from './colors';
+import { Colors } from '@theme/colors';
 
 export const Borders = {
   radius: {

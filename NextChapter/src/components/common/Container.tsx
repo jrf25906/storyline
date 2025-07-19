@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ViewStyle, StyleSheet } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Spacing } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Spacing } from '@theme';
 
 interface ContainerProps {
   children: React.ReactNode;

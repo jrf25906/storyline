@@ -1,5 +1,5 @@
-import { AnalyticsService } from './analyticsService';
-import { AnalyticsEvents } from './types';
+import { AnalyticsService } from '@services/analytics/analyticsService';
+import { AnalyticsEvents } from '@services/analytics/types';
 
 // Singleton instance
 let analyticsInstance: AnalyticsService | null = null;

@@ -1,4 +1,4 @@
-import { OpenAIService } from '../api/openai';
+import { OpenAIService } from '@services/api/openai';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { 
   Resume, 
@@ -7,8 +7,8 @@ import {
   ResumeRewriteResponse,
   ResumeSuggestion,
   ResumeKeywordMatch 
-} from '../../types/resume';
-import { getErrorMessage } from '../../utils/typeGuards';
+} from '@types/resume';
+import { getErrorMessage } from '@utils/typeGuards';
 
 interface RateLimitData {
   count: number;

@@ -1,4 +1,4 @@
-import { hashFinancialData, sanitizeProperties, isPotentialPII } from '../utils';
+import { hashFinancialData, sanitizeProperties, isPotentialPII } from '@services/analytics/utils';
 
 describe('Analytics Utils', () => {
   describe('hashFinancialData', () => {

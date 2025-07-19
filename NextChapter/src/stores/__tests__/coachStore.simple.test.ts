@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-native';
-import { useCoachStore } from '../coachStore';
-import { CoachTone } from '../../types/database';
+import { useCoachStore } from '@stores/coachStore';
+import { CoachTone } from '@types/database';
 
 // Mock dependencies
 jest.mock('@react-native-async-storage/async-storage', () => ({

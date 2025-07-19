@@ -7,8 +7,8 @@ import {
   ViewStyle,
   ActivityIndicator,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Motion } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Motion } from '@theme';
 
 interface CalmingLoadingIndicatorProps {
   message?: string;
@@ -22,15 +22,15 @@ interface CalmingLoadingIndicatorProps {
 }
 
 const LOADING_TIPS = [
-  "Did you know? Taking breaks can boost productivity by 40%",
+  'Did you know? Taking breaks can boost productivity by 40%',
   "Remember: Progress isn't always linear, and that's okay",
   "You're doing great. Every step forward counts",
   "Fun fact: The average job search takes 3-6 months. You've got this!",
-  "Tip: Celebrate small wins - they add up to big changes",
+  'Tip: Celebrate small wins - they add up to big changes',
 ];
 
 export const CalmingLoadingIndicator: React.FC<CalmingLoadingIndicatorProps> = ({
-  message = "Taking a moment...",
+  message = 'Taking a moment...',
   messages,
   size = 'medium',
   fullScreen = false,

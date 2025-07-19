@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Animated } from 'react-native';
-import { Checkbox } from '../Checkbox';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { Checkbox } from '@components/common/Checkbox';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock the theme modules
 jest.mock('../../../theme', () => ({

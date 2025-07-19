@@ -1,6 +1,6 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { EnvironmentService } from '../security/environment';
+import { EnvironmentService } from '@services/security/environment';
 
 /**
  * Secure Supabase client with environment-based configuration

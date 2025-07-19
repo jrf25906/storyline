@@ -1,5 +1,5 @@
-import { EnvironmentService } from '../environment';
-import { KeychainService } from '../keychain';
+import { EnvironmentService } from '@services/security/environment';
+import { KeychainService } from '@services/security/keychain';
 import Constants from 'expo-constants';
 
 // Mock dependencies

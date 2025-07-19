@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Animated } from 'react-native';
-import { styles } from './ErrorMessage.styles';
-import { useTheme } from '../../context/ThemeContext';
+import { styles } from '@components/common/ErrorMessage.styles';
+import { useTheme } from '@context/ThemeContext';
 import { useEffect, useRef } from 'react';
 
 interface ErrorMessageProps {

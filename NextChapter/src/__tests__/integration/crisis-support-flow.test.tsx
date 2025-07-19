@@ -3,10 +3,10 @@ import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { Linking, Alert } from 'react-native';
 
 // Components
-import CoachScreen from '../../screens/main/CoachScreen';
-import CoachChatScreen from '../../screens/coach/CoachChatScreen';
-import { ThemeProvider } from '../../context/ThemeContext';
-import { EmotionalStateProvider } from '../../context/EmotionalStateContext';
+import CoachScreen from '@screens/main/CoachScreen';
+import CoachChatScreen from '@screens/coach/CoachChatScreen';
+import { ThemeProvider } from '@context/ThemeContext';
+import { EmotionalStateProvider } from '@context/EmotionalStateContext';
 
 // Mock stores - create fresh instances for each test
 const createMockCoachStore = () => ({

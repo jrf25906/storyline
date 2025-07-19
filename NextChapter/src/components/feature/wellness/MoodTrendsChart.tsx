@@ -7,8 +7,8 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import Svg, { Path, Circle, Line, Text as SvgText } from 'react-native-svg';
-import { MoodTrend, MOOD_DESCRIPTORS } from '../../../types';
-import { useTheme } from '../../../context/ThemeContext';
+import { MoodTrend, MOOD_DESCRIPTORS } from '@types';
+import { useTheme } from '@context/ThemeContext';
 
 interface MoodTrendsChartProps {
   trend: MoodTrend;
@@ -51,7 +51,7 @@ export const MoodTrendsChart: React.FC<MoodTrendsChartProps> = ({
   }
 
   const periodLabel = trend.period === 'week' ? 'This Week' : 
-                     trend.period === 'month' ? 'This Month' : 'This Quarter';
+    trend.period === 'month' ? 'This Month' : 'This Quarter';
 
   const improvementColor = trend.improvementRate >= 0 ? '#4CAF50' : '#FF9800';
   const improvementText = trend.improvementRate >= 0 
@@ -134,8 +134,8 @@ export const MoodTrendsChart: React.FC<MoodTrendsChartProps> = ({
             const isHighest = index === highestIndex;
             const isLowest = index === lowestIndex;
             const testId = isHighest ? 'mood-point-highest' : 
-                          isLowest ? 'mood-point-lowest' : 
-                          `mood-point-${index}`;
+              isLowest ? 'mood-point-lowest' : 
+                `mood-point-${index}`;
             
             return (
               <Circle

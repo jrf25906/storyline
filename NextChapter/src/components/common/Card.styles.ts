@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Spacing, Borders, Shadows } from '../../theme';
+import { Colors, Spacing, Borders, Shadows } from '@theme';
 
 export const createStyles = (isDark: boolean) => {
   const colors = isDark ? Colors.dark : Colors;

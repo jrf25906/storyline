@@ -12,17 +12,17 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { useUserStore } from '../../stores/userStore';
-import { useBouncePlanStore } from '../../stores/bouncePlanStore';
-import { useAuthStore } from '../../stores/authStore';
-import { BOUNCE_PLAN_TASKS, BouncePlanTaskDefinition } from '../../constants/bouncePlanTasks';
-import ActiveTaskCard from '../../components/feature/bounce-plan/ActiveTaskCard';
-import { withErrorBoundary } from '../../components/common';
-import TaskCompletionCard from '../../components/feature/bounce-plan/TaskCompletionCard';
-import WeeklyProgressDots from '../../components/feature/bounce-plan/WeeklyProgressDots';
-import WeekendCard from '../../components/feature/bounce-plan/WeekendCard';
-import { Typography, Spacing, Colors } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { useUserStore } from '@stores/userStore';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useAuthStore } from '@stores/authStore';
+import { BOUNCE_PLAN_TASKS, BouncePlanTaskDefinition } from '@constants/bouncePlanTasks';
+import ActiveTaskCard from '@components/feature/bounce-plan/ActiveTaskCard';
+import { withErrorBoundary } from '@components/common';
+import TaskCompletionCard from '@components/feature/bounce-plan/TaskCompletionCard';
+import WeeklyProgressDots from '@components/feature/bounce-plan/WeeklyProgressDots';
+import WeekendCard from '@components/feature/bounce-plan/WeekendCard';
+import { Typography, Spacing, Colors } from '@theme';
 
 type BouncePlanStackParamList = {
   DailyTask: undefined;

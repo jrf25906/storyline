@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TextStyle, StyleSheet } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Typography as TypographyTokens } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Typography as TypographyTokens } from '@theme';
 
 interface TypographyProps {
   children: React.ReactNode;

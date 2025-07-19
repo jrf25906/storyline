@@ -4,7 +4,7 @@ import {
   logError,
   createTimeoutPromise,
   withErrorHandling,
-} from '../errorHandling';
+} from '@utils/errorHandling';
 
 describe('errorHandling utilities', () => {
   describe('isNetworkError', () => {

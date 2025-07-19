@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { JobApplication, JobApplicationStatus } from '../types/database';
-import { jobApplicationService } from '../services/database/jobApplications';
+import { JobApplication, JobApplicationStatus } from '@types/database';
+import { jobApplicationService } from '@services/database/jobApplications';
 
 interface JobApplicationStore {
   // State

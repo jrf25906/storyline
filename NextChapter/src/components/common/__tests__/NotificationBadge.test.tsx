@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import { NotificationBadge } from '../NotificationBadge';
+import { NotificationBadge } from '@components/common/NotificationBadge';
 
 describe('NotificationBadge', () => {
   it('should display count when greater than 0', () => {

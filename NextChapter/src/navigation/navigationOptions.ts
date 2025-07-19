@@ -1,6 +1,6 @@
 import { NativeStackNavigationOptions } from '@react-navigation/native-stack';
 import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
-import { Theme } from '../theme';
+import { Theme } from '@theme';
 
 /**
  * Default stack navigation options

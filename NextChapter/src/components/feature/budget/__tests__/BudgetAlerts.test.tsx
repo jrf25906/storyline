@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import { BudgetAlerts } from '../BudgetAlerts';
-import { BudgetAlert } from '../../../../types/budget';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import { BudgetAlerts } from '@components/feature/budget/BudgetAlerts';
+import { BudgetAlert } from '@types/budget';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const mockTheme = {
   colors: {

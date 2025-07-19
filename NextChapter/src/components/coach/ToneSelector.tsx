@@ -7,9 +7,9 @@ import {
   StyleSheet,
   Platform,
 } from 'react-native';
-import { H3, Body, Caption } from '../common/Typography';
-import { useTheme } from '../../context/ThemeContext';
-import { CoachTone } from '../../types/database';
+import { H3, Body, Caption } from '@components/common/Typography';
+import { useTheme } from '@context/ThemeContext';
+import { CoachTone } from '@types/database';
 import { Ionicons } from '@expo/vector-icons';
 
 interface ToneSelectorProps {

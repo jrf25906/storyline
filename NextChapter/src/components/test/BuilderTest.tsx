@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { BuilderContent } from '../common/BuilderContent';
-import { useBuilderContent } from '../../hooks/useBuilderContent';
+import { BuilderContent } from '@components/common/BuilderContent';
+import { useBuilderContent } from '@hooks/useBuilderContent';
 
 export const BuilderTest: React.FC = () => {
   const { content, isLoading, error, refetch } = useBuilderContent({

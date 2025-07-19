@@ -10,20 +10,20 @@ import {
   ActivityIndicator,
   RefreshControl,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useWellnessStore } from '../../stores/wellnessStore';
-import { MoodSelector, MoodTrendsChart, CrisisAlert } from '../../components/feature/wellness';
-import { MoodValue, MOOD_EMOJIS } from '../../types';
+import { useTheme } from '@context/ThemeContext';
+import { useWellnessStore } from '@stores/wellnessStore';
+import { MoodSelector, MoodTrendsChart, CrisisAlert } from '@components/feature/wellness';
+import { MoodValue, MOOD_EMOJIS } from '@types';
 import { Feather } from '@expo/vector-icons';
-import type { MainTabScreenProps } from '../../types/navigation';
-import { withErrorBoundary } from '../../components/common';
+import { withErrorBoundary } from '@components/common';
 import { 
   H1,
   H2,
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
+} from '@components/common/Typography';
+import type { MainTabScreenProps } from '../../types/navigation';
 
 type Props = MainTabScreenProps<'Wellness'>;
 
@@ -164,7 +164,7 @@ function WellnessScreen({ navigation }: Props) {
 
     const userFriendlyMessage = error.includes('Network') 
       ? "Something went wrong, but we're here to help."
-      : "Unable to save your mood. Please try again.";
+      : 'Unable to save your mood. Please try again.';
 
     return (
       <View style={[styles.errorContainer, { backgroundColor: '#FFF3E0' }]}>

@@ -1,7 +1,7 @@
 // This file provides a compatibility layer for tests expecting authStore
 // The actual authentication is handled by AuthContext
 
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '@hooks/useAuth';
 
 // Re-export useAuth as useAuthStore for backward compatibility with tests
 export const useAuthStore = () => {

@@ -2,9 +2,9 @@
  * Integration test to verify AI service setup
  */
 
-import { CoachService } from '../coachService';
-import { COACH_PROMPTS, EMOTIONAL_TRIGGERS } from '../coachPrompts';
-import { APIKeyManager } from '../apiKeyManager';
+import { CoachService } from '@services/ai/coachService';
+import { COACH_PROMPTS, EMOTIONAL_TRIGGERS } from '@services/ai/coachPrompts';
+import { APIKeyManager } from '@services/ai/apiKeyManager';
 
 describe('AI Service Integration', () => {
   describe('Service Initialization', () => {
@@ -39,21 +39,21 @@ describe('AI Service Integration', () => {
   describe('Tone Detection Logic', () => {
     const testCases = [
       // Hype tone triggers
-      { message: "I feel hopeless about this job search", expectedTone: 'hype' },
+      { message: 'I feel hopeless about this job search', expectedTone: 'hype' },
       { message: "I'm completely lost and don't know what to do", expectedTone: 'hype' },
-      { message: "I feel like such a failure", expectedTone: 'hype' },
+      { message: 'I feel like such a failure', expectedTone: 'hype' },
       { message: "I'm so burnt out from applying", expectedTone: 'hype' },
       
       // Tough-love tone triggers
       { message: "I'm too lazy to apply today", expectedTone: 'toughLove' },
-      { message: "They screwed me over at my last job", expectedTone: 'toughLove' },
-      { message: "No one will hire me because the system is rigged", expectedTone: 'toughLove' },
-      { message: "This is all a waste of time", expectedTone: 'toughLove' },
+      { message: 'They screwed me over at my last job', expectedTone: 'toughLove' },
+      { message: 'No one will hire me because the system is rigged', expectedTone: 'toughLove' },
+      { message: 'This is all a waste of time', expectedTone: 'toughLove' },
       
       // Pragmatist tone (default)
-      { message: "Can you help me update my resume?", expectedTone: 'pragmatist' },
+      { message: 'Can you help me update my resume?', expectedTone: 'pragmatist' },
       { message: "What's the best way to network?", expectedTone: 'pragmatist' },
-      { message: "I need interview tips", expectedTone: 'pragmatist' },
+      { message: 'I need interview tips', expectedTone: 'pragmatist' },
     ];
 
     it.each(testCases)('should detect $expectedTone tone for "$message"', ({ message, expectedTone }) => {
@@ -85,17 +85,17 @@ describe('AI Service Integration', () => {
     it('should meet 85% tone detection accuracy target', () => {
       const testMessages = [
         // Clear hype cases
-        { message: "I feel completely hopeless", expected: 'hype', weight: 1 },
+        { message: 'I feel completely hopeless', expected: 'hype', weight: 1 },
         { message: "I'm so lost and confused", expected: 'hype', weight: 1 },
         { message: "I'm worthless", expected: 'hype', weight: 1 },
-        { message: "What a failure I am", expected: 'hype', weight: 1 },
+        { message: 'What a failure I am', expected: 'hype', weight: 1 },
         { message: "I'm burnt out", expected: 'hype', weight: 1 },
         
         // Clear tough-love cases
         { message: "I'm being lazy", expected: 'toughLove', weight: 1 },
-        { message: "They screwed me", expected: 'toughLove', weight: 1 },
-        { message: "No one will hire me", expected: 'toughLove', weight: 1 },
-        { message: "This is rigged against me", expected: 'toughLove', weight: 1 },
+        { message: 'They screwed me', expected: 'toughLove', weight: 1 },
+        { message: 'No one will hire me', expected: 'toughLove', weight: 1 },
+        { message: 'This is rigged against me', expected: 'toughLove', weight: 1 },
         
         // Edge cases (partial weight)
         { message: "I'm tired but hopeful", expected: 'pragmatist', weight: 0.5 },

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Animated } from 'react-native';
-import TaskCompletionCard from '../TaskCompletionCard';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import TaskCompletionCard from '@components/feature/bounce-plan/TaskCompletionCard';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock dependencies
 jest.mock('@expo/vector-icons', () => ({

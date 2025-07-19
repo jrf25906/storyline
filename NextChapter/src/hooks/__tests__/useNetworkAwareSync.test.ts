@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useNetworkAwareSync } from '../useNetworkAwareSync';
+import { useNetworkAwareSync } from '@hooks/useNetworkAwareSync';
 
 // Mock dependencies
 jest.mock('../../context/OfflineContext');

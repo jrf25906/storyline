@@ -4,6 +4,7 @@ const typescriptParser = require('@typescript-eslint/parser');
 const react = require('eslint-plugin-react');
 const reactHooks = require('eslint-plugin-react-hooks');
 const reactNative = require('@react-native/eslint-config');
+const importPlugin = require('eslint-plugin-import');
 
 module.exports = [
   js.configs.recommended,
@@ -42,6 +43,7 @@ module.exports = [
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
+      'import': importPlugin,
     },
     rules: {
       // TypeScript specific rules
@@ -58,6 +60,73 @@ module.exports = [
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       
+      // Import rules - enforce path aliases
+      'no-restricted-imports': ['error', {
+        patterns: [
+          {
+            group: ['../src/*', '../../src/*', '../../../src/*'],
+            message: 'Use path aliases (@/*) instead of relative imports to src/',
+          },
+          {
+            group: ['../components/*', '../../components/*', '../../../components/*'],
+            message: 'Use @components/* instead of relative imports to components/',
+          },
+          {
+            group: ['../screens/*', '../../screens/*', '../../../screens/*'],
+            message: 'Use @screens/* instead of relative imports to screens/',
+          },
+          {
+            group: ['../services/*', '../../services/*', '../../../services/*'],
+            message: 'Use @services/* instead of relative imports to services/',
+          },
+          {
+            group: ['../stores/*', '../../stores/*', '../../../stores/*'],
+            message: 'Use @stores/* instead of relative imports to stores/',
+          },
+          {
+            group: ['../hooks/*', '../../hooks/*', '../../../hooks/*'],
+            message: 'Use @hooks/* instead of relative imports to hooks/',
+          },
+          {
+            group: ['../utils/*', '../../utils/*', '../../../utils/*'],
+            message: 'Use @utils/* instead of relative imports to utils/',
+          },
+          {
+            group: ['../context/*', '../../context/*', '../../../context/*'],
+            message: 'Use @context/* instead of relative imports to context/',
+          },
+          {
+            group: ['../theme/*', '../../theme/*', '../../../theme/*'],
+            message: 'Use @theme/* instead of relative imports to theme/',
+          },
+          {
+            group: ['../navigation/*', '../../navigation/*', '../../../navigation/*'],
+            message: 'Use @navigation/* instead of relative imports to navigation/',
+          },
+          {
+            group: ['../types/*', '../../types/*', '../../../types/*'],
+            message: 'Use @types/* instead of relative imports to types/',
+          },
+        ],
+      }],
+      'import/order': ['error', {
+        groups: [
+          'builtin',   // Node.js built-in modules
+          'external',  // npm packages
+          'internal',  // Path aliases (@/*)
+          ['parent', 'sibling', 'index'], // Relative imports
+        ],
+        'newlines-between': 'never',
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+      }],
+      
       // General rules
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-unused-vars': 'off', // Using TypeScript's version
@@ -72,6 +141,11 @@ module.exports = [
     settings: {
       react: {
         version: 'detect',
+      },
+      'import/resolver': {
+        node: {
+          extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+        },
       },
     },
   },

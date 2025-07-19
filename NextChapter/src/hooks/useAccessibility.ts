@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { AccessibilityInfo, Platform } from 'react-native';
 import * as Haptics from 'expo-haptics';
-import { getHapticFeedbackType } from '../utils/accessibility';
+import { getHapticFeedbackType } from '@utils/accessibility';
 
 interface UseAccessibilityOptions {
   announceOnMount?: string;

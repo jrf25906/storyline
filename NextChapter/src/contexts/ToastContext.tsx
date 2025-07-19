@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import { Toast, ToastProps } from '../components/Toast';
+import { Toast, ToastProps } from '@components/Toast';
 
 interface ToastContextType {
   showToast: (message: string, variant?: ToastProps['variant'], duration?: number) => void;

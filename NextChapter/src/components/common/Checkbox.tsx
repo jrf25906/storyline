@@ -6,10 +6,10 @@ import {
   StyleSheet,
   Animated,
 } from 'react-native';
-import { useTaskCompleteAnimation } from '../../hooks/useAnimations';
-import { Colors } from '../../theme/colors';
-import { Typography } from '../../theme/typography';
-import { Spacing } from '../../theme/spacing';
+import { useTaskCompleteAnimation } from '@hooks/useAnimations';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 export interface CheckboxProps {
   checked: boolean;
@@ -79,59 +79,59 @@ export const Checkbox: React.FC<CheckboxProps> = ({
         hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
         testID={testID ? `${testID}-touchable` : 'checkbox-touchable'}
       >
-      <Animated.View
-        style={[
-          styles.checkbox,
-          checkboxSize,
-          animatedStyle,
-          {
-            borderColor: checked 
-              ? variantColors.checked 
-              : (disabled ? Colors.neutral[200] : Colors.border),
-            backgroundColor: checked 
-              ? variantColors.checked 
-              : Colors.surfaceSection,
-          },
-          animatedColorStyle,
-          disabled && styles.checkboxDisabled,
-        ]}
-      >
-        {checked && (
-          <Animated.View style={[styles.checkmark, animatedStyle]}>
-            <Text style={[styles.checkmarkText, { color: variantColors.checkmark }]}>
+        <Animated.View
+          style={[
+            styles.checkbox,
+            checkboxSize,
+            animatedStyle,
+            {
+              borderColor: checked 
+                ? variantColors.checked 
+                : (disabled ? Colors.neutral[200] : Colors.border),
+              backgroundColor: checked 
+                ? variantColors.checked 
+                : Colors.surfaceSection,
+            },
+            animatedColorStyle,
+            disabled && styles.checkboxDisabled,
+          ]}
+        >
+          {checked && (
+            <Animated.View style={[styles.checkmark, animatedStyle]}>
+              <Text style={[styles.checkmarkText, { color: variantColors.checkmark }]}>
               ✓
-            </Text>
-          </Animated.View>
-        )}
-      </Animated.View>
+              </Text>
+            </Animated.View>
+          )}
+        </Animated.View>
 
-      {(label || description) && (
-        <View style={styles.textContainer}>
-          {label && (
-            <Text
-              style={[
-                styles.label,
-                size === 'small' && styles.labelSmall,
-                size === 'large' && styles.labelLarge,
-                disabled && styles.labelDisabled,
-              ]}
-            >
-              {label}
-            </Text>
-          )}
-          {description && (
-            <Text
-              style={[
-                styles.description,
-                size === 'small' && styles.descriptionSmall,
-                disabled && styles.descriptionDisabled,
-              ]}
-            >
-              {description}
-            </Text>
-          )}
-        </View>
-      )}
+        {(label || description) && (
+          <View style={styles.textContainer}>
+            {label && (
+              <Text
+                style={[
+                  styles.label,
+                  size === 'small' && styles.labelSmall,
+                  size === 'large' && styles.labelLarge,
+                  disabled && styles.labelDisabled,
+                ]}
+              >
+                {label}
+              </Text>
+            )}
+            {description && (
+              <Text
+                style={[
+                  styles.description,
+                  size === 'small' && styles.descriptionSmall,
+                  disabled && styles.descriptionDisabled,
+                ]}
+              >
+                {description}
+              </Text>
+            )}
+          </View>
+        )}
       </TouchableOpacity>
       
       {error && (

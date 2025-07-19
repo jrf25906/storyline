@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import { MoodSelector } from '../MoodSelector';
-import { MoodValue, MOOD_EMOJIS, MOOD_DESCRIPTORS } from '../../../../types';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import { MoodSelector } from '@components/feature/wellness/MoodSelector';
+import { MoodValue, MOOD_EMOJIS, MOOD_DESCRIPTORS } from '@types';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Helper to render with theme
 const renderWithTheme = (component: React.ReactElement) => {

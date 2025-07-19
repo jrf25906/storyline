@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import { TypingIndicator } from '../TypingIndicator';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { TypingIndicator } from '@components/coach/TypingIndicator';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const mockTheme = {
   colors: {

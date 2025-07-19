@@ -7,8 +7,8 @@ import {
   ViewStyle,
   ScrollView,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Borders } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Borders } from '@theme';
 
 interface EmpathyErrorStateProps {
   title: string;

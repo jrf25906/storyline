@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle } from 'react-native';
-import { useEmotionalState } from '../../context/EmotionalStateContext';
-import { Spacing } from '../../theme';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { Spacing } from '@theme';
 
 interface CrisisModeWrapperProps {
   children: ReactNode;

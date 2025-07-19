@@ -1,6 +1,6 @@
 import { Database } from '@nozbe/watermelondb';
-import { WatermelonSyncManager } from '../sync/syncManager';
-import { supabase } from '../../../api/supabase';
+import { WatermelonSyncManager } from '@services/database/watermelon/sync/syncManager';
+import { supabase } from '@services/api/supabase';
 import { 
   Profile,
   JobApplication,
@@ -11,8 +11,8 @@ import {
   LayoffDetails,
   UserGoal,
   WellnessActivity
-} from '../models';
-import { encryptData, decryptData, encryptFinancialData, decryptFinancialData } from '../encryption';
+} from '@services/database/watermelon/models';
+import { encryptData, decryptData, encryptFinancialData, decryptFinancialData } from '@services/database/watermelon/encryption';
 import { Q } from '@nozbe/watermelondb';
 
 // Mock dependencies

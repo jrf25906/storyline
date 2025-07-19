@@ -9,10 +9,11 @@ import {
   Platform,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useAuthStore } from '../../stores/authStore';
-import { theme } from '../../theme';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import { useAuthStore } from '@stores/authStore';
+import { theme } from '@theme';
 
-export const BiometricAuthScreen: React.FC = () => {
+const BiometricAuthScreen: React.FC = () => {
   const {
     isBiometricSupported,
     isBiometricEnabled,
@@ -240,3 +241,5 @@ const styles = StyleSheet.create({
     color: theme.colors.white,
   },
 });
+
+export default withErrorBoundary(BiometricAuthScreen);

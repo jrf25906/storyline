@@ -11,17 +11,17 @@ import {
   createMockCoachStore,
   createMockBouncePlanStore,
   createMockZustandHook,
-} from '../mockHelpers';
+} from '@test-utils/mockHelpers';
 
 // Mock the stores BEFORE importing components that use them
 const mockCoachStore = createMockCoachStore();
 const mockBouncePlanStore = createMockBouncePlanStore();
 
-jest.mock('@/stores/coach', () => ({
+jest.mock('@stores/coachStore', () => ({
   useCoachStore: createMockZustandHook(mockCoachStore),
 }));
 
-jest.mock('@/stores/bouncePlan', () => ({
+jest.mock('@stores/bouncePlanStore', () => ({
   useBouncePlanStore: createMockZustandHook(mockBouncePlanStore),
 }));
 
@@ -248,5 +248,5 @@ describe('Store Mocking Examples', () => {
 });
 
 // Import stores after mocks are set up
-import { useCoachStore } from '@/stores/coach';
-import { useBouncePlanStore } from '@/stores/bouncePlan';
+import { useCoachStore } from '@stores/coachStore';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';

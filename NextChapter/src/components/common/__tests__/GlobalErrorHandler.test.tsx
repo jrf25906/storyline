@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import { GlobalErrorHandler } from '../GlobalErrorHandler';
-import { useUIStore } from '../../../stores/uiStore';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { GlobalErrorHandler } from '@components/common/GlobalErrorHandler';
+import { useUIStore } from '@stores/uiStore';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock the UI store
 jest.mock('../../../stores/uiStore');

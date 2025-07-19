@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-native';
-import { useLoadingState } from '../useLoadingState';
-import { useUIStore } from '../../stores/uiStore';
+import { useLoadingState } from '@hooks/useLoadingState';
+import { useUIStore } from '@stores/uiStore';
 
 // Mock the UI store
 jest.mock('../../stores/uiStore');

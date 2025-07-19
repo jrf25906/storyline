@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, createContext, useContext, ReactNode } from 'react';
 import { View, Text, StyleSheet, AccessibilityInfo } from 'react-native';
-import { useAccessibilityAnnounce } from '../../utils/focusManager';
+import { useAccessibilityAnnounce } from '@utils/focusManager';
 
 interface AnnouncementQueueItem {
   message: string;

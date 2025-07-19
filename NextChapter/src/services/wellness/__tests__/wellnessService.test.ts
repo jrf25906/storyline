@@ -1,7 +1,7 @@
-import { wellnessService } from '../wellnessService';
-import { supabase } from '../../api/supabase';
+import { wellnessService } from '@services/wellness/wellnessService';
+import { supabase } from '@services/api/supabase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { MoodValue, MoodEntry } from '../../../types';
+import { MoodValue, MoodEntry } from '@types';
 
 // Mock dependencies
 jest.mock('../../api/supabase', () => ({

@@ -8,9 +8,9 @@ import {
   Platform 
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Borders, Shadows } from '../../theme';
-import { createStyles } from './Card.styles';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Borders, Shadows } from '@theme';
+import { createStyles } from '@components/common/Card.styles';
 
 interface CardProps {
   children: React.ReactNode;

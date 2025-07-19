@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Linking, Alert } from 'react-native';
-import { CrisisAlert } from '../CrisisAlert';
-import { CrisisDetectionResult } from '../../../../types';
+import { CrisisAlert } from '@components/feature/wellness/CrisisAlert';
+import { CrisisDetectionResult } from '@types';
 
 // Mock dependencies
 jest.mock('react-native/Libraries/Linking/Linking', () => ({

@@ -1,13 +1,13 @@
 import { ChatCompletionMessageParam } from 'openai/resources/chat/completions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getOpenAIClient } from './openai';
+import { getOpenAIClient } from '@services/ai/openai';
 import { 
   COACH_PROMPTS, 
   EMOTIONAL_TRIGGERS, 
   CRISIS_KEYWORDS,
   BOUNDARY_KEYWORDS 
-} from './coachPrompts';
-import { MODEL_CONFIG, RATE_LIMITS, MODERATION_CONFIG } from './config';
+} from '@services/ai/coachPrompts';
+import { MODEL_CONFIG, RATE_LIMITS, MODERATION_CONFIG } from '@services/ai/config';
 import { CoachMessage, CoachTone } from '@types/coach';
 
 /**
@@ -317,12 +317,12 @@ Which of these feels most manageable to start with?`;
    */
   getOfflineResponses(): { [key: string]: string } {
     return {
-      greeting: "Welcome back! Ready to make progress on your job search today?",
+      greeting: 'Welcome back! Ready to make progress on your job search today?',
       encouragement: "Every application, every connection, every update moves you closer to your next role. You're doing great!",
       taskReminder: "Have you completed today's Bounce Plan task? Small daily actions create big momentum.",
       networkingTip: "Today's tip: Reach out to one former colleague. A simple 'How are you?' can open doors.",
-      applicationTip: "Quality beats quantity. One well-tailored application is worth ten generic ones.",
-      interviewPrep: "Preparing for an interview? Use the STAR method to structure your answers: Situation, Task, Action, Result.",
+      applicationTip: 'Quality beats quantity. One well-tailored application is worth ten generic ones.',
+      interviewPrep: 'Preparing for an interview? Use the STAR method to structure your answers: Situation, Task, Action, Result.',
       rejectionSupport: "Rejections are redirections. Each 'no' gets you closer to your 'yes'. What did you learn from this one?",
       motivationBoost: "You've overcome challenges before. You have the skills. You have the experience. You've got this!",
     };

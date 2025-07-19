@@ -1,7 +1,7 @@
 import { field, date, relation } from '@nozbe/watermelondb/decorators';
-import { BaseModel } from './BaseModel';
+import { BaseModel } from '@services/database/watermelon/models/BaseModel';
 import { Associations } from '@nozbe/watermelondb/Model';
-import { encryptData, decryptData } from '../encryption';
+import { encryptData, decryptData } from '@services/database/watermelon/encryption';
 
 export type BudgetType = 'income' | 'expense';
 export type BudgetFrequency = 'one-time' | 'monthly' | 'weekly' | 'daily';

@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Alert } from 'react-native';
 
 // Components
-import AppNavigator from '../../navigation/AppNavigator';
-import { ThemeProvider } from '../../context/ThemeContext';
+import AppNavigator from '@navigation/AppNavigator';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock stores - define inside mock factory functions to avoid Jest variable reference issues
 let mockAuthStore: any;

@@ -3,7 +3,7 @@
  * This provides the template for updating the remaining 17 screens
  */
 
-import { screenErrorMessages } from '../utils/updateScreensWithErrorBoundary';
+import { screenErrorMessages } from '@utils/updateScreensWithErrorBoundary';
 
 interface ScreenUpdate {
   path: string;

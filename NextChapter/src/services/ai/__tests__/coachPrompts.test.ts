@@ -3,7 +3,7 @@ import {
   EMOTIONAL_TRIGGERS, 
   CRISIS_KEYWORDS,
   BOUNDARY_KEYWORDS 
-} from '../coachPrompts';
+} from '@services/ai/coachPrompts';
 
 describe('Coach Prompts', () => {
   describe('COACH_PROMPTS', () => {
@@ -104,8 +104,8 @@ describe('Coach Prompts', () => {
       COACH_PROMPTS.hype.exampleResponses.forEach(response => {
         const hasEncouragingPhrase = 
           response.includes("You've got this") ||
-          response.includes("momentum") ||
-          response.includes("Yes!");
+          response.includes('momentum') ||
+          response.includes('Yes!');
         expect(hasEncouragingPhrase).toBe(true);
       });
     });
@@ -113,9 +113,9 @@ describe('Coach Prompts', () => {
     it('pragmatist examples should be structured and practical', () => {
       COACH_PROMPTS.pragmatist.exampleResponses.forEach(response => {
         const hasStructuredPhrase = 
-          response.includes("step-by-step") ||
+          response.includes('step-by-step') ||
           response.includes("Let's break") ||
-          response.includes("Start with");
+          response.includes('Start with');
         expect(hasStructuredPhrase).toBe(true);
       });
     });
@@ -124,8 +124,8 @@ describe('Coach Prompts', () => {
       COACH_PROMPTS.toughLove.exampleResponses.forEach(response => {
         const hasDirectPhrase = 
           response.includes("Let's be real") ||
-          response.includes("excuse") ||
-          response.includes("Brutal honesty");
+          response.includes('excuse') ||
+          response.includes('Brutal honesty');
         expect(hasDirectPhrase).toBe(true);
       });
     });

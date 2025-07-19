@@ -27,7 +27,7 @@ export const ThemeTestWrapper: React.FC<ThemeTestWrapperProps> = ({
   const selectedTheme = theme || initialTheme;
   
   // Mock the useTheme hook to return our test theme
-  const { useTheme } = require('../context/ThemeContext');
+  const { useTheme } = require('@context/ThemeContext');
   useTheme.mockReturnValue({
     theme: selectedTheme === 'dark' ? darkCompatibleTheme : lightCompatibleTheme,
     themeType: selectedTheme as 'light' | 'dark',

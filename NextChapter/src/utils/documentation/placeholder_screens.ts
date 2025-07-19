@@ -1,8 +1,8 @@
 // src/components/common/PlaceholderScreen.tsx
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import Button from './Button';
+import { useTheme } from '@context/ThemeContext';
+import Button from '@utils/documentation/Button';
 
 interface PlaceholderScreenProps {
   title: string;
@@ -96,7 +96,7 @@ export default function PlaceholderScreen({
 
 // src/screens/main/HomeScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function HomeScreen() {
   return (
@@ -118,7 +118,7 @@ export default function HomeScreen() {
 
 // src/screens/main/BouncePlanScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function BouncePlanScreen() {
   return (
@@ -140,7 +140,7 @@ export default function BouncePlanScreen() {
 
 // src/screens/main/CoachScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function CoachScreen() {
   return (
@@ -162,7 +162,7 @@ export default function CoachScreen() {
 
 // src/screens/main/TrackerScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function TrackerScreen() {
   return (
@@ -184,7 +184,7 @@ export default function TrackerScreen() {
 
 // src/screens/main/BudgetScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function BudgetScreen() {
   return (
@@ -206,7 +206,7 @@ export default function BudgetScreen() {
 
 // src/screens/main/WellnessScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function WellnessScreen() {
   return (
@@ -229,9 +229,9 @@ export default function WellnessScreen() {
 // src/screens/main/SettingsScreen.tsx
 import React from 'react';
 import { View, ScrollView, StyleSheet, Alert } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useAuth } from '../../hooks/useAuth';
-import Button from '../../components/common/Button';
+import { useTheme } from '@context/ThemeContext';
+import { useAuth } from '@hooks/useAuth';
+import Button from '@components/common/Button';
 
 export default function SettingsScreen() {
   const { theme, themeType, setThemeType, isHighContrast, setIsHighContrast } = useTheme();
@@ -312,11 +312,11 @@ export default function SettingsScreen() {
 // src/screens/auth/LoginScreen.tsx
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Alert } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useAuth } from '../../hooks/useAuth';
-import Button from '../../components/common/Button';
-import Input from '../../components/common/Input';
-import { validateEmail } from '../../utils/helpers';
+import { useTheme } from '@context/ThemeContext';
+import { useAuth } from '@hooks/useAuth';
+import Button from '@components/common/Button';
+import Input from '@components/common/Input';
+import { validateEmail } from '@utils/helpers';
 
 export default function LoginScreen() {
   const { theme } = useTheme();
@@ -425,11 +425,11 @@ export default function LoginScreen() {
 // src/screens/auth/SignupScreen.tsx
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Alert } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useAuth } from '../../hooks/useAuth';
-import Button from '../../components/common/Button';
-import Input from '../../components/common/Input';
-import { validateEmail } from '../../utils/helpers';
+import { useTheme } from '@context/ThemeContext';
+import { useAuth } from '@hooks/useAuth';
+import Button from '@components/common/Button';
+import Input from '@components/common/Input';
+import { validateEmail } from '@utils/helpers';
 
 export default function SignupScreen() {
   const { theme } = useTheme();
@@ -555,7 +555,7 @@ export default function SignupScreen() {
 
 // src/screens/onboarding/WelcomeScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function WelcomeScreen() {
   return (
@@ -577,7 +577,7 @@ export default function WelcomeScreen() {
 
 // src/screens/onboarding/LayoffDetailsScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function LayoffDetailsScreen() {
   return (
@@ -598,7 +598,7 @@ export default function LayoffDetailsScreen() {
 
 // src/screens/onboarding/GoalsScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function GoalsScreen() {
   return (
@@ -621,7 +621,7 @@ export default function GoalsScreen() {
 
 // src/screens/onboarding/SetupCompleteScreen.tsx
 import React from 'react';
-import PlaceholderScreen from '../../components/common/PlaceholderScreen';
+import PlaceholderScreen from '@components/common/PlaceholderScreen';
 
 export default function SetupCompleteScreen() {
   return (

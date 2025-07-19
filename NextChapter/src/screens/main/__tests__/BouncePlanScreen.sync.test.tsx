@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, waitFor, act, fireEvent } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { BouncePlanScreen } from '../BouncePlanScreen';
-import { useBouncePlanStore } from '../../../stores/bouncePlanStore';
-import { useAuthStore } from '../../../stores/authStore';
-import * as bouncePlanService from '../../../services/database/bouncePlan';
+import { BouncePlanScreen } from '@screens/main/BouncePlanScreen';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useAuthStore } from '@stores/authStore';
+import * as bouncePlanService from '@services/database/bouncePlan';
 import NetInfo, { NetInfoStateType } from '@react-native-community/netinfo';
-import { NETWORK_STATES } from '../../../test-utils/mockHelpers';
+import { NETWORK_STATES } from '@test-utils/mockHelpers';
 
 // Mock dependencies
 jest.mock('../../../stores/bouncePlanStore');

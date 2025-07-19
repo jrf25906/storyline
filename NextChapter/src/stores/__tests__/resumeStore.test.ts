@@ -16,15 +16,15 @@ jest.mock('../../services/api/openai', () => ({
 }));
 
 // Import dependencies for mocking
-import { ResumeParser } from '../../services/resume/resumeParser';
-import { ResumeAIService } from '../../services/resume/resumeAI';
+import { ResumeParser } from '@services/resume/resumeParser';
+import { ResumeAIService } from '@services/resume/resumeAI';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { 
   Resume, 
   ResumeAnalysis, 
   ResumeRewriteRequest,
   ResumeUploadProgress 
-} from '../../types/resume';
+} from '@types/resume';
 
 // Get the mocked classes
 const MockedResumeParser = ResumeParser as jest.MockedClass<typeof ResumeParser>;
@@ -53,7 +53,7 @@ MockedResumeAIService.mockImplementation(() => mockResumeAI);
 
 // NOW import the store after mocks are set up
 import { renderHook, act, waitFor } from '@testing-library/react-native';
-import { useResumeStore, __resetServices } from '../resumeStore';
+import { useResumeStore, __resetServices } from '@stores/resumeStore';
 
 describe('useResumeStore', () => {
   const mockResume: Resume = {

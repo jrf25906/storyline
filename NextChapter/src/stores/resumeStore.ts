@@ -8,10 +8,10 @@ import {
   ResumeRewriteResponse,
   ResumeUploadProgress,
   ResumeKeywordMatch
-} from '../types/resume';
-import { ResumeParser } from '../services/resume/resumeParser';
-import { ResumeAIService } from '../services/resume/resumeAI';
-import { openAIService } from '../services/api/openai';
+} from '@types/resume';
+import { ResumeParser } from '@services/resume/resumeParser';
+import { ResumeAIService } from '@services/resume/resumeAI';
+import { openAIService } from '@services/api/openai';
 
 interface ResumeStore {
   // State

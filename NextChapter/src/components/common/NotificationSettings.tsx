@@ -9,8 +9,8 @@ import {
   Platform,
 } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { styles } from './NotificationSettings.styles';
-import { notificationService, NotificationPreferences } from '../../services/notifications/notificationService';
+import { styles } from '@components/common/NotificationSettings.styles';
+import { notificationService, NotificationPreferences } from '@services/notifications/notificationService';
 
 export const NotificationSettings: React.FC = () => {
   const [preferences, setPreferences] = useState<NotificationPreferences>({

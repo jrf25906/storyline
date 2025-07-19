@@ -7,9 +7,9 @@ import {
   Platform,
 } from 'react-native';
 import { format } from 'date-fns';
-import Card from '../../common/Card';
-import { JobApplication } from '../../../types/database';
-import { Colors, Typography, Spacing } from '../../../theme';
+import Card from '@components/common/Card';
+import { JobApplication } from '@types/database';
+import { Colors, Typography, Spacing } from '@theme';
 import { Ionicons } from '@expo/vector-icons';
 
 interface ApplicationCardProps {

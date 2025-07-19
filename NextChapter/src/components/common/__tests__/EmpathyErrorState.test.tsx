@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { StyleSheet } from 'react-native';
-import { EmpathyErrorState } from '../EmpathyErrorState';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { EmpathyErrorState } from '@components/common/EmpathyErrorState';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(
@@ -14,7 +14,7 @@ const renderWithTheme = (component: React.ReactElement) => {
 
 describe('EmpathyErrorState', () => {
   const defaultProps = {
-    title: "We hit a small bump",
+    title: 'We hit a small bump',
     message: "Don't worry, we can fix this together.",
   };
 

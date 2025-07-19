@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { Alert } from 'react-native';
-import { OfflineQueueViewer } from '../OfflineQueueViewer';
-import { syncManager } from '../../../../services/database/sync/syncManager';
+import { OfflineQueueViewer } from '@components/feature/sync/OfflineQueueViewer';
+import { syncManager } from '@services/database/sync/syncManager';
 
 // Mock dependencies
 jest.mock('../../../../services/database/sync/syncManager', () => ({

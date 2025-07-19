@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ScrollView, Text, StyleSheet } from 'react-native';
-import Button from '../Button';
-import { Colors, Spacing, Typography } from '../../../theme';
+import Button from '@components/common/Button';
+import { Colors, Spacing, Typography } from '@theme';
 
 /**
  * Button Component Examples

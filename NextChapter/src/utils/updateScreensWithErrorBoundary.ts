@@ -28,7 +28,7 @@ export function generateUpdatedScreenContent(
   }
 
   // Add import for withErrorBoundary
-  const importStatement = `import { withErrorBoundary } from '../../components/common';`;
+  const importStatement = 'import { withErrorBoundary } from \'../../components/common\';';
   
   // Find the right place to add the import (after other imports)
   const importRegex = /^import.*from.*;$/gm;
@@ -109,15 +109,15 @@ export const screenErrorMessages: Record<string, { title: string; message: strin
   },
   'ResumeScannerScreen': {
     title: 'Resume scanner taking a break',
-    message: "The scanner will be back shortly. Please try again."
+    message: 'The scanner will be back shortly. Please try again.'
   },
   'BouncePlanScreen': {
     title: 'Bounce Plan loading issue',
-    message: "Your progress is saved. Please try refreshing the screen."
+    message: 'Your progress is saved. Please try refreshing the screen.'
   },
   'CoachScreen': {
     title: 'Your coach is temporarily away',
-    message: "The AI coach will be back shortly. Your conversation history is safe."
+    message: 'The AI coach will be back shortly. Your conversation history is safe.'
   },
   'WellnessScreen': {
     title: 'Wellness check-in unavailable',
@@ -129,15 +129,15 @@ export const screenErrorMessages: Record<string, { title: string; message: strin
   },
   'LayoffDetailsScreen': {
     title: 'Unable to save your details',
-    message: "Your information is important. Please try again."
+    message: 'Your information is important. Please try again.'
   },
   'JobApplicationsScreen': {
     title: 'Application tracker needs a moment',
-    message: "Your applications are safe. Please refresh to continue."
+    message: 'Your applications are safe. Please refresh to continue.'
   },
   'PersonalInfoScreen': {
     title: 'Personal info form unavailable',
-    message: "We need just a moment to prepare your form."
+    message: 'We need just a moment to prepare your form.'
   },
   'GoalsScreen': {
     title: 'Goals setup interrupted',
@@ -145,27 +145,27 @@ export const screenErrorMessages: Record<string, { title: string; message: strin
   },
   'ExperienceScreen': {
     title: 'Experience form needs attention',
-    message: "Your background is valuable. Please try again."
+    message: 'Your background is valuable. Please try again.'
   },
   'ProgressScreen': {
     title: 'Progress tracker taking a break',
-    message: "Your achievements are saved. Please refresh."
+    message: 'Your achievements are saved. Please refresh.'
   },
   'CoachChatScreen': {
     title: 'Chat temporarily offline',
-    message: "Your coach will be back. Your messages are saved."
+    message: 'Your coach will be back. Your messages are saved.'
   },
   'TaskDetailsScreen': {
     title: 'Task details unavailable',
-    message: "This task will be available again shortly."
+    message: 'This task will be available again shortly.'
   },
   'DailyTaskScreen': {
     title: "Today's task needs a refresh",
-    message: "Your progress is saved. Please try again."
+    message: 'Your progress is saved. Please try again.'
   },
   'BudgetOverviewScreen': {
     title: 'Budget overview loading issue',
-    message: "Your financial data is secure. Please refresh."
+    message: 'Your financial data is secure. Please refresh.'
   },
   'BiometricAuthScreen': {
     title: 'Security check interrupted',
@@ -173,10 +173,10 @@ export const screenErrorMessages: Record<string, { title: string; message: strin
   },
   'EmailVerificationScreen': {
     title: 'Email verification paused',
-    message: "Almost there! Please try verifying again."
+    message: 'Almost there! Please try verifying again.'
   },
   'TestAuthScreen': {
     title: 'Test screen error',
-    message: "This is a test environment. Please try again."
+    message: 'This is a test environment. Please try again.'
   }
 };

@@ -6,18 +6,18 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native';
-import { Modal } from './common/Modal';
-import { BottomSheet } from './common/BottomSheet';
-import { Checkbox } from './common/Checkbox';
-import { RadioButton, RadioOption } from './common/RadioButton';
-import { ToggleSwitch } from './common/ToggleSwitch';
-import { SwipeableCard, SwipeAction } from './common/SwipeableCard';
-import { ExpandableCard } from './common/ExpandableCard';
-import { JobApplicationCard, JobApplication } from './common/JobApplicationCard';
-import { useToast } from '../contexts/ToastContext';
-import { Colors } from '../theme/colors';
-import { Typography } from '../theme/typography';
-import { Spacing } from '../theme/spacing';
+import { Modal } from '@components/common/Modal';
+import { BottomSheet } from '@components/common/BottomSheet';
+import { Checkbox } from '@components/common/Checkbox';
+import { RadioButton, RadioOption } from '@components/common/RadioButton';
+import { ToggleSwitch } from '@components/common/ToggleSwitch';
+import { SwipeableCard, SwipeAction } from '@components/common/SwipeableCard';
+import { ExpandableCard } from '@components/common/ExpandableCard';
+import { JobApplicationCard, JobApplication } from '@components/common/JobApplicationCard';
+import { useToast } from '@context/../contexts/ToastContext';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 export const ThisWeekDemo: React.FC = () => {
   const { showSuccess, showInfo } = useToast();
@@ -337,7 +337,7 @@ export const ThisWeekDemo: React.FC = () => {
               contactPerson: 'Mike Chen',
               notes: 'Great interview! Team seems collaborative and innovative.',
             }}
-            onStatusChange={(id, status) => showSuccess(`Status updated! Keep going! 🚀`)}
+            onStatusChange={(id, status) => showSuccess('Status updated! Keep going! 🚀')}
             onArchive={(id) => showInfo('Application archived')}
             onDelete={(id) => showInfo('Application deleted')}
             onPress={(app) => showInfo(`Viewing ${app.title} progress`)}

@@ -9,7 +9,7 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
+import { useTheme } from '@context/ThemeContext';
 
 interface CrisisResource {
   id: string;

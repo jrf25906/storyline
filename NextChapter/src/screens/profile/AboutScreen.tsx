@@ -2,11 +2,12 @@ import React from 'react';
 import { View, ScrollView, Linking, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
-import { ProfileStackScreenProps } from '../../types/navigation';
-import { useTheme } from '../../context/ThemeContext';
-import Card from '../../components/common/Card';
-import Button from '../../components/common/Button';
-import { Theme } from '../../theme/types';
+import { ProfileStackScreenProps } from '@types/navigation';
+import { useTheme } from '@context/ThemeContext';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import Card from '@components/common/Card';
+import Button from '@components/common/Button';
+import { Theme } from '@theme/types';
 import { 
   H1,
   H2,
@@ -14,11 +15,11 @@ import {
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
+} from '@components/common/Typography';
 
 type AboutScreenProps = ProfileStackScreenProps<'About'>;
 
-export default function AboutScreen({ navigation }: AboutScreenProps) {
+const AboutScreen = ({ navigation }: AboutScreenProps) => {
   const { theme } = useTheme();
   const styles = createStyles(theme);
 
@@ -106,7 +107,7 @@ export default function AboutScreen({ navigation }: AboutScreenProps) {
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
 
 const createStyles = (theme: Theme) =>
   StyleSheet.create({
@@ -174,3 +175,5 @@ const createStyles = (theme: Theme) =>
       marginTop: theme.spacing.lg,
     },
   });
+
+export default withErrorBoundary(AboutScreen);

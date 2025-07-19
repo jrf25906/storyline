@@ -14,13 +14,13 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useResumeStore } from '../../stores/resumeStore';
-import { ResumeCard } from '../../components/feature/resume/ResumeCard';
-import { AnalysisResults } from '../../components/feature/resume/AnalysisResults';
-import { theme } from '../../theme';
-import { ResumeRewriteRequest } from '../../types/resume';
+import { useResumeStore } from '@stores/resumeStore';
+import { ResumeCard } from '@components/feature/resume/ResumeCard';
+import { AnalysisResults } from '@components/feature/resume/AnalysisResults';
+import { theme } from '@theme';
+import { ResumeRewriteRequest } from '@types/resume';
 import { useNavigation } from '@react-navigation/native';
-import { withErrorBoundary } from '../../components/common';
+import { withErrorBoundary } from '@components/common';
 
 export const ResumeScannerScreen: React.FC = () => {
   const navigation = useNavigation<any>();

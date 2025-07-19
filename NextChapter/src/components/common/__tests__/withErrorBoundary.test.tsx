@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text, View } from 'react-native';
-import { withErrorBoundary } from '../withErrorBoundary';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import { SafeThemeProvider } from '@components/common/SafeThemeProvider';
 
-// Helper to wrap components with ThemeProvider
+// Helper to wrap components with SafeThemeProvider
 const renderWithTheme = (component: React.ReactElement) => {
   return render(
-    <ThemeProvider>
+    <SafeThemeProvider>
       {component}
-    </ThemeProvider>
+    </SafeThemeProvider>
   );
 };
 

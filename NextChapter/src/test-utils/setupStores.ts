@@ -19,7 +19,7 @@ import {
   MockWellnessStore,
   MockOnboardingStore,
   MockAuthStore,
-} from './mockHelpers';
+} from '@test-utils/mockHelpers';
 
 // Store instances that can be modified in tests
 export let mockCoachStore: MockCoachStore;

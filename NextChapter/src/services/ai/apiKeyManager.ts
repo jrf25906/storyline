@@ -1,5 +1,5 @@
 import { setSecureValue, getSecureValue, deleteSecureValue } from '@services/security/keychain';
-import { resetOpenAIClient } from './openai';
+import { resetOpenAIClient } from '@services/ai/openai';
 
 const API_KEY_STORAGE_KEY = 'OPENAI_API_KEY';
 

@@ -1,5 +1,5 @@
-import { supabase } from '../api/supabase';
-import { JobApplication, JobApplicationStatus } from '../../types/database';
+import { supabase } from '@services/api/supabase';
+import { JobApplication, JobApplicationStatus } from '@types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const STORAGE_KEY = '@next_chapter/job_applications';

@@ -3,10 +3,10 @@ import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import NetInfo from '@react-native-community/netinfo';
 
 // Components
-import BouncePlanScreen from '../../screens/main/BouncePlanScreen';
-import { OfflineQueueViewer } from '../../components/dev/OfflineQueueViewer';
-import { ThemeProvider } from '../../context/ThemeContext';
-import { OfflineProvider } from '../../context/OfflineContext';
+import BouncePlanScreen from '@screens/main/BouncePlanScreen';
+import { OfflineQueueViewer } from '@components/dev/OfflineQueueViewer';
+import { ThemeProvider } from '@context/ThemeContext';
+import { OfflineProvider } from '@context/OfflineContext';
 
 // Mock network state
 const mockNetworkState = {

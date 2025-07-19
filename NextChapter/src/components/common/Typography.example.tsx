@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ScrollView } from 'react-native';
-import { Typography } from './Typography';
-import { typographyStyles } from './Typography.styles';
+import { Typography } from '@components/common/Typography';
+import { typographyStyles } from '@components/common/Typography.styles';
 
 /**
  * Typography Usage Examples

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text, View } from 'react-native';
-import AccessibleTouchable from '../AccessibleTouchable';
-import { MINIMUM_TOUCH_TARGET_SIZE } from '../../../utils/accessibility';
+import AccessibleTouchable from '@components/common/AccessibleTouchable';
+import { MINIMUM_TOUCH_TARGET_SIZE } from '@utils/accessibility';
 
 describe('AccessibleTouchable', () => {
   const defaultProps = {

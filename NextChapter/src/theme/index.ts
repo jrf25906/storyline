@@ -9,14 +9,14 @@ export * from './animations';
 export { type Theme, type ThemeType } from '../styles/theme';
 
 // Import tokens
-import { Colors } from './colors';
-import { Typography } from './typography';
-import { Spacing } from './spacing';
-import { Borders, Shadows } from './borders';
-import { Motion } from './animations';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
+import { Borders, Shadows } from '@theme/borders';
+import { Motion } from '@theme/animations';
 
 // Import the base themes for backward compatibility
-import { lightTheme as baseLightTheme, darkTheme as baseDarkTheme } from '../styles/theme';
+import { lightTheme as baseLightTheme, darkTheme as baseDarkTheme } from '@/styles/theme';
 
 // Create new theme structure using design tokens
 export const lightTheme = {

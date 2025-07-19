@@ -1,4 +1,4 @@
-import { EnvironmentService } from '../security/environment';
+import { EnvironmentService } from '@services/security/environment';
 
 interface ChatMessage {
   role: 'user' | 'assistant' | 'system';
@@ -303,7 +303,7 @@ You don't have to go through this alone. These services are free, confidential, 
    * Get appropriate system prompt for tone
    */
   private getSystemPrompt(tone: 'hype' | 'pragmatist' | 'tough-love'): string {
-    const basePrompt = `You are a career coach helping someone who was recently laid off. You provide supportive, actionable advice. Keep responses concise and focused. Never provide financial advice or discuss specific monetary amounts.`;
+    const basePrompt = 'You are a career coach helping someone who was recently laid off. You provide supportive, actionable advice. Keep responses concise and focused. Never provide financial advice or discuss specific monetary amounts.';
 
     const tonePrompts = {
       hype: `${basePrompt} Be encouraging and energetic. Use phrases like "You've got this!" and focus on opportunities and potential. Help them see the positive side and build confidence.`,

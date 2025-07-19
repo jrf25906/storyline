@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
-import { RunwayIndicator } from '../RunwayIndicator';
-import { FinancialRunway } from '../../../../types/budget';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import { RunwayIndicator } from '@components/feature/budget/RunwayIndicator';
+import { FinancialRunway } from '@types/budget';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const mockTheme = {
   colors: {

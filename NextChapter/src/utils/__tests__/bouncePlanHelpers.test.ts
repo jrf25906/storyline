@@ -1,4 +1,4 @@
-import { BOUNCE_PLAN_TASKS, getTasksByCategory, getTaskByDay, getWeekFromDay } from '../../constants/bouncePlanTasks';
+import { BOUNCE_PLAN_TASKS, getTasksByCategory, getTaskByDay, getWeekFromDay } from '@constants/bouncePlanTasks';
 
 describe('Bounce Plan Helpers', () => {
   describe('getTasksByCategory', () => {

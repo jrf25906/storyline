@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import WellnessScreen from '../WellnessScreen';
-import { ThemeProvider } from '../../../context/ThemeContext';
-import { useWellnessStore } from '../../../stores/wellnessStore';
-import { MoodValue } from '../../../types';
+import WellnessScreen from '@screens/main/WellnessScreen';
+import { ThemeProvider } from '@context/ThemeContext';
+import { useWellnessStore } from '@stores/wellnessStore';
+import { MoodValue } from '@types';
 import { Alert } from 'react-native';
 
 // Mock the wellness store

@@ -1,7 +1,7 @@
 import { useEffect, useCallback } from 'react';
-import { useAuth } from './useAuth';
-import { useOnboardingStore } from '../stores/onboardingStore';
-import { OnboardingData } from '../types/onboarding';
+import { useAuth } from '@hooks/useAuth';
+import { useOnboardingStore } from '@stores/onboardingStore';
+import { OnboardingData } from '@types/onboarding';
 
 export function useOnboarding() {
   const { user } = useAuth();

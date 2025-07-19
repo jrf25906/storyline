@@ -12,9 +12,9 @@ import {
   Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { JobApplication, JobApplicationStatus } from '../../../types/database';
-import { useTheme } from '../../../context/ThemeContext';
-import Button from '../../common/Button';
+import { JobApplication, JobApplicationStatus } from '@types/database';
+import { useTheme } from '@context/ThemeContext';
+import Button from '@components/common/Button';
 
 interface JobApplicationModalProps {
   visible: boolean;

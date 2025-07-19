@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import { useOffline } from '../context/OfflineContext';
-import { useBouncePlanStore } from '../stores/bouncePlanStore';
+import { useOffline } from '@context/OfflineContext';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
 
 interface SyncOptions {
   showOfflineMessage?: boolean;

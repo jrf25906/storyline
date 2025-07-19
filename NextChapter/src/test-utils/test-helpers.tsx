@@ -1,15 +1,17 @@
 import React from 'react';
 import { render, RenderOptions } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { ThemeProvider } from '../context/ThemeContext';
-import { AuthProvider } from '../context/AuthContext';
-import { OfflineProvider } from '../context/OfflineContext';
-import { buildUser, buildNavigationProp } from './builders';
+import { SafeThemeProvider } from '@components/common/SafeThemeProvider';
+import { AuthProvider } from '@context/AuthContext';
+import { OfflineProvider } from '@context/OfflineContext';
+import { buildUser, buildNavigationProp } from '@test-utils/builders';
 import { User } from '@supabase/supabase-js';
-import { waitInAct, flushPromisesAndTimers } from './test-act-utils';
+import { waitInAct, flushPromisesAndTimers } from '@test-utils/test-act-utils';
+import { Theme } from '../theme';
 
 // Export mock helpers for easy access
 export { createMockStore, createMockNetInfoState, NETWORK_STATES } from './mockHelpers';
+export * from './mocks/services';
 
 /**
  * Custom render method that wraps components with necessary providers
@@ -18,20 +20,22 @@ export { createMockStore, createMockNetInfoState, NETWORK_STATES } from './mockH
 interface AllTheProvidersProps {
   children: React.ReactNode;
   user?: User | null;
+  testTheme?: Partial<Theme>;
 }
 
 const AllTheProviders: React.FC<AllTheProvidersProps> = ({ 
   children, 
-  user = buildUser() 
+  user = buildUser(),
+  testTheme
 }) => {
   return (
     <NavigationContainer>
       <AuthProvider initialUser={user}>
-        <ThemeProvider>
+        <SafeThemeProvider testTheme={testTheme}>
           <OfflineProvider>
             {children}
           </OfflineProvider>
-        </ThemeProvider>
+        </SafeThemeProvider>
       </AuthProvider>
     </NavigationContainer>
   );
@@ -39,17 +43,18 @@ const AllTheProviders: React.FC<AllTheProvidersProps> = ({
 
 interface CustomRenderOptions extends Omit<RenderOptions, 'wrapper'> {
   user?: User | null;
+  testTheme?: Partial<Theme>;
 }
 
 export const renderWithProviders = (
   ui: React.ReactElement,
   options?: CustomRenderOptions
 ) => {
-  const { user, ...renderOptions } = options || {};
+  const { user, testTheme, ...renderOptions } = options || {};
   
   const result = render(ui, {
     wrapper: ({ children }) => (
-      <AllTheProviders user={user}>{children}</AllTheProviders>
+      <AllTheProviders user={user} testTheme={testTheme}>{children}</AllTheProviders>
     ),
     ...renderOptions,
   });

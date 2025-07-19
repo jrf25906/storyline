@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useBouncePlanStore } from '../stores/bouncePlanStore';
-import { useJobApplicationStore } from '../stores/jobApplicationStore';
-import { useMoodStore } from '../stores/moodStore';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useJobApplicationStore } from '@stores/jobApplicationStore';
+import { useMoodStore } from '@stores/moodStore';
 
 export type EmotionalState = 'normal' | 'crisis' | 'success' | 'struggling';
 

@@ -9,9 +9,9 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { useCoachStore } from '../../stores/coachStore';
-import { APP_CONFIG } from '../../utils/constants';
+import { useTheme } from '@context/ThemeContext';
+import { useCoachStore } from '@stores/coachStore';
+import { APP_CONFIG } from '@utils/constants';
 
 interface CoachSettingsProps {
   visible: boolean;

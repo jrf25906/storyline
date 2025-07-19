@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { View, StyleSheet, ScrollView, Alert, Animated } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useTheme } from '../../context/ThemeContext';
-import { useOnboarding } from '../../hooks/useOnboarding';
-import { Typography } from '../../components/common/Typography';
-import Button from '../../components/common/Button';
-import Card from '../../components/common/Card';
-import Radio from '../../components/common/Radio';
-import ProgressDots from '../../components/feature/onboarding/ProgressDots';
-import { Colors, Spacing, Motion } from '../../theme';
-import { withErrorBoundary } from '../../components/common';
+import { useTheme } from '@context/ThemeContext';
+import { useOnboarding } from '@hooks/useOnboarding';
+import { Typography } from '@components/common/Typography';
+import Button from '@components/common/Button';
+import Card from '@components/common/Card';
+import Radio from '@components/common/Radio';
+import ProgressDots from '@components/feature/onboarding/ProgressDots';
+import { Colors, Spacing, Motion } from '@theme';
+import { withErrorBoundary } from '@components/common';
 
 function ExperienceScreen() {
   const navigation = useNavigation();
@@ -181,6 +181,6 @@ const styles = StyleSheet.create({
 export default withErrorBoundary(ExperienceScreen, {
   errorMessage: {
     title: 'Experience setup issue',
-    message: "We need a moment to load this screen. Please try again."
+    message: 'We need a moment to load this screen. Please try again.'
   }
 });

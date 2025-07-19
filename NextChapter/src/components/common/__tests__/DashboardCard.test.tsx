@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text } from 'react-native';
-import { DashboardCard } from '../DashboardCard';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { DashboardCard } from '@components/common/DashboardCard';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(<ThemeProvider>{component}</ThemeProvider>);

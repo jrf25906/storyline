@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import Radio from '../Radio';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import Radio from '@components/common/Radio';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock the theme modules
 jest.mock('../../../theme', () => ({

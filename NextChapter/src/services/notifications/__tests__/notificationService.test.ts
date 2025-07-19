@@ -14,7 +14,7 @@ import {
   NotificationService,
   NotificationPreferences,
   NotificationType,
-} from '../notificationService';
+} from '@services/notifications/notificationService';
 
 // Get the mocked module
 const mockNotifications = Notifications as jest.Mocked<typeof Notifications>;

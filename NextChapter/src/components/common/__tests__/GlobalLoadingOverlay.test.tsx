@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import { GlobalLoadingOverlay } from '../GlobalLoadingOverlay';
-import { useUIStore } from '../../../stores/uiStore';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { GlobalLoadingOverlay } from '@components/common/GlobalLoadingOverlay';
+import { useUIStore } from '@stores/uiStore';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock the UI store
 jest.mock('../../../stores/uiStore');

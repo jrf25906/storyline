@@ -3,10 +3,10 @@ import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 
 // Components
-import BouncePlanScreen from '../../screens/main/BouncePlanScreen';
-import TaskDetailsScreen from '../../screens/bounce-plan/TaskDetailsScreen';
-import { ThemeProvider } from '../../context/ThemeContext';
-import { EmotionalStateProvider } from '../../context/EmotionalStateContext';
+import BouncePlanScreen from '@screens/main/BouncePlanScreen';
+import TaskDetailsScreen from '@screens/bounce-plan/TaskDetailsScreen';
+import { ThemeProvider } from '@context/ThemeContext';
+import { EmotionalStateProvider } from '@context/EmotionalStateContext';
 
 // Mock stores - create fresh instances for each test
 const createMockBouncePlanStore = () => ({

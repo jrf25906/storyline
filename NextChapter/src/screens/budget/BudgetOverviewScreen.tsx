@@ -11,16 +11,16 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
-import { useBudgetStore } from '../../stores/budgetStore';
-import { useAuthStore } from '../../stores/authStore';
-import { withErrorBoundary } from '../../components/common';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useAuthStore } from '@stores/authStore';
+import { withErrorBoundary } from '@components/common';
 import { 
   H1,
   H2,
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
+} from '@components/common/Typography';
 
 type BudgetStackParamList = {
   BudgetOverview: undefined;
@@ -462,6 +462,6 @@ const styles = StyleSheet.create({
 export default withErrorBoundary(BudgetOverviewScreen, {
   errorMessage: {
     title: 'Budget overview temporarily unavailable',
-    message: "Your financial data is safe. Please refresh to try again."
+    message: 'Your financial data is safe. Please refresh to try again.'
   }
 });

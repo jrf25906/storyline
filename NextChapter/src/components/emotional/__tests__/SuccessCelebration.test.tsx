@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Animated } from 'react-native';
-import { SuccessCelebration } from '../SuccessCelebration';
-import { useAccessibility } from '../../../hooks/useAccessibility';
-import { useAnimations } from '../../../hooks/useAnimations';
+import { SuccessCelebration } from '@components/emotional/SuccessCelebration';
+import { useAccessibility } from '@hooks/useAccessibility';
+import { useAnimations } from '@hooks/useAnimations';
 
 // Mock dependencies
 jest.mock('../../../hooks/useAccessibility');

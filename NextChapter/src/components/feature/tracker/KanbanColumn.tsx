@@ -6,9 +6,9 @@ import {
   ScrollView,
   Dimensions,
 } from 'react-native';
-import { JobApplication, JobApplicationStatus } from '../../../types/database';
-import { ApplicationCard } from './ApplicationCard';
-import { Colors, Typography, Spacing, Borders } from '../../../theme';
+import { JobApplication, JobApplicationStatus } from '@types/database';
+import { ApplicationCard } from '@components/feature/tracker/ApplicationCard';
+import { Colors, Typography, Spacing, Borders } from '@theme';
 
 interface KanbanColumnProps {
   title: string;

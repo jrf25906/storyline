@@ -13,9 +13,9 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
-import { useTheme } from '../../../context/ThemeContext';
-import { BouncePlanTaskDefinition } from '../../../constants/bouncePlanTasks';
-import { useBouncePlanStore } from '../../../stores/bouncePlanStore';
+import { useTheme } from '@context/ThemeContext';
+import { BouncePlanTaskDefinition } from '@constants/bouncePlanTasks';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
 
 interface TaskDetailModalProps {
   task: BouncePlanTaskDefinition | null;

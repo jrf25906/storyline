@@ -7,9 +7,9 @@ import {
   Animated,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../../context/ThemeContext';
-import { BudgetAlert } from '../../../types/budget';
-import { formatRelativeTime } from '../../../utils/budget/budgetCalculations';
+import { useTheme } from '@context/ThemeContext';
+import { BudgetAlert } from '@types/budget';
+import { formatRelativeTime } from '@utils/budget/budgetCalculations';
 
 interface BudgetAlertsProps {
   alerts: BudgetAlert[];

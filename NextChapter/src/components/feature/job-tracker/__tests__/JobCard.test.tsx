@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { TouchableOpacity } from 'react-native';
-import JobCard from '../JobCard';
-import { JobApplication } from '../../../../types/database';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import JobCard from '@components/feature/job-tracker/JobCard';
+import { JobApplication } from '@types/database';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const mockApplication: JobApplication = {
   id: '1',

@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useBouncePlanStore } from '../bouncePlanStore';
-import * as bouncePlanService from '../../services/database/bouncePlan';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import * as bouncePlanService from '@services/database/bouncePlan';
 
 // Mock the database service
 jest.mock('../../services/database/bouncePlan');

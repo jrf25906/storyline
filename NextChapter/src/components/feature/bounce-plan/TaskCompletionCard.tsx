@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Animated } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import Card from '../../common/Card';
-import { useTheme } from '../../../context/ThemeContext';
-import { Typography, Spacing, Colors } from '../../../theme';
+import Card from '@components/common/Card';
+import { useTheme } from '@context/ThemeContext';
+import { Typography, Spacing, Colors } from '@theme';
 
 interface TaskCompletionCardProps {
   taskTitle: string;
@@ -15,7 +15,7 @@ interface TaskCompletionCardProps {
 
 export default function TaskCompletionCard({
   taskTitle,
-  message = "Nice work! That was a big one.",
+  message = 'Nice work! That was a big one.',
   notes,
   onNextTask,
   scaleAnimation,

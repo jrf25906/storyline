@@ -7,8 +7,8 @@ import {
   CrisisDetectionResult,
   CRISIS_KEYWORDS,
   MoodTrend 
-} from '../types';
-import { wellnessService } from '../services/wellness/wellnessService';
+} from '@types';
+import { wellnessService } from '@services/wellness/wellnessService';
 
 interface WellnessStore extends WellnessState {
   // Actions

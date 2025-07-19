@@ -1,11 +1,11 @@
 import './setupCoachTests';
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { CoachSettings } from '../CoachSettings';
-import { useCoachStore } from '../../../stores/coachStore';
-import { APP_CONFIG } from '../../../utils/constants';
-import { renderWithProviders } from '../../../test-utils/test-helpers';
-import { updateMockCoachStore, resetMockCoachStore } from './setupCoachTests';
+import { CoachSettings } from '@components/coach/CoachSettings';
+import { useCoachStore } from '@stores/coachStore';
+import { APP_CONFIG } from '@utils/constants';
+import { renderWithProviders } from '@test-utils/test-helpers';
+import { updateMockCoachStore, resetMockCoachStore } from '@components/coach/__tests__/setupCoachTests';
 
 describe('CoachSettings', () => {
   const mockOnClose = jest.fn();

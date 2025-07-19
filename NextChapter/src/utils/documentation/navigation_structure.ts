@@ -32,13 +32,13 @@ export type MainTabParamList = {
 // src/navigation/AppNavigator.tsx
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useAuth } from '../hooks/useAuth';
-import { useOnboarding } from '../hooks/useOnboarding';
+import { useAuth } from '@utils/hooks/useAuth';
+import { useOnboarding } from '@utils/hooks/useOnboarding';
 
-import AuthNavigator from './AuthNavigator';
-import OnboardingNavigator from './OnboardingNavigator';
-import TabNavigator from './TabNavigator';
-import Loading from '../components/common/Loading';
+import AuthNavigator from '@utils/documentation/AuthNavigator';
+import OnboardingNavigator from '@utils/documentation/OnboardingNavigator';
+import TabNavigator from '@utils/documentation/TabNavigator';
+import Loading from '@utils/components/common/Loading';
 
 import type { RootStackParamList } from '../types/navigation';
 
@@ -68,17 +68,17 @@ export default function AppNavigator() {
 // src/navigation/TabNavigator.tsx
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useTheme } from '../context/ThemeContext';
-import { MainTabParamList } from '../types/navigation';
+import { useTheme } from '@utils/context/ThemeContext';
+import { MainTabParamList } from '@utils/types/navigation';
 
 // Screens - we'll create these as simple placeholder screens initially
-import HomeScreen from '../screens/main/HomeScreen';
-import BouncePlanScreen from '../screens/main/BouncePlanScreen';
-import CoachScreen from '../screens/main/CoachScreen';
-import TrackerScreen from '../screens/main/TrackerScreen';
-import BudgetScreen from '../screens/main/BudgetScreen';
-import WellnessScreen from '../screens/main/WellnessScreen';
-import SettingsScreen from '../screens/main/SettingsScreen';
+import HomeScreen from '@utils/screens/main/HomeScreen';
+import BouncePlanScreen from '@utils/screens/main/BouncePlanScreen';
+import CoachScreen from '@utils/screens/main/CoachScreen';
+import TrackerScreen from '@utils/screens/main/TrackerScreen';
+import BudgetScreen from '@utils/screens/main/BudgetScreen';
+import WellnessScreen from '@utils/screens/main/WellnessScreen';
+import SettingsScreen from '@utils/screens/main/SettingsScreen';
 
 // Icons - using MaterialIcons from react-native-vector-icons
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -164,13 +164,13 @@ export default function TabNavigator() {
 // src/navigation/OnboardingNavigator.tsx
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useTheme } from '../context/ThemeContext';
-import { OnboardingStackParamList } from '../types/navigation';
+import { useTheme } from '@utils/context/ThemeContext';
+import { OnboardingStackParamList } from '@utils/types/navigation';
 
-import WelcomeScreen from '../screens/onboarding/WelcomeScreen';
-import LayoffDetailsScreen from '../screens/onboarding/LayoffDetailsScreen';
-import GoalsScreen from '../screens/onboarding/GoalsScreen';
-import SetupCompleteScreen from '../screens/onboarding/SetupCompleteScreen';
+import WelcomeScreen from '@utils/screens/onboarding/WelcomeScreen';
+import LayoffDetailsScreen from '@utils/screens/onboarding/LayoffDetailsScreen';
+import GoalsScreen from '@utils/screens/onboarding/GoalsScreen';
+import SetupCompleteScreen from '@utils/screens/onboarding/SetupCompleteScreen';
 
 const Stack = createNativeStackNavigator<OnboardingStackParamList>();
 
@@ -219,10 +219,10 @@ export default function OnboardingNavigator() {
 // src/navigation/AuthNavigator.tsx
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { AuthStackParamList } from '../types/navigation';
+import { AuthStackParamList } from '@utils/types/navigation';
 
-import LoginScreen from '../screens/auth/LoginScreen';
-import SignupScreen from '../screens/auth/SignupScreen';
+import LoginScreen from '@utils/screens/auth/LoginScreen';
+import SignupScreen from '@utils/screens/auth/SignupScreen';
 
 const Stack = createNativeStackNavigator<AuthStackParamList>();
 

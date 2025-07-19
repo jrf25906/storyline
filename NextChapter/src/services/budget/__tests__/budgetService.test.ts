@@ -1,6 +1,6 @@
-import { saveBudgetData, loadBudgetData, deleteBudgetData } from '../budgetService';
-import { supabase } from '../../api/supabase';
-import { BudgetData } from '../../../types/budget';
+import { saveBudgetData, loadBudgetData, deleteBudgetData } from '@services/budget/budgetService';
+import { supabase } from '@services/api/supabase';
+import { BudgetData } from '@types/budget';
 import CryptoJS from 'crypto-js';
 
 jest.mock('../../api/supabase', () => ({

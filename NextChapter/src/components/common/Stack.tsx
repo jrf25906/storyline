@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ViewStyle } from 'react-native';
-import { Spacing } from '../../theme';
+import { Spacing } from '@theme';
 
 interface StackProps {
   children: React.ReactNode;

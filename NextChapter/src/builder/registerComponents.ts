@@ -114,10 +114,10 @@ Builder.registerComponent(Image, {
 });
 
 // Register your custom components
-import { CalmingLoadingIndicator } from '../components/common/CalmingLoadingIndicator';
-import { EmpathyErrorState } from '../components/common/EmpathyErrorState';
-import { PrimaryButton } from '../components/common/PrimaryButton';
-import { SecondaryButton } from '../components/common/SecondaryButton';
+import { CalmingLoadingIndicator } from '@components/common/CalmingLoadingIndicator';
+import { EmpathyErrorState } from '@components/common/EmpathyErrorState';
+import { PrimaryButton } from '@components/common/PrimaryButton';
+import { SecondaryButton } from '@components/common/SecondaryButton';
 
 Builder.registerComponent(CalmingLoadingIndicator, {
   name: 'NextChapter.LoadingIndicator',

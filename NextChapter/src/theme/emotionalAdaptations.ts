@@ -1,5 +1,5 @@
 import { ViewStyle, TextStyle } from 'react-native';
-import { Colors, Spacing, Typography, Borders } from './index';
+import { Colors, Spacing, Typography, Borders } from '@theme/index';
 
 /**
  * UI adaptations for different emotional states

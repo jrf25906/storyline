@@ -7,8 +7,8 @@ jest.mock('../../context/OfflineContext', () => ({
   OfflineProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
-import { useNetworkStatus } from '../useNetworkStatus';
-import { useOffline } from '../../context/OfflineContext';
+import { useNetworkStatus } from '@hooks/useNetworkStatus';
+import { useOffline } from '@context/OfflineContext';
 
 describe('useNetworkStatus', () => {
   const mockUseOffline = require('../../context/OfflineContext').useOffline;

@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
-import { BuilderContent } from '../components/common/BuilderContent';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import { BuilderContent } from '@components/common/BuilderContent';
 
-export const BuilderDemoScreen: React.FC = () => {
+const BuilderDemoScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -74,3 +75,5 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 });
+
+export default withErrorBoundary(BuilderDemoScreen);

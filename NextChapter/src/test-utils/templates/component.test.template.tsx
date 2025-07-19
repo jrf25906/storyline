@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
+// import ComponentName from 'PATH_TO_COMPONENT'; // Replace with actual component path
 import { ThemeProvider } from '../../../context/ThemeContext';
-import ComponentName from '../ComponentName';
 
 // Mock dependencies
 jest.mock('@expo/vector-icons', () => ({

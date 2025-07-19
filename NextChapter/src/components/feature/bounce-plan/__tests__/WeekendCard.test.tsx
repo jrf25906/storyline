@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import WeekendCard from '../WeekendCard';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import WeekendCard from '@components/feature/bounce-plan/WeekendCard';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock dependencies
 jest.mock('@expo/vector-icons', () => ({

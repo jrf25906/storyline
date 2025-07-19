@@ -1,6 +1,6 @@
 // UI Store tests - TDD approach
 import { renderHook, act } from '@testing-library/react-native';
-import { useUIStore } from '../uiStore';
+import { useUIStore } from '@stores/uiStore';
 
 describe('UIStore', () => {
   beforeEach(() => {

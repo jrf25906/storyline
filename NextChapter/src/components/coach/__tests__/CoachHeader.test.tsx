@@ -1,10 +1,10 @@
 import React from 'react';
 import { Alert } from 'react-native';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { CoachHeader } from '../CoachHeader';
-import { useCoachStore } from '../../../stores/coachStore';
-import { renderWithProviders } from '../../../test-utils/test-helpers';
-import { updateMockCoachStore, resetMockCoachStore } from './setupCoachTests';
+import { CoachHeader } from '@components/coach/CoachHeader';
+import { useCoachStore } from '@stores/coachStore';
+import { renderWithProviders } from '@test-utils/test-helpers';
+import { updateMockCoachStore, resetMockCoachStore } from '@components/coach/__tests__/setupCoachTests';
 import './setupCoachTests';
 
 jest.spyOn(Alert, 'alert');

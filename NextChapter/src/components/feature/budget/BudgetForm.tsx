@@ -13,9 +13,9 @@ import {
   Platform,
 } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import { useTheme } from '../../../context/ThemeContext';
-import { BudgetFormData, STATE_UNEMPLOYMENT_RATES } from '../../../types/budget';
-import { formatCurrency, parseCurrency } from '../../../utils/budget/budgetCalculations';
+import { useTheme } from '@context/ThemeContext';
+import { BudgetFormData, STATE_UNEMPLOYMENT_RATES } from '@types/budget';
+import { formatCurrency, parseCurrency } from '@utils/budget/budgetCalculations';
 import { Ionicons } from '@expo/vector-icons';
 
 interface BudgetFormProps {

@@ -7,8 +7,8 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useNetworkStatus } from '../../hooks/useNetworkStatus';
+import { useTheme } from '@context/ThemeContext';
+import { useNetworkStatus } from '@hooks/useNetworkStatus';
 
 interface OfflineAction {
   id: string;

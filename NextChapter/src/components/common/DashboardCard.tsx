@@ -8,9 +8,9 @@ import {
   AccessibilityProps,
   Animated,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Theme } from '../../styles/theme';
-import { Colors, Spacing, Borders, Shadows } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Borders, Shadows } from '@theme';
+import { Theme } from '@/styles/theme';
 
 interface DashboardCardProps extends AccessibilityProps {
   title: string;

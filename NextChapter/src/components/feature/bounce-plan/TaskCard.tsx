@@ -7,9 +7,9 @@ import {
   Animated,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../../context/ThemeContext';
-import { BouncePlanTaskDefinition } from '../../../constants/bouncePlanTasks';
-import { Body, BodySM, Caption } from '../../common/Typography';
+import { useTheme } from '@context/ThemeContext';
+import { BouncePlanTaskDefinition } from '@constants/bouncePlanTasks';
+import { Body, BodySM, Caption } from '@components/common/Typography';
 
 interface TaskCardProps {
   task: BouncePlanTaskDefinition;

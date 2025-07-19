@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Text, Animated, ViewStyle } from 'react-native';
-import { styles } from './NotificationBadge.styles';
+import { styles } from '@components/common/NotificationBadge.styles';
 
 interface NotificationBadgeProps {
   count: number;
@@ -42,8 +42,8 @@ export const NotificationBadge: React.FC<NotificationBadgeProps> = ({
 
   const animatedStyle = animated
     ? {
-        transform: [{ scale: pulseAnim }],
-      }
+      transform: [{ scale: pulseAnim }],
+    }
     : {};
 
   return (

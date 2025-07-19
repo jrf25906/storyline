@@ -9,24 +9,24 @@ import {
   ActivityIndicator,
   Animated,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useCoachStore } from '../../stores/coachStore';
-import { useAuthStore } from '../../stores/authStore';
-import { openAIService } from '../../services/api/openai';
-import { CoachMessage } from '../../types/coach';
-import { MessageBubble } from '../../components/coach/MessageBubble';
-import { MessageInput } from '../../components/coach/MessageInput';
-import { CoachHeader } from '../../components/coach/CoachHeader';
-import { CoachSettings } from '../../components/coach/CoachSettings';
-import { APP_CONFIG } from '../../utils/constants';
-import { withErrorBoundary } from '../../components/common';
+import { useTheme } from '@context/ThemeContext';
+import { useCoachStore } from '@stores/coachStore';
+import { useAuthStore } from '@stores/authStore';
+import { openAIService } from '@services/api/openai';
+import { CoachMessage } from '@types/coach';
+import { MessageBubble } from '@components/coach/MessageBubble';
+import { MessageInput } from '@components/coach/MessageInput';
+import { CoachHeader } from '@components/coach/CoachHeader';
+import { CoachSettings } from '@components/coach/CoachSettings';
+import { APP_CONFIG } from '@utils/constants';
+import { withErrorBoundary } from '@components/common';
 import { 
   H2,
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
-import { Colors, Spacing } from '../../theme';
+} from '@components/common/Typography';
+import { Colors, Spacing } from '@theme';
 import uuid from 'react-native-uuid';
 
 function CoachScreen() {
@@ -269,6 +269,6 @@ const styles = StyleSheet.create({
 export default withErrorBoundary(CoachScreen, {
   errorMessage: {
     title: 'Coach feature unavailable',
-    message: "Your AI coach is temporarily offline. Please try again soon."
+    message: 'Your AI coach is temporarily offline. Please try again soon.'
   }
 });

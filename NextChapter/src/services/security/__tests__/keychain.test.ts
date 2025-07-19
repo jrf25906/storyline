@@ -1,4 +1,4 @@
-import { KeychainService } from '../keychain';
+import { KeychainService } from '@services/security/keychain';
 import * as Keychain from 'react-native-keychain';
 
 // Mock react-native-keychain

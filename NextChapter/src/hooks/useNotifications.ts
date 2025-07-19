@@ -4,7 +4,7 @@ import {
   notificationService, 
   NotificationPreferences,
   NotificationType 
-} from '../services/notifications/notificationService';
+} from '@services/notifications/notificationService';
 
 interface JobApplication {
   applicationId: string;

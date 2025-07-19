@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useCoachStore } from '../../stores/coachStore';
-import { H2, Caption } from '../common/Typography';
-import { ToneSelector } from './ToneSelector';
-import { CoachTone } from '../../types/database';
+import { useTheme } from '@context/ThemeContext';
+import { useCoachStore } from '@stores/coachStore';
+import { H2, Caption } from '@components/common/Typography';
+import { ToneSelector } from '@components/coach/ToneSelector';
+import { CoachTone } from '@types/database';
 
 interface CoachHeaderProps {
   currentTone: CoachTone;

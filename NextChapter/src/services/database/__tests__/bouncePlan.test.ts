@@ -4,8 +4,8 @@ import {
   batchSyncBouncePlanProgress,
   resetBouncePlanProgress,
   getBouncePlanStats 
-} from '../bouncePlan';
-import { supabase } from '../../api/supabase';
+} from '@services/database/bouncePlan';
+import { supabase } from '@services/api/supabase';
 
 // Mock Supabase client
 jest.mock('../../api/supabase', () => ({

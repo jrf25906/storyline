@@ -3,8 +3,8 @@
  * These show how analytics would be used in real app scenarios
  */
 
-import { trackEvent, getAnalytics } from '../index';
-import { trackBounceTaskComplete, trackCoachInteraction, trackJobApplication } from '../examples';
+import { trackEvent, getAnalytics } from '@services/analytics/index';
+import { trackBounceTaskComplete, trackCoachInteraction, trackJobApplication } from '@services/analytics/examples';
 
 describe('Analytics Integration Examples', () => {
   describe('User Journey - First Day', () => {

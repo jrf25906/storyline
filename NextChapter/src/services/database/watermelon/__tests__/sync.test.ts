@@ -1,15 +1,15 @@
 import { Database } from '@nozbe/watermelondb';
 import { synchronize } from '@nozbe/watermelondb/sync';
-import { WatermelonSyncManager } from '../sync/syncManager';
-import { supabase } from '../../../api/supabase';
+import { WatermelonSyncManager } from '@services/database/watermelon/sync/syncManager';
+import { supabase } from '@services/api/supabase';
 import { 
   Profile,
   JobApplication,
   BudgetEntry,
   BouncePlanTask,
   CoachConversation
-} from '../models';
-import { encryptData, decryptData } from '../encryption';
+} from '@services/database/watermelon/models';
+import { encryptData, decryptData } from '@services/database/watermelon/encryption';
 
 // Mock dependencies
 jest.mock('@nozbe/watermelondb/sync');

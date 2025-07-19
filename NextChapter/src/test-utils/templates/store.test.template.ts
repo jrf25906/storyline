@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useStoreName } from '../storeName';
+// import { useStoreName } from 'PATH_TO_STORE'; // Replace with actual store path
 
 describe('useStoreName', () => {
   beforeEach(() => {

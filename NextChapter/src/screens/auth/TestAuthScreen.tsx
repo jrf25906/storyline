@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
-import { Button, Input } from '../../components/common';
-import { useAuth } from '../../hooks/useAuth';
-import { useTheme } from '../../context/ThemeContext';
+import { Button, Input } from '@components/common';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import { useAuth } from '@hooks/useAuth';
+import { useTheme } from '@context/ThemeContext';
 
-export default function TestAuthScreen() {
+const TestAuthScreen = () => {
   const { signUp, signIn, user, error } = useAuth();
   const { theme } = useTheme();
   const [email, setEmail] = useState('test@example.com');
@@ -71,7 +72,7 @@ export default function TestAuthScreen() {
       )}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -99,3 +100,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+export default withErrorBoundary(TestAuthScreen);

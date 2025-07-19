@@ -1,11 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { BudgetStackParamList } from '../types/navigation';
-import { useTheme } from '../context/ThemeContext';
+import { BudgetStackParamList } from '@types/navigation';
+import { useTheme } from '@context/ThemeContext';
 
 // Screens
-import BudgetScreen from '../screens/main/BudgetScreen';
-import BudgetOverviewScreen from '../screens/budget/BudgetOverviewScreen';
+import BudgetScreen from '@screens/main/BudgetScreen';
+import BudgetOverviewScreen from '@screens/budget/BudgetOverviewScreen';
 
 const Stack = createNativeStackNavigator<BudgetStackParamList>();
 

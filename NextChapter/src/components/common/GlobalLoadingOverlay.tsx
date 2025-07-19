@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Modal } from 'react-native';
-import { useUIStore } from '../../stores/uiStore';
-import { CalmingLoadingIndicator } from './CalmingLoadingIndicator';
-import { Colors } from '../../theme';
+import { useUIStore } from '@stores/uiStore';
+import { CalmingLoadingIndicator } from '@components/common/CalmingLoadingIndicator';
+import { Colors } from '@theme';
 
 export const GlobalLoadingOverlay: React.FC = () => {
   const { globalLoading, loadingMessage } = useUIStore();

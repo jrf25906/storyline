@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { View, StyleSheet, ActivityIndicator, Animated, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useTheme } from '../../context/ThemeContext';
-import { useOnboarding } from '../../hooks/useOnboarding';
-import { Typography } from '../../components/common/Typography';
-import Button from '../../components/common/Button';
-import { Colors, Spacing, Motion } from '../../theme';
-import { withErrorBoundary } from '../../components/common';
+import { useTheme } from '@context/ThemeContext';
+import { useOnboarding } from '@hooks/useOnboarding';
+import { Typography } from '@components/common/Typography';
+import Button from '@components/common/Button';
+import { Colors, Spacing, Motion } from '@theme';
+import { withErrorBoundary } from '@components/common';
 
 function WelcomeScreen() {
   const navigation = useNavigation();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { NotificationSettings } from '../NotificationSettings';
-import { notificationService } from '../../../services/notifications/notificationService';
+import { NotificationSettings } from '@components/common/NotificationSettings';
+import { notificationService } from '@services/notifications/notificationService';
 
 // Mock the notification service
 jest.mock('../../../services/notifications/notificationService');

@@ -1,10 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CoachStackParamList } from '../types/navigation';
-import { useTheme } from '../context/ThemeContext';
+import { CoachStackParamList } from '@types/navigation';
+import { useTheme } from '@context/ThemeContext';
 
 // Screens
-import CoachScreen from '../screens/main/CoachScreen';
+import CoachScreen from '@screens/main/CoachScreen';
 
 const Stack = createNativeStackNavigator<CoachStackParamList>();
 

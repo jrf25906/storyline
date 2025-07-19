@@ -1,8 +1,8 @@
 import { Database } from '@nozbe/watermelondb';
 import { Q } from '@nozbe/watermelondb';
 import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite';
-import { schema } from './schema';
-import { migrations } from './migrations';
+import { schema } from '@services/database/watermelon/schema';
+import { migrations } from '@services/database/watermelon/migrations';
 import {
   Profile,
   LayoffDetails,
@@ -13,7 +13,7 @@ import {
   BouncePlanTask,
   CoachConversation,
   WellnessActivity
-} from './models';
+} from '@services/database/watermelon/models';
 
 let database: Database | null = null;
 

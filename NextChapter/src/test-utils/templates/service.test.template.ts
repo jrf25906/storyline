@@ -1,4 +1,4 @@
-import { serviceName } from '../serviceName';
+// import { serviceName } from 'PATH_TO_SERVICE'; // Replace with actual service path
 import { supabase } from '../../../api/supabase';
 
 // Mock Supabase

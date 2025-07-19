@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
 import { BuilderComponent } from '@builder.io/sdk-react-native';
-import { builderService } from '../../services/builderService';
+import { builderService } from '@services/builderService';
 
 interface BuilderContentProps {
   model: string;

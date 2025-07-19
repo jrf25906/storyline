@@ -8,7 +8,7 @@ import {
   encryptBudgetData,
   decryptBudgetData,
   clearEncryptionKeys,
-} from '../encryption';
+} from '@utils/encryption';
 
 // Mock dependencies
 jest.mock('crypto-js');

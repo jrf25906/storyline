@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ActivityIndicator, Text, Modal } from 'react-native';
-import { styles } from './LoadingOverlay.styles';
-import { useTheme } from '../../context/ThemeContext';
+import { styles } from '@components/common/LoadingOverlay.styles';
+import { useTheme } from '@context/ThemeContext';
 
 interface LoadingOverlayProps {
   visible: boolean;
@@ -24,7 +24,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
       accessible={true}
       accessibilityRole="alert"
       accessibilityLiveRegion="assertive"
-      accessibilityLabel={message || "Loading"}
+      accessibilityLabel={message || 'Loading'}
       accessibilityHint="Please wait while the operation completes"
     >
       <View style={[styles.loadingBox, { backgroundColor: theme.colors.surface }]}>
@@ -53,7 +53,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
         animationType="fade"
         visible={visible}
         accessibilityViewIsModal
-        accessibilityLabel={message || "Loading, please wait"}
+        accessibilityLabel={message || 'Loading, please wait'}
       >
         {content}
       </Modal>

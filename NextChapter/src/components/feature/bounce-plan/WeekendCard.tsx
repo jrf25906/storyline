@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import Card from '../../common/Card';
-import { useTheme } from '../../../context/ThemeContext';
-import { Typography, Spacing, Colors } from '../../../theme';
+import Card from '@components/common/Card';
+import { useTheme } from '@context/ThemeContext';
+import { Typography, Spacing, Colors } from '@theme';
 
 interface WeekendCardProps {
   dayNumber: number;

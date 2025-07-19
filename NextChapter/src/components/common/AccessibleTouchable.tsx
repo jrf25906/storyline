@@ -7,7 +7,7 @@ import {
   AccessibilityRole,
   AccessibilityState,
 } from 'react-native';
-import { MINIMUM_TOUCH_TARGET_SIZE } from '../../utils/accessibility';
+import { MINIMUM_TOUCH_TARGET_SIZE } from '@utils/accessibility';
 
 interface AccessibleTouchableProps extends TouchableOpacityProps {
   accessibilityRole: AccessibilityRole;

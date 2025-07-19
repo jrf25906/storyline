@@ -1,5 +1,5 @@
-import { initializeAppServices, setupSecureCredentials, clearStoredCredentials } from '../initialization';
-import { getSecurityServices } from '../security';
+import { initializeAppServices, setupSecureCredentials, clearStoredCredentials } from '@services/initialization';
+import { getSecurityServices } from '@services/security';
 import { Alert } from 'react-native';
 
 // Mock dependencies

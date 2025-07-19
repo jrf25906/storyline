@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
+// import ScreenName from 'PATH_TO_SCREEN'; // Replace with actual screen path
 import { ThemeProvider } from '../../../context/ThemeContext';
-import ScreenName from '../ScreenName';
 
 // Mock navigation
 const mockNavigate = jest.fn();

@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useBudgetStore } from '../budgetStore';
-import * as budgetService from '../../services/budget/budgetService';
+import { useBudgetStore } from '@stores/budgetStore';
+import * as budgetService from '@services/budget/budgetService';
 
 // Mock dependencies
 jest.mock('@react-native-async-storage/async-storage', () => ({

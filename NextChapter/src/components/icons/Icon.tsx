@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, ViewStyle } from 'react-native';
 import Svg, { Path, Circle, Rect, Line, G } from 'react-native-svg';
-import { Colors } from '../../theme';
-import { useTheme } from '../../context/ThemeContext';
+import { Colors } from '@theme';
+import { useTheme } from '@context/ThemeContext';
 
 export type IconName = 
   // Navigation

@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Alert } from 'react-native';
-import TaskDetailModal from '../TaskDetailModal';
-import { BouncePlanTaskDefinition } from '../../../../constants/bouncePlanTasks';
-import { ThemeProvider } from '../../../../context/ThemeContext';
-import { useBouncePlanStore } from '../../../../stores/bouncePlanStore';
-import { createMockStore } from '../../../../test-utils/mockHelpers';
+import TaskDetailModal from '@components/feature/bounce-plan/TaskDetailModal';
+import { BouncePlanTaskDefinition } from '@constants/bouncePlanTasks';
+import { ThemeProvider } from '@context/ThemeContext';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { createMockStore } from '@test-utils/mockHelpers';
 
 // Mock the store
 jest.mock('../../../../stores/bouncePlanStore');

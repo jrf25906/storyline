@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { Alert } from 'react-native';
-import BouncePlanScreen from '../BouncePlanScreen';
-import { ThemeProvider } from '../../../context/ThemeContext';
-import { AuthProvider } from '../../../context/AuthContext';
-import { useBouncePlanStore } from '../../../stores/bouncePlanStore';
-import { loadBouncePlanProgress, syncBouncePlanProgress } from '../../../services/database/bouncePlan';
-import { BOUNCE_PLAN_TASKS } from '../../../constants/bouncePlanTasks';
+import BouncePlanScreen from '@screens/main/BouncePlanScreen';
+import { ThemeProvider } from '@context/ThemeContext';
+import { AuthProvider } from '@context/AuthContext';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { loadBouncePlanProgress, syncBouncePlanProgress } from '@services/database/bouncePlan';
+import { BOUNCE_PLAN_TASKS } from '@constants/bouncePlanTasks';
 
 // Mock dependencies
 jest.mock('../../../stores/bouncePlanStore');

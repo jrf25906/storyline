@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text } from 'react-native';
-import { ErrorBoundary } from '../ErrorBoundary';
+import { ErrorBoundary } from '@components/common/ErrorBoundary';
 
 // Component that throws an error for testing
 const ThrowError: React.FC<{ shouldThrow: boolean }> = ({ shouldThrow }) => {

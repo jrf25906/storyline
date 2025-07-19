@@ -1,4 +1,4 @@
-import { getAuthErrorMessage } from './validation';
+import { getAuthErrorMessage } from '@utils/validation';
 
 export interface NetworkError extends Error {
   isNetworkError: boolean;

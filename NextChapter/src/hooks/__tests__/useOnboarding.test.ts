@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useOnboarding } from '../useOnboarding';
-import { useAuth } from '../useAuth';
+import { useOnboarding } from '@hooks/useOnboarding';
+import { useAuth } from '@hooks/useAuth';
 import { useOnboardingStore } from '@stores/onboardingStore';
 import { createMockStore } from '@/test-utils/mockHelpers';
 

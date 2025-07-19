@@ -1,4 +1,4 @@
-import { initializeAnalytics, getAnalytics } from './index';
+import { initializeAnalytics, getAnalytics } from '@services/analytics/index';
 import { KeychainService } from '@/services/security/keychain';
 
 const keychainService = new KeychainService();

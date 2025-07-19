@@ -1,8 +1,8 @@
 import { renderHook, act } from '@testing-library/react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useCoachStore } from '../coachStore';
-import { APP_CONFIG } from '../../utils/constants';
-import { CoachTone } from '../../types/database';
+import { useCoachStore } from '@stores/coachStore';
+import { APP_CONFIG } from '@utils/constants';
+import { CoachTone } from '@types/database';
 
 // Mock dependencies
 jest.mock('@react-native-async-storage/async-storage');
@@ -199,7 +199,7 @@ describe('CoachStore', () => {
       const userId = 'test-user-id';
       
       // Mock an error
-      const { coachService } = require('../../services/ai/coachService');
+      const { coachService } = require('@services/ai/coachService');
       coachService.sendMessage.mockRejectedValueOnce(new Error('API Error'));
 
       await act(async () => {

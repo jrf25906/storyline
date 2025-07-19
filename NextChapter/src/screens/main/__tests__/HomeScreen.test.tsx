@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
-import HomeScreen from '../HomeScreen';
-import { useBouncePlanStore } from '../../../stores/bouncePlanStore';
-import { useBudgetStore } from '../../../stores/budgetStore';
-import { useWellnessStore } from '../../../stores/wellnessStore';
-import { useJobTrackerStore } from '../../../stores/jobTrackerStore';
-import { useAuth } from '../../../hooks/useAuth';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import HomeScreen from '@screens/main/HomeScreen';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useWellnessStore } from '@stores/wellnessStore';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
+import { useAuth } from '@hooks/useAuth';
+import { ThemeProvider } from '@context/ThemeContext';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 

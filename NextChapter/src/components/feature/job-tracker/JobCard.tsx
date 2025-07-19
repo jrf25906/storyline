@@ -7,8 +7,8 @@ import {
   ViewStyle,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { JobApplication } from '../../../types/database';
-import { useTheme } from '../../../context/ThemeContext';
+import { JobApplication } from '@types/database';
+import { useTheme } from '@context/ThemeContext';
 
 interface JobCardProps {
   application: JobApplication;

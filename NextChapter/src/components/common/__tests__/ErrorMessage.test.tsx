@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { ErrorMessage } from '../ErrorMessage';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { ErrorMessage } from '@components/common/ErrorMessage';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(

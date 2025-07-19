@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Animated, StyleSheet } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
+import { useTheme } from '@context/ThemeContext';
 
 export const TypingIndicator: React.FC = () => {
   const { theme } = useTheme();

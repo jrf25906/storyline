@@ -6,11 +6,11 @@ import {
   StyleSheet,
   Animated,
 } from 'react-native';
-import { useCelebrationAnimation, useCardPressAnimation } from '../hooks/useAnimations';
-import { useToast } from '../contexts/ToastContext';
-import { Colors } from '../theme/colors';
-import { Typography } from '../theme/typography';
-import { Spacing } from '../theme/spacing';
+import { useCelebrationAnimation, useCardPressAnimation } from '@hooks/useAnimations';
+import { useToast } from '@context/../contexts/ToastContext';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 export const QuickWinsDemo: React.FC = () => {
   const { showSuccess, showInfo, showWarning } = useToast();

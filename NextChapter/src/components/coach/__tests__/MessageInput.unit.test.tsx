@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import { MessageInput } from '../MessageInput';
-import { EMOTIONAL_TRIGGERS } from '../../../types/coach';
-import { APP_CONFIG } from '../../../utils/constants';
+import { MessageInput } from '@components/coach/MessageInput';
+import { EMOTIONAL_TRIGGERS } from '@types/coach';
+import { APP_CONFIG } from '@utils/constants';
 
 // Mock the theme context
 jest.mock('../../../context/ThemeContext', () => ({

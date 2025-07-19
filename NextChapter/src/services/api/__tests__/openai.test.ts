@@ -1,5 +1,5 @@
-import { openAIService } from '../openai';
-import { EMOTIONAL_TRIGGERS } from '../../../types/coach';
+import { openAIService } from '@services/api/openai';
+import { EMOTIONAL_TRIGGERS } from '@types/coach';
 
 describe('OpenAIService', () => {
   describe('detectTone', () => {
@@ -16,7 +16,7 @@ describe('OpenAIService', () => {
       
       const response = await openAIService.sendMessage(
         [],
-        "I feel so hopeless about finding a job"
+        'I feel so hopeless about finding a job'
       );
       
       expect(response.tone).toBe('hype');
@@ -56,7 +56,7 @@ describe('OpenAIService', () => {
       
       const response = await openAIService.sendMessage(
         [],
-        "I need help with my job search strategy"
+        'I need help with my job search strategy'
       );
       
       expect(response.tone).toBe('pragmatist');
@@ -68,7 +68,7 @@ describe('OpenAIService', () => {
     it('should detect crisis keywords and return crisis response', async () => {
       const response = await openAIService.sendMessage(
         [],
-        "I want to end it all"
+        'I want to end it all'
       );
       
       expect(response.isCrisis).toBe(true);
@@ -95,7 +95,7 @@ describe('OpenAIService', () => {
       const mockResponse = {
         ok: true,
         json: async () => ({
-          choices: [{ message: { content: "Your SSN 123-45-6789 should not be shared." } }],
+          choices: [{ message: { content: 'Your SSN 123-45-6789 should not be shared.' } }],
           usage: { total_tokens: 100 },
         }),
       };
@@ -104,7 +104,7 @@ describe('OpenAIService', () => {
       
       const response = await openAIService.sendMessage(
         [],
-        "How do I handle background checks?"
+        'How do I handle background checks?'
       );
       
       expect(response.message).toContain('[SSN REMOVED]');
@@ -120,7 +120,7 @@ describe('OpenAIService', () => {
       });
       
       await expect(
-        openAIService.sendMessage([], "Test message")
+        openAIService.sendMessage([], 'Test message')
       ).rejects.toThrow('OpenAI API error: 429');
     });
 
@@ -128,7 +128,7 @@ describe('OpenAIService', () => {
       global.fetch = jest.fn().mockRejectedValue(new Error('Network error'));
       
       await expect(
-        openAIService.sendMessage([], "Test message")
+        openAIService.sendMessage([], 'Test message')
       ).rejects.toThrow('Network error');
     });
   });

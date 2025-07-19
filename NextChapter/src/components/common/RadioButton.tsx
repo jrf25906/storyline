@@ -6,10 +6,10 @@ import {
   StyleSheet,
   Animated,
 } from 'react-native';
-import { useTaskCompleteAnimation } from '../../hooks/useAnimations';
-import { Colors } from '../../theme/colors';
-import { Typography } from '../../theme/typography';
-import { Spacing } from '../../theme/spacing';
+import { useTaskCompleteAnimation } from '@hooks/useAnimations';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 export interface RadioOption {
   value: string;

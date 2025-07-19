@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, act, waitFor } from '@testing-library/react-native';
-import { NetworkStatusIndicator } from '../NetworkStatusIndicator';
-import { useUIStore } from '../../../stores/uiStore';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { NetworkStatusIndicator } from '@components/common/NetworkStatusIndicator';
+import { useUIStore } from '@stores/uiStore';
+import { ThemeProvider } from '@context/ThemeContext';
 import NetInfo from '@react-native-community/netinfo';
 
 // Mock dependencies

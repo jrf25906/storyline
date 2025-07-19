@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { renderWithProviders, waitForAsync, silenceConsole, setupMockTimers, mockAsyncStorage, createMockNavigation, testAccessibility, expectLoadingState, expectErrorState, resolvedPromise, rejectedPromise, createMockSupabaseClient, dateSerializer } from '../test-helpers';
-import { buildUser } from '../builders';
+import { renderWithProviders, waitForAsync, silenceConsole, setupMockTimers, mockAsyncStorage, createMockNavigation, testAccessibility, expectLoadingState, expectErrorState, resolvedPromise, rejectedPromise, createMockSupabaseClient, dateSerializer } from '@test-utils/test-helpers';
+import { buildUser } from '@test-utils/builders';
 
 // Test component
 const TestComponent: React.FC<{ testId?: string }> = ({ testId = 'test-component' }) => (

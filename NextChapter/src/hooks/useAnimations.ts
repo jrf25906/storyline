@@ -6,7 +6,7 @@ import {
   ViewStyle,
   ColorValue,
 } from 'react-native';
-import { Motion } from '../theme/animations';
+import { Motion } from '@theme/animations';
 
 /**
  * Configuration options for animations

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import Input from '../Input';
+import Input from '@components/common/Input';
 
 // Mock the ThemeContext
 jest.mock('../../../context/ThemeContext', () => ({

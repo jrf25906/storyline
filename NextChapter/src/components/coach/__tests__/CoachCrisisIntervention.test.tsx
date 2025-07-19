@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { renderWithProviders } from '../../../test-utils/test-helpers';
-import { EMOTIONAL_TRIGGERS, CRISIS_RESOURCES } from '../../../types/coach';
-import { openAIService } from '../../../services/api/openai';
+import { renderWithProviders } from '@test-utils/test-helpers';
+import { EMOTIONAL_TRIGGERS, CRISIS_RESOURCES } from '@types/coach';
+import { openAIService } from '@services/api/openai';
 import './setupCoachTests';
 
 // Mock the OpenAI service

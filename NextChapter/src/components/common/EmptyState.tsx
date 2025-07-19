@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, ViewStyle } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography } from '../../theme';
-import Button from './Button';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography } from '@theme';
+import Button from '@components/common/Button';
 
 interface EmptyStateProps {
   icon?: string;

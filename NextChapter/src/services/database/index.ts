@@ -7,8 +7,8 @@ export * from './coachService';
 export * from './watermelon';
 
 // Import WatermelonDB initialization
-import { initializeWatermelonDB, getDatabase } from './watermelon';
-import { WatermelonSyncManager } from './watermelon/sync/syncManager';
+import { initializeWatermelonDB, getDatabase } from '@services/database/watermelon';
+import { WatermelonSyncManager } from '@services/database/watermelon/sync/syncManager';
 
 // Global sync manager instance
 let syncManager: WatermelonSyncManager | null = null;

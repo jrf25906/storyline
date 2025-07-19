@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeScreen from './HomeScreen';
-import { ErrorBoundary } from '../../components/common/ErrorBoundary';
+import HomeScreen from '@screens/main/HomeScreen';
+import { ErrorBoundary } from '@components/common/ErrorBoundary';
 
 export default function HomeScreenWithErrorBoundary() {
   return (

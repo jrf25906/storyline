@@ -4,7 +4,7 @@ import {
   validatePasswordMatch,
   getAuthErrorMessage,
   getAuthLoadingMessage,
-} from '../validation';
+} from '@utils/validation';
 
 describe('validation utilities', () => {
   describe('validateEmail', () => {

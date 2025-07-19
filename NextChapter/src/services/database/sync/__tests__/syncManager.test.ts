@@ -25,14 +25,14 @@ jest.mock('../../../api/supabase', () => ({
 }));
 
 // Now import everything
-import { syncManager } from '../syncManager';
-import { useBouncePlanStore } from '../../../../stores/bouncePlanStore';
-import { useJobTrackerStore } from '../../../../stores/jobTrackerStore';
-import { useBudgetStore } from '../../../../stores/budgetStore';
-import { useWellnessStore } from '../../../../stores/wellnessStore';
-import { useCoachStore } from '../../../../stores/coachStore';
-import { supabase } from '../../../api/supabase';
-import { encryptData } from '../../../../utils/encryption';
+import { syncManager } from '@services/database/sync/syncManager';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useWellnessStore } from '@stores/wellnessStore';
+import { useCoachStore } from '@stores/coachStore';
+import { supabase } from '@services/api/supabase';
+import { encryptData } from '@utils/encryption';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 describe('syncManager', () => {

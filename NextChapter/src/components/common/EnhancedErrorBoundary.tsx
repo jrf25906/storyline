@@ -1,7 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { View } from 'react-native';
-import { useUIStore } from '../../stores/uiStore';
-import { EmpathyErrorState } from './EmpathyErrorState';
+import { useUIStore } from '@stores/uiStore';
+import { EmpathyErrorState } from '@components/common/EmpathyErrorState';
 
 interface Props {
   children: ReactNode;

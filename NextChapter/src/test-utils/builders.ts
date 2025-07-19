@@ -1,5 +1,5 @@
-import { BouncePlanTaskDefinition } from '../constants/bouncePlanTasks';
-import { BouncePlanTask } from '../types/database';
+import { BouncePlanTaskDefinition } from '@constants/bouncePlanTasks';
+import { BouncePlanTask } from '@types/database';
 import { User } from '@supabase/supabase-js';
 
 /**

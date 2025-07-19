@@ -7,8 +7,8 @@ import {
   StyleSheet,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { Resume } from '../../../types/resume';
-import { theme } from '../../../theme';
+import { Resume } from '@types/resume';
+import { theme } from '@theme';
 
 interface ResumeCardProps {
   resume: Resume;

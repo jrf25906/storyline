@@ -11,8 +11,8 @@ import {
   WellnessActivity,
   LayoffDetails,
   UserGoal
-} from './index';
-import { getSyncManager } from '../index';
+} from '@services/database/watermelon/index';
+import { getSyncManager } from '@services/database/index';
 
 /**
  * Helper functions to integrate WatermelonDB with existing Zustand stores

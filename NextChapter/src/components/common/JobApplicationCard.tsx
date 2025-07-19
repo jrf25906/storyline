@@ -4,13 +4,13 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import { SwipeableCard, SwipeAction } from './SwipeableCard';
-import { ExpandableCard } from './ExpandableCard';
-import { useToast } from '../../contexts/ToastContext';
-import { useCelebrationAnimation } from '../../hooks/useAnimations';
-import { Colors } from '../../theme/colors';
-import { Typography } from '../../theme/typography';
-import { Spacing } from '../../theme/spacing';
+import { SwipeableCard, SwipeAction } from '@components/common/SwipeableCard';
+import { ExpandableCard } from '@components/common/ExpandableCard';
+import { useToast } from '@context/../contexts/ToastContext';
+import { useCelebrationAnimation } from '@hooks/useAnimations';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 export type ApplicationStatus = 
   | 'saved' 

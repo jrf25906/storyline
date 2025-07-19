@@ -8,9 +8,9 @@ import {
   Animated,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { syncManager } from '../../../services/database/sync/syncManager';
-import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
-import { theme } from '../../../theme';
+import { syncManager } from '@services/database/sync/syncManager';
+import { useNetworkStatus } from '@hooks/useNetworkStatus';
+import { theme } from '@theme';
 
 export const SyncStatusIndicator: React.FC = () => {
   const { isConnected } = useNetworkStatus();
@@ -167,7 +167,7 @@ export const SyncStatusIndicator: React.FC = () => {
             style={styles.expandButton}
           >
             <Ionicons 
-              name={isExpanded ? "chevron-up" : "chevron-down"} 
+              name={isExpanded ? 'chevron-up' : 'chevron-down'} 
               size={16} 
               color={theme.colors.textSecondary} 
             />

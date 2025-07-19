@@ -46,9 +46,9 @@ describe('Bounce Plan Daily Tasks', () => {
       await TestActions.waitForElement(TestIds.bouncePlan.screen);
 
       // Try to tap future task
-      const futureTa
+      const futureTa;
 
-Id = TestIds.bouncePlan.taskCard('day-7');
+      Id = TestIds.bouncePlan.taskCard('day-7');
       
       // Should either not be visible or be disabled
       const exists = await TestActions.elementExists(futureTaskId);

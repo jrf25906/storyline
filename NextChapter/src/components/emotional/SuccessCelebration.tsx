@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { View, StyleSheet, Animated, Dimensions } from 'react-native';
-import { Typography } from '../common/Typography';
-import { Button } from '../common/Button';
-import { Modal } from '../common/Modal';
-import { useAccessibility } from '../../hooks/useAccessibility';
-import { useAnimations } from '../../hooks/useAnimations';
-import { Colors, Spacing } from '../../theme';
+import { Typography } from '@components/common/Typography';
+import { Button } from '@components/common/Button';
+import { Modal } from '@components/common/Modal';
+import { useAccessibility } from '@hooks/useAccessibility';
+import { useAnimations } from '@hooks/useAnimations';
+import { Colors, Spacing } from '@theme';
 
 interface SuccessCelebrationProps {
   visible: boolean;

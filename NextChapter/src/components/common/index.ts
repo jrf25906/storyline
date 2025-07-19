@@ -24,6 +24,7 @@ export { Container } from './Container';
 export { Stack } from './Stack';
 
 // Form Components
+export { Checkbox } from './Checkbox';
 export { Switch } from './Switch';
 export { default as Radio } from './Radio';
 

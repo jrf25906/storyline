@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { supabase } from '../services/api/supabase';
+import { supabase } from '@services/api/supabase';
 import type { User } from '@supabase/supabase-js';
-import { logAnalyticsEvent } from '../utils/analytics';
-import { BiometricService } from '../services/auth/biometricService';
+import { logAnalyticsEvent } from '@utils/analytics';
+import { BiometricService } from '@services/auth/biometricService';
 
 interface AuthContextType {
   user: User | null;

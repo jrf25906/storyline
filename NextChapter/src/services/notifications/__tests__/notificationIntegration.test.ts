@@ -1,7 +1,7 @@
 import * as Notifications from 'expo-notifications';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { notificationService } from '../notificationService';
-import { setupNotificationHandlers } from '../notificationHandlers';
+import { notificationService } from '@services/notifications/notificationService';
+import { setupNotificationHandlers } from '@services/notifications/notificationHandlers';
 import { NavigationContainerRef } from '@react-navigation/native';
 
 // Mock dependencies

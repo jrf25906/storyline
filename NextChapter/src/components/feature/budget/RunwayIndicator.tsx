@@ -6,9 +6,9 @@ import {
   Animated,
   AccessibilityInfo,
 } from 'react-native';
-import { useTheme } from '../../../context/ThemeContext';
-import { FinancialRunway } from '../../../types/budget';
-import { formatCurrency, formatDate } from '../../../utils/budget/budgetCalculations';
+import { useTheme } from '@context/ThemeContext';
+import { FinancialRunway } from '@types/budget';
+import { formatCurrency, formatDate } from '@utils/budget/budgetCalculations';
 
 interface RunwayIndicatorProps {
   runway: FinancialRunway;

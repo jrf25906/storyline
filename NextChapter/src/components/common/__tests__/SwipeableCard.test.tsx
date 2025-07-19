@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { render, fireEvent } from '@testing-library/react-native';
-import { SwipeableCard, SwipeAction } from '../SwipeableCard';
+import { SwipeableCard, SwipeAction } from '@components/common/SwipeableCard';
 
 // Mock the animations
 jest.mock('../../../hooks/useAnimations', () => ({

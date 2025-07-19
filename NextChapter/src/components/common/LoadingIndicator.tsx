@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ActivityIndicator, Text, StyleSheet, ViewStyle } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography } from '@theme';
 
 interface LoadingIndicatorProps {
   size?: 'small' | 'large';
@@ -29,7 +29,7 @@ export default function LoadingIndicator({
       testID={testID}
       accessible={true}
       accessibilityRole="progressbar"
-      accessibilityLabel={message || "Loading"}
+      accessibilityLabel={message || 'Loading'}
       accessibilityState={{ busy: true }}
     >
       <ActivityIndicator 

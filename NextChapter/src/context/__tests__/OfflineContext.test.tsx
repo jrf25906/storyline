@@ -2,10 +2,10 @@ import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { render } from '@testing-library/react-native';
 import { Text } from 'react-native';
-import { OfflineProvider, useOffline } from '../OfflineContext';
+import { OfflineProvider, useOffline } from '@context/OfflineContext';
 import NetInfo, { NetInfoStateType } from '@react-native-community/netinfo';
-import { advanceTimersWithAct, runPendingTimersWithAct } from '../../test-utils/test-act-utils';
-import { NETWORK_STATES, createMockNetInfoState } from '../../test-utils/mockHelpers';
+import { advanceTimersWithAct, runPendingTimersWithAct } from '@test-utils/test-act-utils';
+import { NETWORK_STATES, createMockNetInfoState } from '@test-utils/mockHelpers';
 
 // Mock syncManager
 jest.mock('../../services/database/sync/syncManager', () => ({

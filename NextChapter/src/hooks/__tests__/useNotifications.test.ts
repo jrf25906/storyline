@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useNotifications } from '../useNotifications';
-import { notificationService } from '../../services/notifications/notificationService';
+import { useNotifications } from '@hooks/useNotifications';
+import { notificationService } from '@services/notifications/notificationService';
 import * as Notifications from 'expo-notifications';
 
 jest.mock('../../services/notifications/notificationService');

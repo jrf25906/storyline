@@ -7,8 +7,8 @@ import {
   ViewStyle,
   Animated
 } from 'react-native';
-import { Colors, Spacing, Typography, Borders } from '../../theme';
-import { useTheme } from '../../context/ThemeContext';
+import { Colors, Spacing, Typography, Borders } from '@theme';
+import { useTheme } from '@context/ThemeContext';
 
 interface RadioOption {
   value: string;

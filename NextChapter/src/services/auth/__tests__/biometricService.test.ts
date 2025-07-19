@@ -1,6 +1,6 @@
 import * as LocalAuthentication from 'expo-local-authentication';
 import * as SecureStore from 'expo-secure-store';
-import { BiometricService } from '../biometricService';
+import { BiometricService } from '@services/auth/biometricService';
 
 // Mock expo modules
 jest.mock('expo-local-authentication');

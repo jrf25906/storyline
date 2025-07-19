@@ -7,8 +7,8 @@ import {
   MAX_FILE_SIZE,
   Resume,
   AllowedFileTypes 
-} from '../../types/resume';
-import { getErrorMessage } from '../../utils/typeGuards';
+} from '@types/resume';
+import { getErrorMessage } from '@utils/typeGuards';
 
 // Common technical keywords patterns
 const TECHNICAL_PATTERNS = [

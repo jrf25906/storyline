@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { StyleSheet } from 'react-native';
-import { Typography } from '../Typography';
-import { Typography as TypographyTokens } from '../../../theme/typography';
-import { Colors } from '../../../theme/colors';
+import { Typography } from '@components/common/Typography';
+import { Typography as TypographyTokens } from '@theme/typography';
+import { Colors } from '@theme/colors';
 
 // Helper to flatten style arrays for testing
 const getStyle = (element: any) => {

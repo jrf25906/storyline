@@ -1,17 +1,17 @@
 // src/navigation/TabNavigator.tsx (Updated with Expo Vector Icons)
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useTheme } from '../context/ThemeContext';
-import { MainTabParamList } from '../types/navigation';
+import { useTheme } from '@utils/context/ThemeContext';
+import { MainTabParamList } from '@utils/types/navigation';
 
 // Screens
-import HomeScreen from '../screens/main/HomeScreen';
-import BouncePlanScreen from '../screens/main/BouncePlanScreen';
-import CoachScreen from '../screens/main/CoachScreen';
-import TrackerScreen from '../screens/main/TrackerScreen';
-import BudgetScreen from '../screens/main/BudgetScreen';
-import WellnessScreen from '../screens/main/WellnessScreen';
-import SettingsScreen from '../screens/main/SettingsScreen';
+import HomeScreen from '@utils/screens/main/HomeScreen';
+import BouncePlanScreen from '@utils/screens/main/BouncePlanScreen';
+import CoachScreen from '@utils/screens/main/CoachScreen';
+import TrackerScreen from '@utils/screens/main/TrackerScreen';
+import BudgetScreen from '@utils/screens/main/BudgetScreen';
+import WellnessScreen from '@utils/screens/main/WellnessScreen';
+import SettingsScreen from '@utils/screens/main/SettingsScreen';
 
 // Using Expo Vector Icons instead of react-native-vector-icons (easier setup)
 import { MaterialIcons } from '@expo/vector-icons';

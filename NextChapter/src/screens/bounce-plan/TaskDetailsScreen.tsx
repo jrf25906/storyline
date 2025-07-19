@@ -14,13 +14,13 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { useBouncePlanStore } from '../../stores/bouncePlanStore';
-import { useAuthStore } from '../../stores/authStore';
-import { BOUNCE_PLAN_TASKS } from '../../constants/bouncePlanTasks';
-import { withErrorBoundary } from '../../components/common';
-import Card from '../../components/common/Card';
-import { Typography, Spacing, Colors } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useAuthStore } from '@stores/authStore';
+import { BOUNCE_PLAN_TASKS } from '@constants/bouncePlanTasks';
+import { withErrorBoundary } from '@components/common';
+import Card from '@components/common/Card';
+import { Typography, Spacing, Colors } from '@theme';
 
 type BouncePlanStackParamList = {
   DailyTask: undefined;
@@ -236,12 +236,12 @@ export const TaskDetailsScreen: React.FC<TaskDetailsScreenProps> = ({ navigation
             {/* Status Display */}
             {(isCompleted || isSkipped) && (
               <Card 
-                variant={isCompleted ? "progress" : "outlined"} 
+                variant={isCompleted ? 'progress' : 'outlined'} 
                 style={styles.statusCard}
               >
                 <View style={styles.statusContent}>
                   <Ionicons 
-                    name={isCompleted ? "checkmark-circle" : "close-circle"} 
+                    name={isCompleted ? 'checkmark-circle' : 'close-circle'} 
                     size={48} 
                     color={isCompleted ? Colors.white : theme.colors.textSecondary} 
                   />

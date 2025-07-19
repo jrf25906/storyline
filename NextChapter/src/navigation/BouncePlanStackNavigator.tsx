@@ -1,11 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { BouncePlanStackParamList } from '../types/navigation';
-import { useTheme } from '../context/ThemeContext';
+import { BouncePlanStackParamList } from '@types/navigation';
+import { useTheme } from '@context/ThemeContext';
 
 // Screens
-import BouncePlanScreen from '../screens/main/BouncePlanScreen';
-import { DailyTaskScreen } from '../screens/bounce-plan';
+import BouncePlanScreen from '@screens/main/BouncePlanScreen';
+import { DailyTaskScreen } from '@screens/bounce-plan';
 
 const Stack = createNativeStackNavigator<BouncePlanStackParamList>();
 

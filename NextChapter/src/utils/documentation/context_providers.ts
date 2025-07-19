@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useColorScheme } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { lightTheme, darkTheme, Theme, ThemeType } from '../styles/theme';
+import { lightTheme, darkTheme, Theme, ThemeType } from '@utils/styles/theme';
 
 interface ThemeContextType {
   theme: Theme;
@@ -119,9 +119,9 @@ export function useTheme(): ThemeContextType {
 
 // src/context/AuthContext.tsx
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { supabase } from '../services/api/supabase';
+import { supabase } from '@utils/services/api/supabase';
 import type { User } from '@supabase/supabase-js';
-import { logAnalyticsEvent } from '../utils/analytics';
+import { logAnalyticsEvent } from '@utils/utils/analytics';
 
 interface AuthContextType {
   user: User | null;

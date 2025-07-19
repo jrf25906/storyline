@@ -8,8 +8,8 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { useOffline } from '../../context/OfflineContext';
+import { useTheme } from '@context/ThemeContext';
+import { useOffline } from '@context/OfflineContext';
 
 interface NetworkStatusBarProps {
   onPress?: () => void;

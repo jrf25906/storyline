@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import TaskCard from '../TaskCard';
-import { BouncePlanTaskDefinition } from '../../../../constants/bouncePlanTasks';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import TaskCard from '@components/feature/bounce-plan/TaskCard';
+import { BouncePlanTaskDefinition } from '@constants/bouncePlanTasks';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const mockTask: BouncePlanTaskDefinition = {
   id: 'day1_breathe',

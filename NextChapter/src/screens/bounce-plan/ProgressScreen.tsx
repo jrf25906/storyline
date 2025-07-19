@@ -10,20 +10,20 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { useBouncePlanStore } from '../../stores/bouncePlanStore';
-import { useAuthStore } from '../../stores/authStore';
-import { BOUNCE_PLAN_TASKS } from '../../constants/bouncePlanTasks';
-import Card from '../../components/common/Card';
-import { Typography, Spacing, Colors } from '../../theme';
-import { withErrorBoundary } from '../../components/common';
+import { useTheme } from '@context/ThemeContext';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useAuthStore } from '@stores/authStore';
+import { BOUNCE_PLAN_TASKS } from '@constants/bouncePlanTasks';
+import Card from '@components/common/Card';
+import { Typography, Spacing, Colors } from '@theme';
+import { withErrorBoundary } from '@components/common';
 import { 
   H1,
   H2,
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
+} from '@components/common/Typography';
 
 type BouncePlanStackParamList = {
   DailyTask: undefined;
@@ -174,7 +174,7 @@ export const ProgressScreen: React.FC<ProgressScreenProps> = ({ navigation }) =>
               return (
                 <Card 
                   key={week.weekNumber} 
-                  variant={isCurrentWeek ? "task" : "outlined"}
+                  variant={isCurrentWeek ? 'task' : 'outlined'}
                   style={[
                     styles.weekCard,
                     !isUnlocked && styles.weekCardLocked

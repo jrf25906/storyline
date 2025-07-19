@@ -3,8 +3,8 @@
  * These examples show how to properly track events throughout the app
  */
 
-import { trackEvent, getAnalytics } from './index';
-import { shouldTrackFeature } from './config';
+import { trackEvent, getAnalytics } from '@services/analytics/index';
+import { shouldTrackFeature } from '@services/analytics/config';
 
 // ========================================
 // ONBOARDING FLOW

@@ -73,7 +73,7 @@ const EMPATHY_ERROR_MESSAGES: Record<string, string> = {
   network: "We're having trouble connecting. Your data is safe, and we'll sync when you're back online.",
   auth: "We need to verify it's you. Please sign in again when you're ready.",
   validation: "Let's double-check that information together.",
-  server: "Our servers are taking a moment. Thanks for your patience.",
+  server: 'Our servers are taking a moment. Thanks for your patience.',
   permission: "We need your permission to continue. You're in control.",
   notFound: "We couldn't find what you're looking for. Let's try a different approach.",
   timeout: "This is taking longer than expected. Let's give it another try.",
@@ -82,11 +82,11 @@ const EMPATHY_ERROR_MESSAGES: Record<string, string> = {
 
 // Default calming loading messages
 const DEFAULT_LOADING_MESSAGES = [
-  "Taking care of that for you...",
-  "Just a moment...",
-  "Getting things ready...",
-  "Almost there...",
-  "Working on it...",
+  'Taking care of that for you...',
+  'Just a moment...',
+  'Getting things ready...',
+  'Almost there...',
+  'Working on it...',
 ];
 
 export const useUIStore = create<UIState>()(

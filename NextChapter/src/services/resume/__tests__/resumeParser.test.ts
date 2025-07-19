@@ -1,4 +1,4 @@
-import { ResumeParser } from '../resumeParser';
+import { ResumeParser } from '@services/resume/resumeParser';
 import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system';
 import { 
@@ -6,7 +6,7 @@ import {
   MAX_FILE_SIZE,
   Resume,
   AllowedFileTypes 
-} from '../../../types/resume';
+} from '@types/resume';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Mock expo modules

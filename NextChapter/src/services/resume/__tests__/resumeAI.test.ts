@@ -1,12 +1,12 @@
-import { ResumeAIService } from '../resumeAI';
-import { OpenAIService } from '../../api/openai';
+import { ResumeAIService } from '@services/resume/resumeAI';
+import { OpenAIService } from '@services/api/openai';
 import { 
   Resume, 
   ResumeAnalysis, 
   ResumeRewriteRequest,
   ResumeRewriteResponse,
   ResumeSuggestion 
-} from '../../../types/resume';
+} from '@types/resume';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 jest.mock('../../api/openai');

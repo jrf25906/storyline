@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import { LoadingOverlay } from '../LoadingOverlay';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import { LoadingOverlay } from '@components/common/LoadingOverlay';
+import { ThemeProvider } from '@context/ThemeContext';
 
 const renderWithTheme = (component: React.ReactElement) => {
   return render(

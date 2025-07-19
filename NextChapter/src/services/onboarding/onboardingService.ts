@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { encryptData, decryptData } from '../../utils/encryption';
-import { supabase } from '../api/supabase';
+import { encryptData, decryptData } from '@utils/encryption';
+import { supabase } from '@services/api/supabase';
 import {
   OnboardingStep,
   OnboardingData,
@@ -9,7 +9,7 @@ import {
   PersonalInfo,
   Goals,
   UserProfile,
-} from '../../types/onboarding';
+} from '@types/onboarding';
 
 export class OnboardingService {
   private static readonly PROGRESS_KEY_PREFIX = '@next_chapter/onboarding_progress_';

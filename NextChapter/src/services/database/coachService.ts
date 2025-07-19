@@ -1,5 +1,5 @@
-import { supabase } from '../api/supabase';
-import { CoachMessage } from '../../types/coach';
+import { supabase } from '@services/api/supabase';
+import { CoachMessage } from '@types/coach';
 
 export class CoachDatabaseService {
   /**

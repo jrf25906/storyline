@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Modal } from 'react-native';
-import { useUIStore } from '../../stores/uiStore';
-import { EmpathyErrorState } from './EmpathyErrorState';
-import { Colors } from '../../theme';
+import { useUIStore } from '@stores/uiStore';
+import { EmpathyErrorState } from '@components/common/EmpathyErrorState';
+import { Colors } from '@theme';
 
 export const GlobalErrorHandler: React.FC = () => {
   const { globalError, clearGlobalError } = useUIStore();

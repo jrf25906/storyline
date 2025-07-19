@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { withErrorBoundary } from '../../components/common';
+import { withErrorBoundary } from '@components/common';
 import { View, StyleSheet, ScrollView, Alert, Animated } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useTheme } from '../../context/ThemeContext';
-import { useOnboarding } from '../../hooks/useOnboarding';
-import { Typography } from '../../components/common/Typography';
-import Button from '../../components/common/Button';
-import Card from '../../components/common/Card';
-import Radio from '../../components/common/Radio';
-import ProgressDots from '../../components/feature/onboarding/ProgressDots';
-import { Colors, Spacing, Motion } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { useOnboarding } from '@hooks/useOnboarding';
+import { Typography } from '@components/common/Typography';
+import Button from '@components/common/Button';
+import Card from '@components/common/Card';
+import Radio from '@components/common/Radio';
+import ProgressDots from '@components/feature/onboarding/ProgressDots';
+import { Colors, Spacing, Motion } from '@theme';
 
 function PersonalInfoScreen() {
   const navigation = useNavigation();

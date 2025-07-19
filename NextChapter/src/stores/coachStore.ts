@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { CoachConversation, CoachTone } from '../types/database';
-import { supabase } from '../services/api/supabase';
+import { CoachConversation, CoachTone } from '@types/database';
+import { supabase } from '@services/api/supabase';
 
 interface CoachMessage {
   id: string;

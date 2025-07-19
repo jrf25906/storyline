@@ -1,8 +1,8 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useWellnessStore } from '../wellnessStore';
-import { MoodValue, MoodEntry, CRISIS_KEYWORDS } from '../../types';
-import { wellnessService } from '../../services/wellness/wellnessService';
+import { useWellnessStore } from '@stores/wellnessStore';
+import { MoodValue, MoodEntry, CRISIS_KEYWORDS } from '@types';
+import { wellnessService } from '@services/wellness/wellnessService';
 
 // Mock dependencies
 jest.mock('@react-native-async-storage/async-storage');

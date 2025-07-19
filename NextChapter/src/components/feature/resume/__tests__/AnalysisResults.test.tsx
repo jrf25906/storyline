@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import { AnalysisResults } from '../AnalysisResults';
-import { ResumeAnalysis } from '../../../../types/resume';
+import { AnalysisResults } from '@components/feature/resume/AnalysisResults';
+import { ResumeAnalysis } from '@types/resume';
 
 describe('AnalysisResults', () => {
   const mockAnalysis: ResumeAnalysis = {

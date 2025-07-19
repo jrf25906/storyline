@@ -8,8 +8,8 @@ import {
   Alert,
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { getContrastRatio, meetsWCAGAA } from '../../utils/accessibility';
+import { useTheme } from '@context/ThemeContext';
+import { getContrastRatio, meetsWCAGAA } from '@utils/accessibility';
 
 interface ChecklistItem {
   id: string;

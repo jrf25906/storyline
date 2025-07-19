@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, ViewStyle, TextStyle, Animated } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Borders, Motion } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Borders, Motion } from '@theme';
 
 interface BadgeProps {
   value: string | number;
@@ -111,25 +111,25 @@ export default function Badge({
   const getSizeStyles = () => {
     return size === 'small' 
       ? {
-          badge: {
-            paddingHorizontal: Spacing.xs,
-            paddingVertical: Spacing.xxs,
-            minHeight: 20,
-          },
-          text: {
-            fontSize: Typography.fontSizes.caption,
-          },
-        }
+        badge: {
+          paddingHorizontal: Spacing.xs,
+          paddingVertical: Spacing.xxs,
+          minHeight: 20,
+        },
+        text: {
+          fontSize: Typography.fontSizes.caption,
+        },
+      }
       : {
-          badge: {
-            paddingHorizontal: Spacing.sm,
-            paddingVertical: Spacing.xxs,
-            minHeight: 24,
-          },
-          text: {
-            fontSize: Typography.fontSizes.bodySM,
-          },
-        };
+        badge: {
+          paddingHorizontal: Spacing.sm,
+          paddingVertical: Spacing.xxs,
+          minHeight: 24,
+        },
+        text: {
+          fontSize: Typography.fontSizes.bodySM,
+        },
+      };
   };
 
   const { backgroundColor, textColor } = getVariantColors();

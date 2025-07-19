@@ -1,24 +1,26 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { ThemeProvider } from '../context/ThemeContext';
-import { AuthProvider } from '../context/AuthContext';
+import { SafeThemeProvider } from '@components/common/SafeThemeProvider';
+import { AuthProvider } from '@context/AuthContext';
 import { render, RenderOptions } from '@testing-library/react-native';
+import { Theme } from '../theme';
 
 interface AllTheProvidersProps {
   children: React.ReactNode;
+  testTheme?: Partial<Theme>;
 }
 
 /**
  * Wrapper component that includes all necessary providers for testing
  */
-export const AllTheProviders: React.FC<AllTheProvidersProps> = ({ children }) => {
+export const AllTheProviders: React.FC<AllTheProvidersProps> = ({ children, testTheme }) => {
   return (
     <NavigationContainer>
-      <ThemeProvider>
+      <SafeThemeProvider testTheme={testTheme}>
         <AuthProvider>
           {children}
         </AuthProvider>
-      </ThemeProvider>
+      </SafeThemeProvider>
     </NavigationContainer>
   );
 };
@@ -28,16 +30,25 @@ export const AllTheProviders: React.FC<AllTheProvidersProps> = ({ children }) =>
  */
 export const renderWithProviders = (
   ui: React.ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
+  options?: Omit<RenderOptions, 'wrapper'> & { testTheme?: Partial<Theme> }
 ) => {
-  return render(ui, { wrapper: AllTheProviders, ...options });
+  const { testTheme, ...renderOptions } = options || {};
+  
+  const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <AllTheProviders testTheme={testTheme}>{children}</AllTheProviders>
+  );
+  
+  return render(ui, { wrapper: Wrapper, ...renderOptions });
 };
 
 /**
  * Provider wrapper for components that need theme only
  */
-export const ThemeWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <ThemeProvider>{children}</ThemeProvider>;
+export const ThemeWrapper: React.FC<{ children: React.ReactNode; testTheme?: Partial<Theme> }> = ({ 
+  children, 
+  testTheme 
+}) => {
+  return <SafeThemeProvider testTheme={testTheme}>{children}</SafeThemeProvider>;
 };
 
 /**
@@ -45,7 +56,13 @@ export const ThemeWrapper: React.FC<{ children: React.ReactNode }> = ({ children
  */
 export const renderWithTheme = (
   ui: React.ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
+  options?: Omit<RenderOptions, 'wrapper'> & { testTheme?: Partial<Theme> }
 ) => {
-  return render(ui, { wrapper: ThemeWrapper, ...options });
+  const { testTheme, ...renderOptions } = options || {};
+  
+  const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <ThemeWrapper testTheme={testTheme}>{children}</ThemeWrapper>
+  );
+  
+  return render(ui, { wrapper: Wrapper, ...renderOptions });
 };

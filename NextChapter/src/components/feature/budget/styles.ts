@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { Theme } from '../../../styles/theme';
+import { Theme } from '@/styles/theme';
 
 export const createBudgetStyles = (theme: Theme) => StyleSheet.create({
   // Common styles for budget components

@@ -10,9 +10,9 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { JobApplicationStatus } from '../../../types/database';
-import { Colors, Typography, Spacing, Borders } from '../../../theme';
-import Card from '../../common/Card';
+import { JobApplicationStatus } from '@types/database';
+import { Colors, Typography, Spacing, Borders } from '@theme';
+import Card from '@components/common/Card';
 
 interface AddApplicationModalProps {
   onClose: () => void;

@@ -3,9 +3,9 @@ import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 
 // Components
-import BudgetOverviewScreen from '../../screens/budget/BudgetOverviewScreen';
-import BudgetScreen from '../../screens/main/BudgetScreen';
-import { ThemeProvider } from '../../context/ThemeContext';
+import BudgetOverviewScreen from '@screens/budget/BudgetOverviewScreen';
+import BudgetScreen from '@screens/main/BudgetScreen';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock stores - create fresh instances for each test
 const createMockBudgetStore = () => ({

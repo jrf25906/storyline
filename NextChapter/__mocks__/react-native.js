@@ -9,8 +9,39 @@ const TouchableHighlight = (props) => React.createElement('TouchableHighlight', 
 const TouchableWithoutFeedback = (props) => React.createElement('TouchableWithoutFeedback', props);
 const Pressable = (props) => React.createElement('Pressable', props);
 const ScrollView = (props) => React.createElement('ScrollView', props);
-const FlatList = (props) => React.createElement('FlatList', props);
-const Modal = (props) => React.createElement('Modal', props);
+const FlatList = ({ data, renderItem, keyExtractor, ItemSeparatorComponent, ...props }) => {
+  if (!data || !renderItem) {
+    return React.createElement('FlatList', props);
+  }
+  
+  const items = data.map((item, index) => {
+    const key = keyExtractor ? keyExtractor(item, index) : index;
+    const element = renderItem({ item, index });
+    
+    // Add separator between items
+    const children = [
+      React.cloneElement(element, { key: `item-${key}` })
+    ];
+    
+    if (ItemSeparatorComponent && index < data.length - 1) {
+      children.push(
+        React.createElement(ItemSeparatorComponent, { key: `separator-${key}` })
+      );
+    }
+    
+    return children;
+  }).flat();
+  
+  return React.createElement('View', { ...props, testID: props.testID || 'flat-list' }, ...items);
+};
+const Modal = ({ visible = true, children, ...props }) => {
+  // In tests, always render the modal content but with a testID to indicate visibility
+  return React.createElement('Modal', { 
+    ...props, 
+    visible, 
+    testID: 'modal',
+  }, visible ? children : null);
+};
 const Image = (props) => React.createElement('Image', props);
 const SafeAreaView = (props) => React.createElement('SafeAreaView', props);
 const ActivityIndicator = (props) => React.createElement('ActivityIndicator', props);

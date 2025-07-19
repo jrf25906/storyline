@@ -1,11 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { TrackerStackParamList } from '../types/navigation';
-import { useTheme } from '../context/ThemeContext';
+import { TrackerStackParamList } from '@types/navigation';
+import { useTheme } from '@context/ThemeContext';
 
 // Screens
-import TrackerScreen from '../screens/main/TrackerScreen';
-import JobApplicationsScreen from '../screens/tracker/JobApplicationsScreen';
+import TrackerScreen from '@screens/main/TrackerScreen';
+import JobApplicationsScreen from '@screens/tracker/JobApplicationsScreen';
 
 const Stack = createNativeStackNavigator<TrackerStackParamList>();
 

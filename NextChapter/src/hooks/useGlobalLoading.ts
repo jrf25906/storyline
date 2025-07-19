@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { useUIStore } from '../stores/uiStore';
+import { useUIStore } from '@stores/uiStore';
 
 export function useGlobalLoading() {
   const { globalLoading, setGlobalLoading, setGlobalError } = useUIStore();

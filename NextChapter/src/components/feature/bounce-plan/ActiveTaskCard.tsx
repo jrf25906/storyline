@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import Card from '../../common/Card';
-import { useTheme } from '../../../context/ThemeContext';
-import { Typography, Spacing, Colors } from '../../../theme';
-import { BouncePlanTaskDefinition } from '../../../constants/bouncePlanTasks';
+import Card from '@components/common/Card';
+import { useTheme } from '@context/ThemeContext';
+import { Typography, Spacing, Colors } from '@theme';
+import { BouncePlanTaskDefinition } from '@constants/bouncePlanTasks';
 
 interface ActiveTaskCardProps {
   task: BouncePlanTaskDefinition;

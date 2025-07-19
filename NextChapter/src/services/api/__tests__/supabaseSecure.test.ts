@@ -1,5 +1,5 @@
-import { SecureSupabaseClient } from '../supabaseSecure';
-import { EnvironmentService } from '../../security/environment';
+import { SecureSupabaseClient } from '@services/api/supabaseSecure';
+import { EnvironmentService } from '@services/security/environment';
 import { createClient } from '@supabase/supabase-js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 

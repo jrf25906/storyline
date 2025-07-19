@@ -1,13 +1,13 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ProfileStackParamList } from '../types/navigation';
-import { useTheme } from '../context/ThemeContext';
+import { ProfileStackParamList } from '@types/navigation';
+import { useTheme } from '@context/ThemeContext';
 
 // Screens
-import ProfileScreen from '../screens/profile/ProfileScreen';
-import SettingsScreen from '../screens/main/SettingsScreen';
-import WellnessScreen from '../screens/main/WellnessScreen';
-import AboutScreen from '../screens/profile/AboutScreen';
+import ProfileScreen from '@screens/profile/ProfileScreen';
+import SettingsScreen from '@screens/main/SettingsScreen';
+import WellnessScreen from '@screens/main/WellnessScreen';
+import AboutScreen from '@screens/profile/AboutScreen';
 
 const Stack = createNativeStackNavigator<ProfileStackParamList>();
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import LoginScreen from '../LoginScreen';
-import { useAuth } from '../../../hooks/useAuth';
-import { useTheme } from '../../../context/ThemeContext';
+import LoginScreen from '@screens/auth/LoginScreen';
+import { useAuth } from '@hooks/useAuth';
+import { useTheme } from '@context/ThemeContext';
 
 // Mock dependencies
 jest.mock('../../../hooks/useAuth');

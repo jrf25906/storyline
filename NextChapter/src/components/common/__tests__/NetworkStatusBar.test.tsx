@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Animated } from 'react-native';
-import NetworkStatusBar from '../NetworkStatusBar';
+import NetworkStatusBar from '@components/common/NetworkStatusBar';
 
 // Mock dependencies
 jest.mock('../../../context/ThemeContext');

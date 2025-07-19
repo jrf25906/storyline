@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { render, fireEvent } from '@testing-library/react-native';
-import { ExpandableCard } from '../ExpandableCard';
+import { ExpandableCard } from '@components/common/ExpandableCard';
 
 // Mock the animations
 jest.mock('../../../hooks/useAnimations', () => ({

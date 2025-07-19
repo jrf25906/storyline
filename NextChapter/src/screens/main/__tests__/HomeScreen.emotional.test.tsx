@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import HomeScreen from '../HomeScreen';
-import { useEmotionalState } from '../../../context/EmotionalStateContext';
-import { useAccessibility } from '../../../hooks/useAccessibility';
-import { useBouncePlanStore } from '../../../stores/bouncePlanStore';
-import { useBudgetStore } from '../../../stores/budgetStore';
-import { useWellnessStore } from '../../../stores/wellnessStore';
-import { useJobTrackerStore } from '../../../stores/jobTrackerStore';
+import HomeScreen from '@screens/main/HomeScreen';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { useAccessibility } from '@hooks/useAccessibility';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useWellnessStore } from '@stores/wellnessStore';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
 
 // Mock all dependencies
 jest.mock('../../../context/EmotionalStateContext');

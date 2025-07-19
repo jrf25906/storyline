@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { JobApplication, JobApplicationStatus } from '../types/database';
-import { supabase } from '../services/api/supabase';
+import { JobApplication, JobApplicationStatus } from '@types/database';
+import { supabase } from '@services/api/supabase';
 
 interface JobTrackerState {
   applications: JobApplication[];

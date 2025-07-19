@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import BudgetScreen from '../BudgetScreen';
-import { ThemeProvider } from '../../../context/ThemeContext';
-import { useBudgetStore } from '../../../stores/budgetStore';
+import BudgetScreen from '@screens/main/BudgetScreen';
+import { ThemeProvider } from '@context/ThemeContext';
+import { useBudgetStore } from '@stores/budgetStore';
 import { Alert } from 'react-native';
 
 // Mock the budget store

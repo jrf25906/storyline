@@ -9,10 +9,10 @@ import {
   Platform,
   UIManager,
 } from 'react-native';
-import { useCardPressAnimation } from '../../hooks/useAnimations';
-import { Colors } from '../../theme/colors';
-import { Typography } from '../../theme/typography';
-import { Spacing } from '../../theme/spacing';
+import { useCardPressAnimation } from '@hooks/useAnimations';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 // Enable LayoutAnimation on Android
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {

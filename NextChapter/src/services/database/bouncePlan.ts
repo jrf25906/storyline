@@ -1,5 +1,5 @@
-import { supabase } from '../api/supabase';
-import { BouncePlanTask } from '../../types/database';
+import { supabase } from '@services/api/supabase';
+import { BouncePlanTask } from '@types';
 
 export interface BouncePlanProgress {
   tasks: BouncePlanTask[];

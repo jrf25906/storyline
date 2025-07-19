@@ -1,5 +1,5 @@
 import { appSchema, tableSchema } from '@nozbe/watermelondb';
-import { schema } from '../schema';
+import { schema } from '@services/database/watermelon/schema';
 
 describe('WatermelonDB Schema', () => {
   it('should define all required tables', () => {

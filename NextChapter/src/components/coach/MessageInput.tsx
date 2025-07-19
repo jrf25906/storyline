@@ -9,8 +9,8 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { Typography } from '../common/Typography';
+import { useTheme } from '@context/ThemeContext';
+import { Typography } from '@components/common/Typography';
 
 interface MessageInputProps {
   onSend: (message: string) => void;

@@ -1,4 +1,4 @@
-import { BudgetData, BudgetFormData, FinancialRunway, BudgetAlert } from '../../types/budget';
+import { BudgetData, BudgetFormData, FinancialRunway, BudgetAlert } from '@types/budget';
 
 export const buildBudgetFormData = (overrides?: Partial<BudgetFormData>): BudgetFormData => ({
   monthlyIncome: 5000,

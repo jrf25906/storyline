@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { useTheme } from '../../../context/ThemeContext';
-import { Typography, Spacing } from '../../../theme';
-import { BOUNCE_PLAN_TASKS } from '../../../constants/bouncePlanTasks';
+import { useTheme } from '@context/ThemeContext';
+import { Typography, Spacing } from '@theme';
+import { BOUNCE_PLAN_TASKS } from '@constants/bouncePlanTasks';
 
 interface WeeklyProgressDotsProps {
   currentDay: number;
@@ -35,8 +35,8 @@ export default function WeeklyProgressDots({ currentDay, getTaskStatus }: Weekly
                   backgroundColor: isCompleted 
                     ? theme.colors.success 
                     : isToday 
-                    ? theme.colors.primary 
-                    : theme.colors.border,
+                      ? theme.colors.primary 
+                      : theme.colors.border,
                   opacity: isFuture ? 0.3 : 1,
                 }
               ]}

@@ -8,8 +8,8 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { ResumeAnalysis, ResumeSuggestion } from '../../../types/resume';
-import { theme } from '../../../theme';
+import { ResumeAnalysis, ResumeSuggestion } from '@types/resume';
+import { theme } from '@theme';
 
 interface AnalysisResultsProps {
   analysis: ResumeAnalysis;
@@ -189,9 +189,9 @@ export const AnalysisResults: React.FC<AnalysisResultsProps> = ({
             const isExpanded = expandedSuggestions.has(suggestion.id);
             const iconName = 
               suggestion.type === 'keyword' ? 'key-outline' :
-              suggestion.type === 'format' ? 'document-text-outline' :
-              suggestion.type === 'content' ? 'create-outline' :
-              'folder-outline';
+                suggestion.type === 'format' ? 'document-text-outline' :
+                  suggestion.type === 'content' ? 'create-outline' :
+                    'folder-outline';
 
             return (
               <TouchableOpacity

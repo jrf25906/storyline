@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Animated, Platform } from 'react-native';
-import { Typography } from '../common/Typography';
-import { useTheme } from '../../context/ThemeContext';
-import { CoachMessage } from '../../types/coach';
+import { Typography } from '@components/common/Typography';
+import { useTheme } from '@context/ThemeContext';
+import { CoachMessage } from '@types/coach';
 
 interface MessageBubbleProps {
   message: CoachMessage;
@@ -57,16 +57,16 @@ export function MessageBubble({ message, animatedValue }: MessageBubbleProps) {
   const AnimatedContainer = animatedValue ? Animated.View : View;
   const animatedStyle = animatedValue
     ? {
-        opacity: animatedValue,
-        transform: [
-          {
-            translateY: animatedValue.interpolate({
-              inputRange: [0, 1],
-              outputRange: [20, 0],
-            }),
-          },
-        ],
-      }
+      opacity: animatedValue,
+      transform: [
+        {
+          translateY: animatedValue.interpolate({
+            inputRange: [0, 1],
+            outputRange: [20, 0],
+          }),
+        },
+      ],
+    }
     : {};
 
   return (

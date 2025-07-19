@@ -2,14 +2,14 @@ import React from 'react';
 import { AppState, AppStateStatus, Text } from 'react-native';
 import { render, waitFor } from '@testing-library/react-native';
 import * as Notifications from 'expo-notifications';
-import { NotificationSetup } from '../NotificationSetup';
-import { notificationService } from '../../../services/notifications/notificationService';
-import { setupNotificationHandlers } from '../../../services/notifications/notificationHandlers';
-import { useNotifications } from '../../../hooks/useNotifications';
-import { useBouncePlanStore } from '../../../stores/bouncePlanStore';
-import { useBudgetStore } from '../../../stores/budgetStore';
-import { useAuth } from '../../../hooks/useAuth';
-import { useOnboardingStore } from '../../../stores/onboardingStore';
+import { NotificationSetup } from '@components/app/NotificationSetup';
+import { notificationService } from '@services/notifications/notificationService';
+import { setupNotificationHandlers } from '@services/notifications/notificationHandlers';
+import { useNotifications } from '@hooks/useNotifications';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useAuth } from '@hooks/useAuth';
+import { useOnboardingStore } from '@stores/onboardingStore';
 
 // Mock dependencies
 jest.mock('expo-notifications', () => ({

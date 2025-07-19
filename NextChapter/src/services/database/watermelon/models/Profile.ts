@@ -1,5 +1,5 @@
 import { field, date, children } from '@nozbe/watermelondb/decorators';
-import { BaseModel } from './BaseModel';
+import { BaseModel } from '@services/database/watermelon/models/BaseModel';
 import { Associations } from '@nozbe/watermelondb/Model';
 
 export class Profile extends BaseModel {

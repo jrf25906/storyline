@@ -2,34 +2,24 @@ import React from 'react';
 import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { Alert } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { EmailVerificationScreen } from '../EmailVerificationScreen';
-import { useAuth } from '../../../hooks/useAuth';
-import { supabase } from '../../../services/api/supabase';
-import { logAnalyticsEvent } from '../../../utils/analytics';
+import { EmailVerificationScreen } from '@screens/auth/EmailVerificationScreen';
+import { useAuth } from '@hooks/useAuth';
+import { supabase } from '@services/api/supabase';
+import { logAnalyticsEvent } from '@utils/analytics';
+import { SafeThemeProvider } from '@components/common/SafeThemeProvider';
 
 // Mock dependencies
 jest.mock('../../../hooks/useAuth');
-jest.mock('../../../services/api/supabase');
-jest.mock('../../../utils/analytics');
-jest.mock('../../../context/ThemeContext', () => ({
-  useTheme: () => ({
-    theme: {
-      colors: {
-        background: '#fff',
-        text: '#000',
-        textSecondary: '#666',
-        primary: '#007AFF',
-        primaryLight: '#E3F2FD',
-        success: '#4CAF50',
-        successLight: '#E8F5E9',
-        white: '#FFFFFF',
-        surface: '#F5F5F5',
-        warningLight: '#FFF3E0',
-        warningDark: '#E65100',
-      },
+jest.mock('../../../services/api/supabase', () => ({
+  supabase: {
+    auth: {
+      getUser: jest.fn(),
+      resend: jest.fn(),
+      signOut: jest.fn(),
     },
-  }),
+  },
 }));
+jest.mock('../../../utils/analytics');
 
 // Mock navigation
 const mockNavigate = jest.fn();
@@ -69,9 +59,11 @@ describe('EmailVerificationScreen', () => {
 
   const renderScreen = () => {
     return render(
-      <NavigationContainer>
-        <EmailVerificationScreen />
-      </NavigationContainer>
+      <SafeThemeProvider>
+        <NavigationContainer>
+          <EmailVerificationScreen />
+        </NavigationContainer>
+      </SafeThemeProvider>
     );
   };
 

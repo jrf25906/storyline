@@ -1,5 +1,5 @@
-import { CoachService } from '../coachService';
-import { getOpenAIClient } from '../openai';
+import { CoachService } from '@services/ai/coachService';
+import { getOpenAIClient } from '@services/ai/openai';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { CoachMessage } from '@types/coach';
 
@@ -68,7 +68,7 @@ describe('CoachService', () => {
   describe('generateResponse', () => {
     it('should detect hype tone for hopeless messages', async () => {
       const result = await coachService.generateResponse(
-        "I feel so hopeless about finding a job",
+        'I feel so hopeless about finding a job',
         [],
         'test-user'
       );
@@ -79,7 +79,7 @@ describe('CoachService', () => {
 
     it('should detect tough-love tone for excuse messages', async () => {
       const result = await coachService.generateResponse(
-        "They screwed me over and now no one will hire me",
+        'They screwed me over and now no one will hire me',
         [],
         'test-user'
       );
@@ -90,7 +90,7 @@ describe('CoachService', () => {
 
     it('should default to pragmatist tone', async () => {
       const result = await coachService.generateResponse(
-        "Can you help me update my resume?",
+        'Can you help me update my resume?',
         [],
         'test-user'
       );
@@ -101,7 +101,7 @@ describe('CoachService', () => {
 
     it('should handle crisis keywords appropriately', async () => {
       const result = await coachService.generateResponse(
-        "I want to end it all",
+        'I want to end it all',
         [],
         'test-user'
       );
@@ -113,7 +113,7 @@ describe('CoachService', () => {
 
     it('should enforce professional boundaries', async () => {
       const result = await coachService.generateResponse(
-        "Can you give me relationship advice?",
+        'Can you give me relationship advice?',
         [],
         'test-user'
       );
@@ -127,7 +127,7 @@ describe('CoachService', () => {
       mockAsyncStorage.getItem.mockResolvedValueOnce('10');
 
       const result = await coachService.generateResponse(
-        "Help me with my job search",
+        'Help me with my job search',
         [],
         'test-user'
       );
@@ -154,7 +154,7 @@ describe('CoachService', () => {
       ];
 
       await coachService.generateResponse(
-        "Follow up message",
+        'Follow up message',
         history,
         'test-user'
       );
@@ -171,7 +171,7 @@ describe('CoachService', () => {
       );
 
       const result = await coachService.generateResponse(
-        "Help me",
+        'Help me',
         [],
         'test-user'
       );
@@ -205,7 +205,7 @@ describe('CoachService', () => {
       });
 
       const result = await coachService.generateResponse(
-        "Inappropriate content here",
+        'Inappropriate content here',
         [],
         'test-user'
       );

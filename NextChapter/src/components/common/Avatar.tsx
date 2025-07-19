@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ViewStyle, ImageSourcePropType } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Borders } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Borders } from '@theme';
 
 interface AvatarProps {
   source?: ImageSourcePropType;

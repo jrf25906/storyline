@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Linking, Alert } from 'react-native';
-import { CrisisMode } from '../CrisisMode';
-import { useEmotionalState } from '../../../context/EmotionalStateContext';
-import { useAccessibility } from '../../../hooks/useAccessibility';
+import { CrisisMode } from '@components/emotional/CrisisMode';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { useAccessibility } from '@hooks/useAccessibility';
 
 // Mock dependencies
 jest.mock('react-native', () => ({

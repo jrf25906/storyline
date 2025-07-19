@@ -6,11 +6,11 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-import { Icon, IconName } from './Icon';
-import { ExtendedIcon, ExtendedIconName } from './IconExtended';
-import { Colors, Typography, Spacing, Borders } from '../../theme';
-import { useTheme } from '../../context/ThemeContext';
-import { Card } from '../common/Card';
+import { Icon, IconName } from '@components/icons/Icon';
+import { ExtendedIcon, ExtendedIconName } from '@components/icons/IconExtended';
+import { Colors, Typography, Spacing, Borders } from '@theme';
+import { useTheme } from '@context/ThemeContext';
+import { Card } from '@components/common/Card';
 
 interface IconShowcaseProps {
   onIconPress?: (name: string) => void;

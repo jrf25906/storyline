@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 import { render, fireEvent } from '@testing-library/react-native';
-import Header from '../Header';
+import Header from '@components/common/Header';
 
 // Mock navigation
 const mockGoBack = jest.fn();

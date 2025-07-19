@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import EmptyState from '../EmptyState';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import EmptyState from '@components/common/EmptyState';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock ThemeContext
 const mockTheme = {

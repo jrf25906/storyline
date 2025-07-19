@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useAuth } from '../hooks/useAuth';
-import { useTheme } from '../context/ThemeContext';
-import { RootStackParamList } from '../types/navigation';
-import { LoadingOverlay } from '../components/common/LoadingOverlay';
+import { useAuth } from '@hooks/useAuth';
+import { useTheme } from '@context/ThemeContext';
+import { RootStackParamList } from '@types';
+import { LoadingOverlay } from '@components/common/LoadingOverlay';
 
 // Navigators
-import AuthStackNavigator from './AuthStackNavigator';
-import MainTabNavigator from './MainTabNavigator';
+import AuthStackNavigator from '@navigation/AuthStackNavigator';
+import MainTabNavigator from '@navigation/MainTabNavigator';
 
 // Modal Screens
-import ResumeScannerScreen from '../screens/resume/ResumeScannerScreen';
+import ResumeScannerScreen from '@screens/resume/ResumeScannerScreen';
 import { View } from 'react-native';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();

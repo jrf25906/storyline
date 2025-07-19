@@ -1,16 +1,16 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import Button from '../Button';
-import { Colors, Shadows, Borders, Motion } from '../../../theme';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import Button from '@components/common/Button';
+import { Colors, Shadows, Borders, Motion } from '@theme';
+import { SafeThemeProvider } from '@components/common/SafeThemeProvider';
 import '../../../test-utils/styleHelpers'; // Import custom matchers
 
 // Helper to render button with theme
 const renderButton = (props: any) => {
   return render(
-    <ThemeProvider>
+    <SafeThemeProvider>
       <Button {...props} />
-    </ThemeProvider>
+    </SafeThemeProvider>
   );
 };
 
@@ -86,8 +86,8 @@ describe('Button', () => {
         
         const button = getByRole('button');
         expect(button.props.style).toMatchStyle({
-            minHeight: 56,
-          });
+          minHeight: 56,
+        });
       });
     });
   });
@@ -146,8 +146,8 @@ describe('Button', () => {
       
       const button = getByRole('button');
       expect(button.props.style).toMatchStyle({
-          opacity: 0.5,
-        });
+        opacity: 0.5,
+      });
     });
 
     it('should use muted colors when disabled', () => {
@@ -159,8 +159,8 @@ describe('Button', () => {
       
       const button = getByRole('button');
       expect(button.props.style).toMatchStyle({
-          backgroundColor: Colors.muted,
-        });
+        backgroundColor: Colors.muted,
+      });
     });
   });
 
@@ -211,7 +211,7 @@ describe('Button', () => {
       });
       
       const text = getByText('Test Button');
-      const flattenedStyle = text.props.style.flat().reduce((acc: any, style: any) => ({...acc, ...style}), {});
+      const flattenedStyle = text.props.style.flat().reduce((acc: any, style: any) => ({ ...acc, ...style }), {});
       expect(flattenedStyle.color).toBe(Colors.white);
     });
 
@@ -222,7 +222,7 @@ describe('Button', () => {
       });
       
       const text = getByText('Test Button');
-      const flattenedStyle = text.props.style.flat().reduce((acc: any, style: any) => ({...acc, ...style}), {});
+      const flattenedStyle = text.props.style.flat().reduce((acc: any, style: any) => ({ ...acc, ...style }), {});
       expect(flattenedStyle.color).toBe(Colors.primary);
     });
 
@@ -233,7 +233,7 @@ describe('Button', () => {
       });
       
       const text = getByText('Test Button');
-      const flattenedStyle = text.props.style.flat().reduce((acc: any, style: any) => ({...acc, ...style}), {});
+      const flattenedStyle = text.props.style.flat().reduce((acc: any, style: any) => ({ ...acc, ...style }), {});
       expect(flattenedStyle.color).toBe(Colors.white);
     });
   });
@@ -247,9 +247,9 @@ describe('Button', () => {
       
       const button = getByRole('button');
       expect(button.props.style).toMatchStyle({
-          backgroundColor: Colors.transparent,
-          borderWidth: Borders.width.medium,
-        });
+        backgroundColor: Colors.transparent,
+        borderWidth: Borders.width.medium,
+      });
     });
 
     it('should handle existing button usage without breaking', () => {
@@ -263,8 +263,8 @@ describe('Button', () => {
       const button = getByRole('button');
       expect(button).toBeTruthy();
       expect(button.props.style).toMatchStyle({
-          width: '100%',
-        });
+        width: '100%',
+      });
     });
   });
 

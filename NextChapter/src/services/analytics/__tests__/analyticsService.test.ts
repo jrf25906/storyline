@@ -1,4 +1,4 @@
-import { AnalyticsService } from '../analyticsService';
+import { AnalyticsService } from '@services/analytics/analyticsService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
 

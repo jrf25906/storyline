@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { builderService } from '../services/builderService';
+import { builderService } from '@services/builderService';
 
 interface UseBuilderContentOptions {
   model: string;

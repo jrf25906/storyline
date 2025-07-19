@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Alert } from 'react-native';
-import { BudgetForm } from '../BudgetForm';
-import { BudgetFormData } from '../../../../types/budget';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import { BudgetForm } from '@components/feature/budget/BudgetForm';
+import { BudgetFormData } from '@types/budget';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock Alert
 const alertMock = jest.fn();

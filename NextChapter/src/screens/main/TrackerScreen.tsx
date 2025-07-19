@@ -1,23 +1,23 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { View, StyleSheet, SafeAreaView, ActivityIndicator } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useJobTrackerStore } from '../../stores/jobTrackerStore';
-import { useNetworkStatus } from '../../hooks/useNetworkStatus';
-import { JobApplication, JobApplicationStatus } from '../../types/database';
-import KanbanBoard from '../../components/feature/job-tracker/KanbanBoard';
-import SearchFilterBar from '../../components/feature/job-tracker/SearchFilterBar';
-import JobApplicationModal from '../../components/feature/job-tracker/JobApplicationModal';
+import { useTheme } from '@context/ThemeContext';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
+import { useNetworkStatus } from '@hooks/useNetworkStatus';
+import { JobApplication, JobApplicationStatus } from '@types/database';
+import KanbanBoard from '@components/feature/job-tracker/KanbanBoard';
+import SearchFilterBar from '@components/feature/job-tracker/SearchFilterBar';
+import JobApplicationModal from '@components/feature/job-tracker/JobApplicationModal';
 import { 
   withErrorBoundary,
   Container
-} from '../../components/common';
+} from '@components/common';
 
 // Emotional Intelligence Components
-import { EmotionalStateDetector } from '../../components/emotional/EmotionalStateDetector';
-import { AdaptiveUIWrapper, useAdaptiveSpacing } from '../../components/emotional/AdaptiveUIWrapper';
-import { SuccessCelebration } from '../../components/emotional/SuccessCelebration';
-import { useEmotionalState } from '../../context/EmotionalStateContext';
-import { useAccessibility } from '../../hooks/useAccessibility';
+import { EmotionalStateDetector } from '@components/emotional/EmotionalStateDetector';
+import { AdaptiveUIWrapper, useAdaptiveSpacing } from '@components/emotional/AdaptiveUIWrapper';
+import { SuccessCelebration } from '@components/emotional/SuccessCelebration';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { useAccessibility } from '@hooks/useAccessibility';
 
 function TrackerScreen() {
   const { theme } = useTheme();
@@ -179,37 +179,37 @@ function TrackerScreen() {
       <AdaptiveUIWrapper>
         <Container variant="fullscreen">
           <SafeAreaView style={[styles.container, { padding: adaptiveSpacing.screenPadding }]}>
-        <SearchFilterBar
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          selectedStatus={selectedStatus}
-          onStatusChange={setSelectedStatus}
-          onAddPress={handleAddPress}
-        />
+            <SearchFilterBar
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              selectedStatus={selectedStatus}
+              onStatusChange={setSelectedStatus}
+              onAddPress={handleAddPress}
+            />
 
-        <KanbanBoard
-          applications={filteredApplications}
-          onStatusChange={handleStatusChange}
-          onCardPress={handleCardPress}
-        />
+            <KanbanBoard
+              applications={filteredApplications}
+              onStatusChange={handleStatusChange}
+              onCardPress={handleCardPress}
+            />
 
-        <JobApplicationModal
-          visible={modalVisible}
-          onClose={() => setModalVisible(false)}
-          onSave={handleSaveApplicationWithCelebration}
-          onUpdate={handleUpdateApplication}
-          onDelete={handleDeleteApplication}
-          application={selectedApplication}
-        />
+            <JobApplicationModal
+              visible={modalVisible}
+              onClose={() => setModalVisible(false)}
+              onSave={handleSaveApplicationWithCelebration}
+              onUpdate={handleUpdateApplication}
+              onDelete={handleDeleteApplication}
+              application={selectedApplication}
+            />
 
-        {/* Success Celebration Modal */}
-        <SuccessCelebration
-          visible={celebrationData.visible}
-          onClose={() => setCelebrationData({ visible: false, achievement: '' })}
-          achievement={celebrationData.achievement}
-          message={celebrationData.message}
-        />
-      </SafeAreaView>
+            {/* Success Celebration Modal */}
+            <SuccessCelebration
+              visible={celebrationData.visible}
+              onClose={() => setCelebrationData({ visible: false, achievement: '' })}
+              achievement={celebrationData.achievement}
+              message={celebrationData.message}
+            />
+          </SafeAreaView>
         </Container>
       </AdaptiveUIWrapper>
     </EmotionalStateDetector>

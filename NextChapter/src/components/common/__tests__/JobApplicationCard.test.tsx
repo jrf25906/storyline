@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import { JobApplicationCard, JobApplication, ApplicationStatus } from '../JobApplicationCard';
+import { JobApplicationCard, JobApplication, ApplicationStatus } from '@components/common/JobApplicationCard';
 
 // Mock dependencies
 jest.mock('../../../hooks/useAnimations', () => ({

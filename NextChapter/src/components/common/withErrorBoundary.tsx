@@ -1,8 +1,8 @@
 import React, { ComponentType, ReactNode, ErrorInfo } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { ErrorBoundary } from './ErrorBoundary';
-import { Theme } from '../../theme';
-import { useTheme } from '../../context/ThemeContext';
+import { ErrorBoundary } from '@components/common/ErrorBoundary';
+import { Theme } from '@theme';
+import { useTheme } from '@context/ThemeContext';
 
 interface ErrorMessageConfig {
   title?: string;

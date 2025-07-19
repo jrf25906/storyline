@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { ThemeTestWrapper, renderWithTheme } from '../../../test-utils/ThemeTestWrapper';
-import Input from '../Input';
-import Checkbox from '../Checkbox';
-import Radio from '../Radio';
-import { Colors, Spacing, Typography, Borders, Shadows } from '../../../theme';
+import { ThemeTestWrapper, renderWithTheme } from '@test-utils/ThemeTestWrapper';
+import Input from '@components/common/Input';
+import { Checkbox } from '@components/common/Checkbox';
+import Radio from '@components/common/Radio';
+import { Colors, Spacing, Typography, Borders, Shadows } from '@theme';
 
 describe('Input Component', () => {
   describe('Styling', () => {
@@ -158,9 +158,15 @@ describe('Input Component', () => {
 
 describe('Checkbox Component', () => {
   describe('Styling', () => {
+    const mockOnToggle = jest.fn();
+
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
     it('should be 24x24px with rounded corners', () => {
       const { getByTestId } = renderWithTheme(
-        <Checkbox testID="test-checkbox" label="Accept terms" />
+        <Checkbox testID="test-checkbox" label="Accept terms" checked={false} onToggle={mockOnToggle} />
       );
       
       const checkbox = getByTestId('test-checkbox-box');
@@ -173,7 +179,7 @@ describe('Checkbox Component', () => {
 
     it('should have 2px border in light gray', () => {
       const { getByTestId } = renderWithTheme(
-        <Checkbox testID="test-checkbox" label="Accept terms" />
+        <Checkbox testID="test-checkbox" label="Accept terms" checked={false} onToggle={mockOnToggle} />
       );
       
       const checkbox = getByTestId('test-checkbox-box');
@@ -185,7 +191,7 @@ describe('Checkbox Component', () => {
 
     it('should show primary green background when checked', () => {
       const { getByTestId } = renderWithTheme(
-        <Checkbox testID="test-checkbox" label="Accept terms" checked />
+        <Checkbox testID="test-checkbox" label="Accept terms" checked={true} onToggle={mockOnToggle} />
       );
       
       const checkbox = getByTestId('test-checkbox-box');
@@ -197,7 +203,7 @@ describe('Checkbox Component', () => {
 
     it('should show white checkmark when checked', () => {
       const { getByTestId } = renderWithTheme(
-        <Checkbox testID="test-checkbox" label="Accept terms" checked />
+        <Checkbox testID="test-checkbox" label="Accept terms" checked={true} onToggle={mockOnToggle} />
       );
       
       const checkmark = getByTestId('test-checkbox-checkmark');
@@ -208,7 +214,7 @@ describe('Checkbox Component', () => {
 
     it('should have smooth check/uncheck animation', async () => {
       const { getByTestId, rerender } = renderWithTheme(
-        <Checkbox testID="test-checkbox" label="Accept terms" checked={false} />
+        <Checkbox testID="test-checkbox" label="Accept terms" checked={false} onToggle={mockOnToggle} />
       );
       
       const checkbox = getByTestId('test-checkbox-box');
@@ -218,9 +224,9 @@ describe('Checkbox Component', () => {
       });
       
       rerender(
-        <ThemeProvider initialTheme="light">
-          <Checkbox testID="test-checkbox" label="Accept terms" checked />
-        </ThemeProvider>
+        <ThemeTestWrapper>
+          <Checkbox testID="test-checkbox" label="Accept terms" checked={true} onToggle={mockOnToggle} />
+        </ThemeTestWrapper>
       );
       
       await waitFor(() => {
@@ -232,7 +238,7 @@ describe('Checkbox Component', () => {
 
     it('should show focus state', () => {
       const { getByTestId } = renderWithTheme(
-        <Checkbox testID="test-checkbox" label="Accept terms" />
+        <Checkbox testID="test-checkbox" label="Accept terms" checked={false} onToggle={mockOnToggle} />
       );
       
       const touchable = getByTestId('test-checkbox-touchable');
@@ -247,26 +253,27 @@ describe('Checkbox Component', () => {
 
   describe('Functionality', () => {
     it('should toggle checked state on press', () => {
-      const onValueChange = jest.fn();
+      const onToggle = jest.fn();
       const { getByTestId } = renderWithTheme(
         <Checkbox 
           testID="test-checkbox" 
           label="Accept terms" 
-          onValueChange={onValueChange}
+          checked={false}
+          onToggle={onToggle}
         />
       );
       
       const touchable = getByTestId('test-checkbox-touchable');
       fireEvent.press(touchable);
       
-      expect(onValueChange).toHaveBeenCalledWith(true);
+      expect(onToggle).toHaveBeenCalledWith(true);
     });
   });
 
   describe('Accessibility', () => {
     it('should have checkbox role', () => {
       const { getByRole } = renderWithTheme(
-        <Checkbox label="Accept terms" />
+        <Checkbox label="Accept terms" checked={false} onToggle={jest.fn()} />
       );
       
       const checkbox = getByRole('checkbox');
@@ -275,7 +282,7 @@ describe('Checkbox Component', () => {
 
     it('should announce checked state', () => {
       const { getByRole } = renderWithTheme(
-        <Checkbox label="Accept terms" checked />
+        <Checkbox label="Accept terms" checked={true} onToggle={jest.fn()} />
       );
       
       const checkbox = getByRole('checkbox');
@@ -405,7 +412,7 @@ describe('Error States', () => {
     );
     
     const { getByText: getCheckboxError } = renderWithTheme(
-      <Checkbox label="Terms" error="You must accept the terms" />
+      <Checkbox label="Terms" error="You must accept the terms" checked={false} onToggle={jest.fn()} />
     );
     
     const { getByText: getRadioError } = renderWithTheme(

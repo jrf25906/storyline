@@ -9,9 +9,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { useTheme } from '../../context/ThemeContext';
-import { useBouncePlanStore } from '../../stores/bouncePlanStore';
-import { useMoodStore } from '../../stores/moodStore';
+import { useTheme } from '@context/ThemeContext';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useMoodStore } from '@stores/moodStore';
 
 interface TaskDetailScreenProps {
   route: {
@@ -21,7 +22,7 @@ interface TaskDetailScreenProps {
   };
 }
 
-export const TaskDetailScreen: React.FC = () => {
+const TaskDetailScreen: React.FC = () => {
   const { theme } = useTheme();
   const navigation = useNavigation();
   const route = useRoute();
@@ -286,3 +287,5 @@ export const TaskDetailScreen: React.FC = () => {
     </View>
   );
 };
+
+export default withErrorBoundary(TaskDetailScreen);

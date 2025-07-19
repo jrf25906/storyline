@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
-import { EmotionalStateDetector } from '../EmotionalStateDetector';
-import { useEmotionalState } from '../../../context/EmotionalStateContext';
-import { useAccessibility } from '../../../hooks/useAccessibility';
+import { EmotionalStateDetector } from '@components/emotional/EmotionalStateDetector';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { useAccessibility } from '@hooks/useAccessibility';
 
 // Mock dependencies
 jest.mock('../../../context/EmotionalStateContext');

@@ -1,4 +1,4 @@
-import { KeychainService } from './keychain';
+import { KeychainService } from '@services/security/keychain';
 import Constants from 'expo-constants';
 
 interface SupabaseConfig {
@@ -165,7 +165,7 @@ export class EnvironmentService {
     isProduction: boolean;
     hasSupabaseConfig: boolean;
     hasOpenAIConfig: boolean;
-  } {
+    } {
     return {
       environment: process.env.NODE_ENV || 'development',
       isProduction: process.env.NODE_ENV === 'production',

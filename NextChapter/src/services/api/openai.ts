@@ -1,4 +1,4 @@
-import { EMOTIONAL_TRIGGERS, TONE_PROMPTS, CoachTone } from '../../types/coach';
+import { EMOTIONAL_TRIGGERS, TONE_PROMPTS, CoachTone } from '@types/coach';
 
 const OPENAI_API_KEY = process.env.EXPO_PUBLIC_OPENAI_API_KEY || '';
 
@@ -112,7 +112,7 @@ export class OpenAIService {
 
   private getSystemPrompt(tone: CoachTone): string {
     const basePrompt = TONE_PROMPTS[tone];
-    const boundaries = "\n\nImportant: Never provide personal relationship advice, medical advice, or financial investment advice. Stay focused on career recovery and job search support. If asked about these topics, politely redirect to career-related matters.";
+    const boundaries = '\n\nImportant: Never provide personal relationship advice, medical advice, or financial investment advice. Stay focused on career recovery and job search support. If asked about these topics, politely redirect to career-related matters.';
     
     return basePrompt + boundaries;
   }
@@ -121,7 +121,7 @@ export class OpenAIService {
     // Basic content moderation - in production, use OpenAI's moderation API
     // For now, just ensure no personal data is exposed
     return content.replace(/\b\d{3}-\d{2}-\d{4}\b/g, '[SSN REMOVED]')
-                  .replace(/\b\d{16}\b/g, '[CARD NUMBER REMOVED]');
+      .replace(/\b\d{16}\b/g, '[CARD NUMBER REMOVED]');
   }
 
   async analyzeChatContent<T>(
@@ -171,7 +171,7 @@ export class OpenAIService {
     focusAreas?: string[];
   }): Promise<any> {
     try {
-      const systemPrompt = `You are a professional resume writer. Generate improved resume content based on the provided parameters. Return JSON with sections array and suggestions array.`;
+      const systemPrompt = 'You are a professional resume writer. Generate improved resume content based on the provided parameters. Return JSON with sections array and suggestions array.';
       
       const userPrompt = `
         Current Resume: ${params.resume}

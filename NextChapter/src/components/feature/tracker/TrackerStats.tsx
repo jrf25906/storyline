@@ -4,9 +4,9 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
-import Card from '../../common/Card';
-import { JobApplication } from '../../../types/database';
-import { Colors, Typography, Spacing } from '../../../theme';
+import Card from '@components/common/Card';
+import { JobApplication } from '@types/database';
+import { Colors, Typography, Spacing } from '@theme';
 import { Ionicons } from '@expo/vector-icons';
 import { differenceInDays } from 'date-fns';
 

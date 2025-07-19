@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import AppNavigator from '../AppNavigator';
-import { AuthProvider } from '../../context/AuthContext';
-import { ThemeProvider } from '../../context/ThemeContext';
-import { OfflineProvider } from '../../context/OfflineContext';
-import { useAuth } from '../../hooks/useAuth';
+import AppNavigator from '@navigation/AppNavigator';
+import { AuthProvider } from '@context/AuthContext';
+import { ThemeProvider } from '@context/ThemeContext';
+import { OfflineProvider } from '@context/OfflineContext';
+import { useAuth } from '@hooks/useAuth';
 
 // Mock the hooks
 jest.mock('../../hooks/useAuth');

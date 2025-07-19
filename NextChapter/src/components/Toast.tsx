@@ -8,10 +8,10 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useSlideInAnimation, useFadeInAnimation } from '../hooks/useAnimations';
-import { Colors } from '../theme/colors';
-import { Typography } from '../theme/typography';
-import { Spacing } from '../theme/spacing';
+import { useSlideInAnimation, useFadeInAnimation } from '@hooks/useAnimations';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 export interface ToastProps {
   message: string;

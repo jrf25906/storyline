@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent, waitFor, act } from '@testing-library/react-native';
 import { Alert } from 'react-native';
-import { ResumeScannerScreen } from '../ResumeScannerScreen';
-import { useResumeStore } from '../../../stores/resumeStore';
-import { Resume, ResumeAnalysis } from '../../../types/resume';
-import { createMockStore } from '../../../test-utils/mockHelpers';
+import { ResumeScannerScreen } from '@screens/resume/ResumeScannerScreen';
+import { useResumeStore } from '@stores/resumeStore';
+import { Resume, ResumeAnalysis } from '@types/resume';
+import { createMockStore } from '@test-utils/mockHelpers';
 
 // Mock navigation dependencies
 const mockNavigate = jest.fn();
@@ -495,7 +495,7 @@ describe('ResumeScannerScreen', () => {
           error
         };
         const mockStore = createMockStore(mockStoreWithError);
-      (useResumeStore as unknown as typeof mockStore).mockReturnValue(mockStoreWithError);
+        (useResumeStore as unknown as typeof mockStore).mockReturnValue(mockStoreWithError);
 
         const { getByText } = render(<ResumeScannerScreen />);
         expect(getByText(expected)).toBeTruthy();

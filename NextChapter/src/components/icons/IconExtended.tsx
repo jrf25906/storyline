@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import Svg, { Path, Circle, G, Rect, Ellipse } from 'react-native-svg';
-import { Icon, IconProps } from './Icon';
+import { Icon, IconProps } from '@components/icons/Icon';
 
 // Extended icon set for specific features
 export type ExtendedIconName = 

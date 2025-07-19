@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { supabase } from '../api/supabase';
-import { MoodEntry, MoodValue, MoodTrend } from '../../types';
-import { generateUUID } from '../../utils/uuid';
+import { supabase } from '@services/api/supabase';
+import { MoodEntry, MoodValue, MoodTrend } from '@types';
+import { generateUUID } from '@utils/uuid';
 
 class WellnessService {
   async saveMoodEntry(data: { value: MoodValue; note?: string; triggers?: string[]; activities?: string[] }): Promise<MoodEntry> {

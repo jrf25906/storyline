@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { BudgetEntry, BudgetType, BudgetFrequency } from '../types/database';
+import { BudgetEntry, BudgetType, BudgetFrequency } from '@types/database';
 import { 
   BudgetData, 
   FinancialRunway, 
@@ -11,9 +11,9 @@ import {
   BudgetAlertType,
   STATE_UNEMPLOYMENT_RATES,
   COBRA_COST_ESTIMATES 
-} from '../types/budget';
-import { saveBudgetData, loadBudgetData, deleteBudgetData } from '../services/budget/budgetService';
-import { supabase } from '../services/api/supabase';
+} from '@types/budget';
+import { saveBudgetData, loadBudgetData, deleteBudgetData } from '@services/budget/budgetService';
+import { supabase } from '@services/api/supabase';
 
 interface BudgetStore {
   // State

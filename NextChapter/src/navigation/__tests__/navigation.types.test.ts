@@ -8,7 +8,7 @@ import {
   TrackerStackParamList,
   BudgetStackParamList,
   ProfileStackParamList,
-} from '../../types/navigation';
+} from '@types';
 
 // Type tests to ensure navigation types are properly configured
 describe('Navigation Types', () => {

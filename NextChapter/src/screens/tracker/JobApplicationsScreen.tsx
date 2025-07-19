@@ -11,23 +11,23 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
-import { useJobTrackerStore } from '../../stores/jobTrackerStore';
-import { JobApplicationStatus } from '../../types/database';
-import { withErrorBoundary } from '../../components/common';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
+import { JobApplicationStatus } from '@types/database';
+import { withErrorBoundary } from '@components/common';
 import {
   ApplicationCard,
   KanbanColumn,
   TrackerStats,
   SearchBar,
-} from '../../components/feature/tracker';
-import { Colors, Typography, Spacing } from '../../theme';
+} from '@components/feature/tracker';
+import { Colors, Typography, Spacing } from '@theme';
 import { 
   H1,
   H2,
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
+} from '@components/common/Typography';
 
 type TrackerStackParamList = {
   JobApplications: undefined;
@@ -406,6 +406,6 @@ const styles = StyleSheet.create({
 export default withErrorBoundary(JobApplicationsScreen, {
   errorMessage: {
     title: 'Application tracker loading issue',
-    message: "Your applications are safe. Please refresh to view them."
+    message: 'Your applications are safe. Please refresh to view them.'
   }
 });

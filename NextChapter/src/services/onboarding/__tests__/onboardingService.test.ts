@@ -1,7 +1,7 @@
-import { OnboardingService } from '../onboardingService';
+import { OnboardingService } from '@services/onboarding/onboardingService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { encryptData, decryptData } from '../../../utils/encryption';
-import { supabase } from '../../api/supabase';
+import { encryptData, decryptData } from '@utils/encryption';
+import { supabase } from '@services/api/supabase';
 
 // Mock dependencies
 jest.mock('@react-native-async-storage/async-storage');

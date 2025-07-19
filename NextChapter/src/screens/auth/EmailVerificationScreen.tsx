@@ -9,12 +9,12 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
-import { useAuth } from '../../hooks/useAuth';
-import { useTheme } from '../../context/ThemeContext';
+import { useAuth } from '@hooks/useAuth';
+import { useTheme } from '@context/ThemeContext';
 import { Ionicons } from '@expo/vector-icons';
-import { supabase } from '../../services/api/supabase';
-import { logAnalyticsEvent } from '../../utils/analytics';
-import { withErrorBoundary } from '../../components/common';
+import { supabase } from '@services/api/supabase';
+import { logAnalyticsEvent } from '@utils/analytics';
+import { withErrorBoundary } from '@components/common';
 
 export const EmailVerificationScreen: React.FC = () => {
   const navigation = useNavigation();

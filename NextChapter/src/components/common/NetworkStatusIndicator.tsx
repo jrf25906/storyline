@@ -7,9 +7,9 @@ import {
   ViewStyle,
 } from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
-import { useUIStore } from '../../stores/uiStore';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Motion } from '../../theme';
+import { useUIStore } from '@stores/uiStore';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Motion } from '@theme';
 
 interface NetworkStatusIndicatorProps {
   autoHide?: boolean;

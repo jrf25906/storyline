@@ -7,8 +7,8 @@ import {
   ScrollView,
   Platform,
 } from 'react-native';
-import { Colors, Typography, Spacing } from '../../theme';
-import { useFocusOnMount } from '../../utils/focusManager';
+import { Colors, Typography, Spacing } from '@theme';
+import { useFocusOnMount } from '@utils/focusManager';
 
 interface SkipLink {
   id: string;

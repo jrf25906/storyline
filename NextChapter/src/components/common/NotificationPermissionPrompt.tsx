@@ -7,9 +7,9 @@ import {
   Image,
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { styles } from './NotificationPermissionPrompt.styles';
-import { notificationService } from '../../services/notifications/notificationService';
-import { theme } from '../../theme';
+import { styles } from '@components/common/NotificationPermissionPrompt.styles';
+import { notificationService } from '@services/notifications/notificationService';
+import { theme } from '@theme';
 
 interface NotificationPermissionPromptProps {
   onAllow: () => void;

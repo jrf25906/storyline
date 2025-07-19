@@ -8,7 +8,7 @@ import {
   createMockOnboardingStore,
   createMockAuthStore,
   createMockZustandHook,
-} from '../mockHelpers';
+} from '@test-utils/mockHelpers';
 
 describe('Mock Helpers', () => {
   describe('createMockCoachStore', () => {

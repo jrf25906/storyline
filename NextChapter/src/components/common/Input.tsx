@@ -9,8 +9,8 @@ import {
   Animated,
   Platform 
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { Colors, Spacing, Typography, Borders, Shadows } from '../../theme';
+import { useTheme } from '@context/ThemeContext';
+import { Colors, Spacing, Typography, Borders, Shadows } from '@theme';
 
 interface InputProps extends TextInputProps {
   label?: string;

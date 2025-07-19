@@ -1,9 +1,9 @@
-import { useBouncePlanStore } from '../../../stores/bouncePlanStore';
-import { useJobTrackerStore } from '../../../stores/jobTrackerStore';
-import { useBudgetStore } from '../../../stores/budgetStore';
-import { useWellnessStore } from '../../../stores/wellnessStore';
-import { useCoachStore } from '../../../stores/coachStore';
-import { supabase } from '../../api/supabase';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useWellnessStore } from '@stores/wellnessStore';
+import { useCoachStore } from '@stores/coachStore';
+import { supabase } from '@services/api/supabase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface SyncResult {

@@ -8,8 +8,8 @@ import {
   Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { syncManager } from '../../../services/database/sync/syncManager';
-import { theme } from '../../../theme';
+import { syncManager } from '@services/database/sync/syncManager';
+import { theme } from '@theme';
 
 export const OfflineQueueViewer: React.FC = () => {
   const [queueData, setQueueData] = useState(syncManager.getOfflineQueueVisualization());

@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { useAuth } from '../../hooks/useAuth';
-import { useTheme } from '../../context/ThemeContext';
-import { withErrorBoundary } from '../../components/common';
-import { LoadingOverlay } from '../../components/common/LoadingOverlay';
-import { ErrorMessage } from '../../components/common/ErrorMessage';
-import { validateEmail, validatePassword, getAuthErrorMessage, getAuthLoadingMessage } from '../../utils/validation';
+import { useAuth } from '@hooks/useAuth';
+import { useTheme } from '@context/ThemeContext';
+import { withErrorBoundary } from '@components/common';
+import { LoadingOverlay } from '@components/common/LoadingOverlay';
+import { ErrorMessage } from '@components/common/ErrorMessage';
+import { validateEmail, validatePassword, getAuthErrorMessage, getAuthLoadingMessage } from '@utils/validation';
 import { Ionicons } from '@expo/vector-icons';
 
 function LoginScreenContent() {

@@ -7,8 +7,8 @@ import {
   Animated,
   AccessibilityInfo,
 } from 'react-native';
-import { MoodValue, MOOD_EMOJIS, MOOD_DESCRIPTORS } from '../../../types';
-import { useTheme } from '../../../context/ThemeContext';
+import { MoodValue, MOOD_EMOJIS, MOOD_DESCRIPTORS } from '@types';
+import { useTheme } from '@context/ThemeContext';
 
 interface MoodSelectorProps {
   selectedMood?: MoodValue;

@@ -2,7 +2,7 @@
 export * from './mockHelpers';
 
 // Re-export test utilities if they exist
-export * from './testUtils';
+// export * from './testUtils'; // Commented out - file doesn't exist
 
 // Common test setup
 export const setupTest = () => {

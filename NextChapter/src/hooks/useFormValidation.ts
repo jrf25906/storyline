@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import { ValidationResult } from '../utils/validation';
+import { ValidationResult } from '@utils/validation';
 
 export interface FormField<T = string> {
   value: T;

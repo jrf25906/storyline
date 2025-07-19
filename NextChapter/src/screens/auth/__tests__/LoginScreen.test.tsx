@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import LoginScreen from '../LoginScreen';
-import { AuthProvider } from '../../../context/AuthContext';
-import { ThemeProvider } from '../../../context/ThemeContext';
-import * as authHook from '../../../hooks/useAuth';
+import LoginScreen from '@screens/auth/LoginScreen';
+import { AuthProvider } from '@context/AuthContext';
+import { ThemeProvider } from '@context/ThemeContext';
+import * as authHook from '@hooks/useAuth';
 
 // Mock the navigation
 const mockNavigate = jest.fn();

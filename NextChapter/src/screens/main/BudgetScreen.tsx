@@ -7,12 +7,12 @@ import {
   ActivityIndicator,
   RefreshControl,
 } from 'react-native';
-import { useTheme } from '../../context/ThemeContext';
-import { useBudgetStore } from '../../stores/budgetStore';
-import { RunwayIndicator, BudgetForm, BudgetAlerts } from '../../components/feature/budget';
-import { formatCurrency } from '../../utils/budget/budgetCalculations';
+import { useTheme } from '@context/ThemeContext';
+import { useBudgetStore } from '@stores/budgetStore';
+import { RunwayIndicator, BudgetForm, BudgetAlerts } from '@components/feature/budget';
+import { formatCurrency } from '@utils/budget/budgetCalculations';
 import { Ionicons } from '@expo/vector-icons';
-import { withErrorBoundary, Container } from '../../components/common';
+import { withErrorBoundary, Container } from '@components/common';
 import { 
   H1,
   H2,
@@ -20,7 +20,7 @@ import {
   Body,
   BodySM,
   Caption
-} from '../../components/common/Typography';
+} from '@components/common/Typography';
 
 function BudgetScreen() {
   const { theme } = useTheme();

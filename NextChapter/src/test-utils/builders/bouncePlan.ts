@@ -1,5 +1,5 @@
-import { BouncePlanTask } from '../../types/database';
-import { BouncePlanProgress, TaskUpdate } from '../../services/database/bouncePlan';
+import { BouncePlanTask } from '@types/database';
+import { BouncePlanProgress, TaskUpdate } from '@services/database/bouncePlan';
 
 /**
  * Test data builders for Bounce Plan related tests

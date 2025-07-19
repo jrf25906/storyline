@@ -2,9 +2,9 @@ import React from 'react';
 import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '../../context/ThemeContext';
-import { withErrorBoundary, Container, DashboardCard } from '../../components/common';
-import { H1, H2, Body, BodySM, Caption } from '../../components/common/Typography';
+import { useTheme } from '@context/ThemeContext';
+import { withErrorBoundary, Container, DashboardCard } from '@components/common';
+import { H1, H2, Body, BodySM, Caption } from '@components/common/Typography';
 
 function SettingsScreen() {
   const { theme } = useTheme();

@@ -1,8 +1,8 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { waitFor } from '@testing-library/react-native';
-import { useBouncePlanStore } from '../bouncePlanStore';
-import * as bouncePlanService from '../../services/database/bouncePlan';
-import { waitForAsync, testLoadingState, testAsyncError } from '../../test-utils/asyncHelpers';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import * as bouncePlanService from '@services/database/bouncePlan';
+import { waitForAsync, testLoadingState, testAsyncError } from '@test-utils/asyncHelpers';
 
 // Mock the database service
 jest.mock('../../services/database/bouncePlan');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import Avatar from '../Avatar';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import Avatar from '@components/common/Avatar';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock the theme modules
 jest.mock('../../../theme', () => ({

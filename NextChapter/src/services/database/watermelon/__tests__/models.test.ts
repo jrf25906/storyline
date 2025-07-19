@@ -7,7 +7,7 @@ import {
   BouncePlanTask,
   CoachConversation,
   WellnessActivity
-} from '../models';
+} from '@services/database/watermelon/models';
 
 describe('WatermelonDB Models', () => {
   describe('Profile Model', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import WeeklyProgressDots from '../WeeklyProgressDots';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import WeeklyProgressDots from '@components/feature/bounce-plan/WeeklyProgressDots';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock dependencies
 jest.mock('../../../../constants/bouncePlanTasks', () => ({

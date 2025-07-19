@@ -10,8 +10,8 @@ import {
   useProgressAnimation,
   useSequenceAnimation,
   useCelebrationAnimation,
-} from '../useAnimations';
-import { Colors } from '../../theme/colors';
+} from '@hooks/useAnimations';
+import { Colors } from '@theme/colors';
 
 // Mock AccessibilityInfo
 jest.mock('react-native/Libraries/Components/AccessibilityInfo/AccessibilityInfo', () => ({

@@ -5,7 +5,7 @@ import {
   generateBudgetAlerts,
   formatCurrency,
   calculateMonthlyBurn,
-} from '../budgetCalculations';
+} from '@utils/budget/budgetCalculations';
 import { 
   BudgetData, 
   BudgetFormData, 

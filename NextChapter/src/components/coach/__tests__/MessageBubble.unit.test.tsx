@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { View, Text } from 'react-native';
-import { MessageBubble } from '../MessageBubble';
-import { CoachMessage, CoachTone } from '../../../types/coach';
+import { MessageBubble } from '@components/coach/MessageBubble';
+import { CoachMessage, CoachTone } from '@types/coach';
 
 // Mock the theme context to avoid provider issues
 jest.mock('../../../context/ThemeContext', () => ({

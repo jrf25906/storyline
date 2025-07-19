@@ -7,8 +7,8 @@ import {
   Linking,
   Alert,
 } from 'react-native';
-import { CrisisDetectionResult } from '../../../types';
-import { useTheme } from '../../../context/ThemeContext';
+import { CrisisDetectionResult } from '@types';
+import { useTheme } from '@context/ThemeContext';
 import { Feather } from '@expo/vector-icons';
 
 interface CrisisAlertProps {

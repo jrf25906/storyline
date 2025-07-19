@@ -1,18 +1,18 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { useTheme } from '../context/ThemeContext';
-import { MainTabParamList } from '../types/navigation';
+import { useTheme } from '@context/ThemeContext';
+import { MainTabParamList } from '@types/navigation';
 import { MaterialIcons } from '@expo/vector-icons';
 
 // Stack Navigators
-import BouncePlanStackNavigator from './BouncePlanStackNavigator';
-import CoachStackNavigator from './CoachStackNavigator';
-import TrackerStackNavigator from './TrackerStackNavigator';
-import BudgetStackNavigator from './BudgetStackNavigator';
-import ProfileStackNavigator from './ProfileStackNavigator';
+import BouncePlanStackNavigator from '@navigation/BouncePlanStackNavigator';
+import CoachStackNavigator from '@navigation/CoachStackNavigator';
+import TrackerStackNavigator from '@navigation/TrackerStackNavigator';
+import BudgetStackNavigator from '@navigation/BudgetStackNavigator';
+import ProfileStackNavigator from '@navigation/ProfileStackNavigator';
 
 // Direct screen import for Home
-import HomeScreen from '../screens/main/HomeScreen';
+import HomeScreen from '@screens/main/HomeScreen';
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
 

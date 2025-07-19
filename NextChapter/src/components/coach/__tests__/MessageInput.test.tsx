@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { MessageInput } from '../MessageInput';
-import { renderWithProviders } from '../../../test-utils/test-helpers';
-import { APP_CONFIG } from '../../../utils/constants';
-import { EMOTIONAL_TRIGGERS } from '../../../types/coach';
+import { MessageInput } from '@components/coach/MessageInput';
+import { renderWithProviders } from '@test-utils/test-helpers';
+import { APP_CONFIG } from '@utils/constants';
+import { EMOTIONAL_TRIGGERS } from '@types/coach';
 import './setupCoachTests';
 
 describe('MessageInput', () => {

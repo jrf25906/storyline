@@ -3,7 +3,7 @@ export { useAuth } from '../context/AuthContext';
 
 // src/hooks/useOnboarding.ts
 import { useState, useEffect } from 'react';
-import { useAuth } from './useAuth';
+import { useAuth } from '@utils/documentation/useAuth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface OnboardingData {
@@ -85,7 +85,7 @@ export function useOnboarding() {
 export { useOffline as useNetworkStatus } from '../context/OfflineContext';
 
 // src/services/api/supabase.ts
-import { getSecurityServices } from '../security';
+import { getSecurityServices } from '@utils/security';
 
 // Use secure Supabase client with encrypted credential storage
 export const getSupabaseClient = async () => {
@@ -97,7 +97,7 @@ export const getSupabaseClient = async () => {
 export const supabase = getSupabaseClient();
 
 // src/services/api/openai.ts
-import { getSecurityServices } from '../security';
+import { getSecurityServices } from '@utils/security';
 
 // Use secure OpenAI service with encrypted API key storage and content filtering
 export const openAIService = getSecurityServices().openai;

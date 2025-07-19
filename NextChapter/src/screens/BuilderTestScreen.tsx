@@ -1,8 +1,9 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import { BuilderTest } from '../components/test/BuilderTest';
+import { withErrorBoundary } from '@components/common/withErrorBoundary';
+import { BuilderTest } from '@components/test/BuilderTest';
 
-export const BuilderTestScreen: React.FC = () => {
+const BuilderTestScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -21,3 +22,5 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
 });
+
+export default withErrorBoundary(BuilderTestScreen);

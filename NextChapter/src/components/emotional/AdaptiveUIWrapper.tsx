@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ViewStyle, TextStyle } from 'react-native';
-import { useEmotionalState } from '../../context/EmotionalStateContext';
-import { getEmotionalAdaptations, applyEmotionalAdaptations } from '../../theme/emotionalAdaptations';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { getEmotionalAdaptations, applyEmotionalAdaptations } from '@theme/emotionalAdaptations';
 
 interface AdaptiveUIWrapperProps {
   children: React.ReactNode;

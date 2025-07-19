@@ -1,7 +1,7 @@
-import { KeychainService } from './keychain';
-import { EnvironmentService } from './environment';
-import { createSecureSupabaseClient } from '../api/supabaseSecure';
-import { createSecureOpenAIService } from '../api/openaiSecure';
+import { KeychainService } from '@services/security/keychain';
+import { EnvironmentService } from '@services/security/environment';
+import { createSecureSupabaseClient } from '@services/api/supabaseSecure';
+import { createSecureOpenAIService } from '@services/api/openaiSecure';
 
 /**
  * Initialize all security services with proper dependency injection

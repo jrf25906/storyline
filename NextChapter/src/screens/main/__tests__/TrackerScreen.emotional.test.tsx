@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import TrackerScreen from '../TrackerScreen';
-import { useEmotionalState } from '../../../context/EmotionalStateContext';
-import { useAccessibility } from '../../../hooks/useAccessibility';
-import { useJobTrackerStore } from '../../../stores/jobTrackerStore';
-import { useNetworkStatus } from '../../../hooks/useNetworkStatus';
+import TrackerScreen from '@screens/main/TrackerScreen';
+import { useEmotionalState } from '@context/EmotionalStateContext';
+import { useAccessibility } from '@hooks/useAccessibility';
+import { useJobTrackerStore } from '@stores/jobTrackerStore';
+import { useNetworkStatus } from '@hooks/useNetworkStatus';
 
 // Mock dependencies
 jest.mock('../../../context/EmotionalStateContext');

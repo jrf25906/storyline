@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import LoadingIndicator from '../LoadingIndicator';
-import { ThemeProvider } from '../../../context/ThemeContext';
-import { Colors } from '../../../theme';
+import LoadingIndicator from '@components/common/LoadingIndicator';
+import { ThemeProvider } from '@context/ThemeContext';
+import { Colors } from '@theme';
 
 // Mock ThemeContext
 const mockTheme = {

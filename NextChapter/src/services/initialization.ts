@@ -1,7 +1,7 @@
-import { getSecurityServices } from './security';
+import { getSecurityServices } from '@services/security';
 import { Alert } from 'react-native';
-import { setupAnalytics } from './analytics/config';
-import { trackEvent } from './analytics';
+import { setupAnalytics } from '@services/analytics/config';
+import { trackEvent } from '@services/analytics';
 
 /**
  * Initialize all app services with proper error handling

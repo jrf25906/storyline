@@ -2,7 +2,7 @@ import React from 'react';
 import { render, waitFor, act } from '@testing-library/react-native';
 import { AccessibilityInfo } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { AccessibilityProvider, useAccessibilityContext } from '../AccessibilityProvider';
+import { AccessibilityProvider, useAccessibilityContext } from '@components/accessibility/AccessibilityProvider';
 
 // Mock dependencies
 jest.mock('react-native', () => ({
@@ -183,7 +183,7 @@ describe('AccessibilityProvider', () => {
 describe('useAccessibleAnimation', () => {
   it('returns correct animation settings based on reduce motion', async () => {
     const TestAnimationComponent = () => {
-      const { useAccessibleAnimation } = require('../AccessibilityProvider');
+      const { useAccessibleAnimation } = require('@components/accessibility/AccessibilityProvider');
       const { shouldAnimate, duration, extendedTimeout } = useAccessibleAnimation();
       
       return (
@@ -213,7 +213,7 @@ describe('useAccessibleAnimation', () => {
 describe('useAccessibleStyling', () => {
   it('returns correct styling based on accessibility settings', async () => {
     const TestStylingComponent = () => {
-      const { useAccessibleStyling } = require('../AccessibilityProvider');
+      const { useAccessibleStyling } = require('@components/accessibility/AccessibilityProvider');
       const { fontSize, contrast, touchTargetSize } = useAccessibleStyling();
       
       return (

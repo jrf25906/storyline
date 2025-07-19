@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
 import { Animated } from 'react-native';
-import ProgressBar from '../ProgressBar';
-import { ThemeProvider } from '../../../context/ThemeContext';
+import ProgressBar from '@components/common/ProgressBar';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Mock ThemeContext
 const mockTheme = {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import { MoodTrendsChart } from '../MoodTrendsChart';
-import { MoodValue, MoodTrend } from '../../../../types';
-import { ThemeProvider } from '../../../../context/ThemeContext';
+import { MoodTrendsChart } from '@components/feature/wellness/MoodTrendsChart';
+import { MoodValue, MoodTrend } from '@types';
+import { ThemeProvider } from '@context/ThemeContext';
 
 // Helper to render with theme
 const renderWithTheme = (component: React.ReactElement) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
-import { Colors, Spacing, Motion } from '../../../theme';
+import { Colors, Spacing, Motion } from '@theme';
 
 interface ProgressDotsProps {
   total: number;

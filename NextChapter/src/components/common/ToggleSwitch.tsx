@@ -6,9 +6,9 @@ import {
   StyleSheet,
   Animated,
 } from 'react-native';
-import { Colors } from '../../theme/colors';
-import { Typography } from '../../theme/typography';
-import { Spacing } from '../../theme/spacing';
+import { Colors } from '@theme/colors';
+import { Typography } from '@theme/typography';
+import { Spacing } from '@theme/spacing';
 
 export interface ToggleSwitchProps {
   value: boolean;

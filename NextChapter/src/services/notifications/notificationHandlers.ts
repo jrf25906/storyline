@@ -1,6 +1,6 @@
 import * as Notifications from 'expo-notifications';
 import { NavigationContainerRef } from '@react-navigation/native';
-import { NotificationType } from './notificationService';
+import { NotificationType } from '@services/notifications/notificationService';
 
 // Configure notification behavior
 Notifications.setNotificationHandler({
