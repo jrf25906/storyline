@@ -2,22 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import { AppState, AppStateStatus } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import { NavigationContainerRef } from '@react-navigation/native';
-import { notificationService } from '../../services/notifications/notificationService';
-import { setupNotificationHandlers } from '../../services/notifications/notificationHandlers';
-import { useNotifications } from '../../hooks/useNotifications';
-import { useBouncePlanStore } from '../../stores/bouncePlanStore';
-import { useBudgetStore } from '../../stores/budgetStore';
-import { useAuth } from '../../hooks/useAuth';
-import { useOnboardingStore } from '../../stores/onboardingStore';
+import { notificationService } from '@services/notifications/notificationService';
+import { setupNotificationHandlers } from '@services/notifications/notificationHandlers';
+import { useNotifications } from '@hooks/useNotifications';
+import { useBouncePlanStore } from '@stores/bouncePlanStore';
+import { useBudgetStore } from '@stores/budgetStore';
+import { useAuth } from '@hooks/useAuth';
+import { useOnboardingStore } from '@stores/onboardingStore';
 
 interface NotificationSetupProps {
-  navigationRef: React.RefObject<NavigationContainerRef<any>>;
-  children: React.ReactNode;
+  navigationRef?: React.RefObject<NavigationContainerRef<any>>;
 }
 
 export const NotificationSetup: React.FC<NotificationSetupProps> = ({
   navigationRef,
-  children,
 }) => {
   const appState = useRef(AppState.currentState);
   const responseListener = useRef<Notifications.Subscription | undefined>(undefined);
@@ -125,5 +123,5 @@ export const NotificationSetup: React.FC<NotificationSetupProps> = ({
     }
   };
 
-  return <>{children}</>;
+  return null;
 };
