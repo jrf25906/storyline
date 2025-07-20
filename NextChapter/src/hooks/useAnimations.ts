@@ -695,3 +695,33 @@ export const usePageTransitionAnimation = (config: AnimationConfig = {}) => {
     opacity,
   };
 };
+
+/**
+ * Dropdown animation for chevron rotation and menu expansion
+ * Smooth transitions for dropdown interactions
+ */
+export const useDropdownAnimation = (isOpen: boolean, config: AnimationConfig = {}) => {
+  const rotation = useRef(new Animated.Value(0)).current;
+  const reduceMotion = useReduceMotion();
+
+  useEffect(() => {
+    Animated.timing(rotation, {
+      toValue: isOpen ? 1 : 0,
+      duration: reduceMotion 
+        ? Motion.duration.fast 
+        : (config.duration || Motion.duration.fast),
+      easing: CustomEasing.standard,
+      useNativeDriver: true,
+    }).start();
+  }, [isOpen, rotation, reduceMotion, config.duration]);
+
+  const chevronRotation = rotation.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '180deg'],
+  });
+
+  return {
+    rotation,
+    chevronRotation,
+  };
+};
