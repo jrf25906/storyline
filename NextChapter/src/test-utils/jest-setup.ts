@@ -6,17 +6,26 @@
 
 // import '@testing-library/jest-native/extend-expect'; // TODO: Fix dependency conflict
 
-// Properly mock TouchableOpacity to respect disabled prop
+// Mock TouchableOpacity to avoid circular dependency issues
 jest.mock('react-native/Libraries/Components/Touchable/TouchableOpacity', () => {
   const React = require('react');
-  const { TouchableOpacity: RealTouchableOpacity } = jest.requireActual('react-native');
-
+  
   const MockTouchableOpacity = React.forwardRef((props: any, ref: any) => {
-    return React.createElement(RealTouchableOpacity, {
-      ...props,
-      onPress: props.disabled ? undefined : props.onPress,
+    const { onPress, disabled, children, style, testID, accessibilityLabel, accessibilityHint, accessibilityRole, accessibilityState, hitSlop, ...otherProps } = props;
+    
+    return React.createElement('TouchableOpacity', {
+      ...otherProps,
+      onPress: disabled ? undefined : onPress,
+      disabled,
+      style,
+      testID,
+      accessibilityLabel,
+      accessibilityHint,
+      accessibilityRole,
+      accessibilityState,
+      hitSlop,
       ref,
-    });
+    }, children);
   });
 
   MockTouchableOpacity.displayName = 'TouchableOpacity';

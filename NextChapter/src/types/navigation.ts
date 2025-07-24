@@ -61,6 +61,7 @@ export type BudgetStackParamList = {
 export type ProfileStackParamList = {
   ProfileOverview: undefined;
   Settings: undefined;
+  ThemeSettings: undefined;
   Wellness: undefined;
   About: undefined;
 };

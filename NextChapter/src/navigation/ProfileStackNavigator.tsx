@@ -6,6 +6,7 @@ import { useTheme } from '@context/ThemeContext';
 // Screens
 import ProfileScreen from '@screens/profile/ProfileScreen';
 import SettingsScreen from '@screens/main/SettingsScreen';
+import { ThemeSettingsScreen } from '@screens/settings/ThemeSettingsScreen';
 import WellnessScreen from '@screens/main/WellnessScreen';
 import AboutScreen from '@screens/profile/AboutScreen';
 
@@ -47,6 +48,15 @@ export default function ProfileStackNavigator() {
           title: 'Settings',
           headerBackTitle: 'Back',
           headerAccessibilityLabel: 'App settings screen',
+        }} 
+      />
+      <Stack.Screen 
+        name="ThemeSettings" 
+        component={ThemeSettingsScreen} 
+        options={{ 
+          title: 'Theme',
+          headerBackTitle: 'Back',
+          headerAccessibilityLabel: 'Theme settings screen',
         }} 
       />
       <Stack.Screen 

@@ -2,12 +2,15 @@ import React from 'react';
 import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 import { useTheme } from '@context/ThemeContext';
 import { withErrorBoundary, Container, DashboardCard } from '@components/common';
 import { H1, H2, Body, BodySM, Caption } from '@components/common/Typography';
+import type { ProfileStackScreenProps } from '@types/navigation';
 
 function SettingsScreen() {
   const { theme } = useTheme();
+  const navigation = useNavigation<ProfileStackScreenProps<'Settings'>['navigation']>();
 
   const settingsOptions = [
     {
@@ -26,7 +29,7 @@ function SettingsScreen() {
       title: 'Theme',
       description: 'Choose your preferred app appearance',
       icon: 'color-palette-outline',
-      onPress: () => console.log('Theme pressed'),
+      onPress: () => navigation.navigate('ThemeSettings'),
     },
     {
       title: 'Data & Storage',
