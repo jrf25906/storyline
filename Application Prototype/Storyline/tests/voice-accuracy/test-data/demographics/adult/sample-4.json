@@ -1,0 +1,14 @@
+{
+  "id": "adult-004",
+  "text": "My journey through medical school taught me about perseverance. Every sleepless night studying anatomy was worth it when I saved my first patient.",
+  "speaker": {
+    "age": 42,
+    "gender": "female",
+    "accent": "australian"
+  },
+  "metadata": {
+    "duration": 11.5,
+    "words": 26,
+    "emotionalTone": "proud"
+  }
+}

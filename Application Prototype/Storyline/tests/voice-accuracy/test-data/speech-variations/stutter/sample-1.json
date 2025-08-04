@@ -1,0 +1,15 @@
+{
+  "id": "speech-stutter-001",
+  "text": "W-w-writing has always been my escape. When I st-stutter, the words get stuck, but on paper, they flow freely.",
+  "speaker": {
+    "speechCondition": "stuttering",
+    "severity": "moderate",
+    "triggers": ["initial-sounds", "stress"]
+  },
+  "metadata": {
+    "duration": 9.8,
+    "words": 21,
+    "disfluencies": ["repetition", "prolongation"],
+    "accommodationNeeded": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "aave-001",
+  "text": "My grandmama always told me, you gotta speak your truth. That's why I'm writing this book, to tell our stories the way they need to be told.",
+  "speaker": {
+    "accent": "aave",
+    "culturalContext": "African-American Vernacular"
+  },
+  "metadata": {
+    "duration": 11.8,
+    "words": 30,
+    "dialectFeatures": ["gonna->gotta", "grammatical-variation"]
+  }
+}

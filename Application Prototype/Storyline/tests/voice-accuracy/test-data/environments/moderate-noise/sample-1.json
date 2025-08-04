@@ -1,0 +1,15 @@
+{
+  "id": "moderate-001",
+  "text": "I'm recording from my home office. The kids are playing in the next room, but I need to capture this idea before it slips away.",
+  "environment": {
+    "type": "moderate-noise",
+    "noiseLevel": "45dB",
+    "location": "home-office",
+    "backgroundSounds": ["children-playing", "tv-distant"]
+  },
+  "metadata": {
+    "duration": 10.5,
+    "words": 27,
+    "backgroundNoise": "moderate"
+  }
+}

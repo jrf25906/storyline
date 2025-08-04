@@ -1,0 +1,14 @@
+{
+  "id": "british-001",
+  "text": "I've been working on this manuscript whilst commuting on the tube. It's quite extraordinary how the rhythm of the train helps the words flow.",
+  "speaker": {
+    "accent": "british-rp",
+    "region": "London",
+    "dialectFeatures": ["whilst", "quite"]
+  },
+  "metadata": {
+    "duration": 10.7,
+    "words": 26,
+    "britishisms": ["whilst", "tube", "quite extraordinary"]
+  }
+}

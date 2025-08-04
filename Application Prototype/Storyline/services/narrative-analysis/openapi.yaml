@@ -1,0 +1,92 @@
+openapi: 3.0.0
+info:
+  title: Storyline Narrative Analysis Service
+  version: 1.0.0
+  description: API for the Storyline Narrative Analysis Service
+paths:
+  /health:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: Service is healthy
+  /analysis/story/{storyId}:
+    get:
+      summary: Analyze a story for character and structure
+      parameters:
+        - name: storyId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully analyzed story
+        '500':
+          description: Internal server error
+  /analysis/story/{storyId}/characters:
+    get:
+      summary: Get character analysis for a story
+      parameters:
+        - name: storyId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved character analysis
+        '500':
+          description: Internal server error
+  /analysis/story/{storyId}/structure:
+    get:
+      summary: Get story structure analysis for a story
+      parameters:
+        - name: storyId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully retrieved story structure analysis
+        '500':
+          description: Internal server error
+  /analysis/craft/readability:
+    post:
+      summary: Analyze text for readability scores
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+      responses:
+        '200':
+          description: Successfully analyzed readability
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+  /analysis/craft/style-tone:
+    post:
+      summary: Analyze text for style and tone
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+      responses:
+        '200':
+          description: Successfully analyzed style and tone
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error

@@ -1,0 +1,14 @@
+{
+  "id": "elderly-001",
+  "text": "When I was young, we didn't have all these fancy gadgets. But we had stories, real stories passed down through generations. Let me tell you about your grandmother.",
+  "speaker": {
+    "age": 78,
+    "gender": "female",
+    "accent": "american-southern"
+  },
+  "metadata": {
+    "duration": 14.8,
+    "words": 31,
+    "emotionalTone": "nostalgic"
+  }
+}

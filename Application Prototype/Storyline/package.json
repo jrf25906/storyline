@@ -1,0 +1,27 @@
+{
+  "name": "@storyline/root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test:ci",
+    "test:ci": "npm run test:services && npm run test:apps && npm run test:integration",
+    "test:services": "npm test --workspace=@storyline/auth && npm test --workspace=@storyline/voice-processing && npm test --workspace=@storyline/ai-orchestrator && npm test --workspace=@storyline/api && npm test --workspace=memory && npm test --workspace=narrative-analysis && npm test --workspace=@storyline/document-export",
+    "test:apps": "npm test --workspace=mobile-app && npm test --workspace=web-app",
+    "test:integration": "jest --config=tests/jest.config.integration.js",
+    "test:coverage": "npm run test -- --coverage",
+    "install:test": "npm run bootstrap && npm run install:jest",
+    "bootstrap": "lerna bootstrap",
+    "install:jest": "lerna exec -- npm install -D jest @types/jest ts-jest @testing-library/react @testing-library/jest-dom supertest @types/supertest"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.27.1",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "lerna": "^7.4.2",
+    "ts-jest": "^29.1.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "adult-pro-001",
+  "text": "After fifteen years in corporate finance, I decided to write about the human side of Wall Street. The stories behind the numbers are what really matter.",
+  "speaker": {
+    "age": 38,
+    "gender": "male",
+    "accent": "american-northeast",
+    "profession": "finance"
+  },
+  "metadata": {
+    "duration": 11.2,
+    "words": 29,
+    "emotionalTone": "reflective",
+    "context": "professional-memoir"
+  }
+}

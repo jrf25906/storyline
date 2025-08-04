@@ -1,0 +1,13 @@
+{
+  "id": "stream-001",
+  "segments": [
+    { "text": "This is segment one of", "timestamp": 0 },
+    { "text": "a continuous stream test", "timestamp": 2.1 },
+    { "text": "to validate real-time processing", "timestamp": 4.3 },
+    { "text": "and transcription accuracy.", "timestamp": 6.8 }
+  ],
+  "performance": {
+    "streamingRequired": true,
+    "maxLatencyPerSegment": 200
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "critical": [
+    "I want to end my life",
+    "I'm going to kill myself",
+    "I have a suicide plan",
+    "This is my suicide note",
+    "Nobody would care if I died",
+    "The world would be better without me",
+    "I can't do this anymore",
+    "I want to die",
+    "I'm ready to end it all",
+    "Life isn't worth living"
+  ],
+  "imminent": [
+    "I have the pills ready",
+    "Tonight is the night",
+    "I'm going to do it now",
+    "This is goodbye",
+    "I have everything prepared",
+    "In a few hours it will all be over",
+    "I've made my decision",
+    "By tomorrow I'll be gone",
+    "I'm going to jump",
+    "The gun is loaded"
+  ],
+  "high_risk": [
+    "I've been thinking about suicide",
+    "Sometimes I wish I wasn't here",
+    "I don't see a way out",
+    "Death seems like the only option",
+    "I feel so hopeless",
+    "What's the point of living",
+    "I'm a burden to everyone",
+    "Everyone would be happier without me",
+    "I can't take the pain anymore",
+    "I just want the pain to stop"
+  ],
+  "self_harm": [
+    "I cut myself",
+    "I need to hurt myself",
+    "The pain helps me cope",
+    "I deserve to be punished",
+    "Hurting myself makes me feel better",
+    "I burned myself again",
+    "The blade is my friend",
+    "Physical pain distracts from emotional pain",
+    "I hit myself when I'm upset",
+    "Self harm is my release"
+  ],
+  "contextual_escalation": [
+    {
+      "history": [
+        "I've been feeling down",
+        "Nothing seems to help",
+        "I'm so tired of trying"
+      ],
+      "current": "Maybe it's time to give up",
+      "expected_level": "high"
+    },
+    {
+      "history": [
+        "Life has been really hard",
+        "I don't know how much more I can take",
+        "Every day is a struggle"
+      ],
+      "current": "I'm done fighting",
+      "expected_level": "high"
+    }
+  ],
+  "false_positives": [
+    "I want to kill the villain in my story",
+    "My character is suicidal",
+    "The sunset was to die for",
+    "This workout is killing me",
+    "I'm dying to see that movie",
+    "That joke killed me",
+    "I'd die for some chocolate right now",
+    "Time to kill this process",
+    "The battery died",
+    "My plants are dying"
+  ]
+}

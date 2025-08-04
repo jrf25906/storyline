@@ -1,0 +1,13 @@
+{
+  "id": "perf-001",
+  "text": "Quick test.",
+  "performance": {
+    "targetLatency": 50,
+    "acceptableLatency": 100,
+    "testType": "real-time"
+  },
+  "metadata": {
+    "duration": 1.2,
+    "words": 2
+  }
+}

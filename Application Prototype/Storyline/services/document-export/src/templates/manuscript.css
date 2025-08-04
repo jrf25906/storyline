@@ -1,0 +1,187 @@
+@page {
+    margin: 1in;
+    @top-right {
+        content: counter(page);
+        font-family: 'Times New Roman', serif;
+        font-size: 12pt;
+    }
+}
+
+.manuscript {
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 2;
+    color: #000;
+}
+
+/* Title Page */
+.title-page {
+    text-align: left;
+    margin-bottom: 1in;
+    page-break-after: always;
+}
+
+.manuscript-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2in;
+}
+
+.author-info {
+    text-align: left;
+}
+
+.author-info p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.word-count {
+    text-align: right;
+}
+
+.word-count p {
+    margin: 0;
+}
+
+.title-section {
+    text-align: center;
+    margin-top: 2in;
+}
+
+.manuscript-title {
+    font-size: 24pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 24pt;
+    line-height: 1.2;
+}
+
+.genre {
+    font-size: 12pt;
+    font-style: italic;
+    margin-bottom: 12pt;
+}
+
+.byline {
+    font-size: 14pt;
+    margin-bottom: 0;
+}
+
+/* Main Content */
+.manuscript-body {
+    text-align: left;
+}
+
+.chapter-break {
+    page-break-before: always;
+}
+
+.chapter-title {
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 24pt;
+    margin-top: 48pt;
+    text-transform: uppercase;
+}
+
+.chapter-content {
+    text-align: left;
+}
+
+.chapter-content p {
+    text-indent: 0.5in;
+    margin-bottom: 12pt;
+    text-align: justify;
+}
+
+.chapter-content p:first-child {
+    text-indent: 0;
+}
+
+.main-content p {
+    text-indent: 0.5in;
+    margin-bottom: 12pt;
+    text-align: justify;
+}
+
+.main-content p:first-child {
+    text-indent: 0;
+}
+
+/* Characters Section */
+.characters-section {
+    margin-top: 2in;
+}
+
+.section-break {
+    page-break-before: always;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 24pt;
+    text-transform: uppercase;
+}
+
+.character {
+    margin-bottom: 24pt;
+}
+
+.character-name {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 6pt;
+}
+
+.character-description {
+    margin-bottom: 6pt;
+    text-indent: 0;
+}
+
+.character-traits {
+    font-size: 11pt;
+    margin-bottom: 0;
+    text-indent: 0;
+}
+
+/* General Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 12pt 0.5in;
+    font-style: italic;
+    text-indent: 0;
+}
+
+/* Print Optimizations */
+@media print {
+    .manuscript {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    .chapter-break,
+    .section-break {
+        page-break-before: always;
+    }
+    
+    .chapter-title,
+    .section-title {
+        page-break-after: avoid;
+    }
+}

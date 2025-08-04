@@ -1,0 +1,41 @@
+{
+  "name": "@storyline/monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Storyline - AI-powered voice-first book writing platform",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\" \"npm run dev:services\"",
+    "dev:api": "npm run dev --workspace=@storyline/api",
+    "dev:auth": "npm run dev --workspace=@storyline/auth",
+    "dev:ai": "npm run dev --workspace=@storyline/ai-orchestrator",
+    "dev:voice": "npm run dev --workspace=@storyline/voice-processing",
+    "dev:memory": "npm run dev --workspace=@storyline/memory",
+    "dev:web": "npm run dev --workspace=@storyline/web",
+    "dev:services": "concurrently \"npm run dev:api\" \"npm run dev:auth\" \"npm run dev:ai\" \"npm run dev:voice\" \"npm run dev:memory\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "db:migrate": "npm run migrate --workspace=@storyline/api",
+    "db:seed": "npm run seed --workspace=@storyline/api"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

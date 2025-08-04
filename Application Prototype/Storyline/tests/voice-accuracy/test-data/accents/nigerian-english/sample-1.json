@@ -1,0 +1,16 @@
+{
+  "id": "accent-nigerian-001",
+  "text": "Growing up in Lagos shaped my worldview. The hustle and bustle of the city, the warmth of our extended family, it all influences my writing.",
+  "speaker": {
+    "accent": "nigerian-english",
+    "region": "Lagos",
+    "languageBackground": ["Yoruba", "English", "Pidgin"],
+    "intonationPattern": "tonal"
+  },
+  "metadata": {
+    "duration": 11.3,
+    "words": 28,
+    "prosody": "rhythmic",
+    "stressPattern": "syllable-timed"
+  }
+}

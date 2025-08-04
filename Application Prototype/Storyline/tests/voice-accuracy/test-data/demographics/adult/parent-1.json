@@ -1,0 +1,16 @@
+{
+  "id": "adult-parent-001",
+  "text": "Becoming a single mother at thirty-two changed everything. This book is for my daughter, so she understands the choices I made for us.",
+  "speaker": {
+    "age": 35,
+    "gender": "female",
+    "accent": "american-midwest",
+    "parentalStatus": "single-parent"
+  },
+  "metadata": {
+    "duration": 10.3,
+    "words": 25,
+    "emotionalTone": "determined",
+    "context": "parenting-memoir"
+  }
+}

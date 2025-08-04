@@ -1,0 +1,14 @@
+{
+  "id": "adult-001",
+  "text": "I've been working on my memoir for three years now, and it's finally coming together. The process of writing has helped me understand my own journey better.",
+  "speaker": {
+    "age": 35,
+    "gender": "female",
+    "accent": "american-general"
+  },
+  "metadata": {
+    "duration": 12.5,
+    "words": 32,
+    "emotionalTone": "reflective"
+  }
+}

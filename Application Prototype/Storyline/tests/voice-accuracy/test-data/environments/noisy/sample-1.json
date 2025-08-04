@@ -1,0 +1,15 @@
+{
+  "id": "noisy-001",
+  "text": "I'm recording this at the coffee shop because inspiration struck. The protagonist just revealed their secret and I need to capture this dialogue immediately.",
+  "environment": {
+    "type": "noisy",
+    "noiseLevel": "65dB",
+    "location": "coffee-shop",
+    "backgroundSounds": ["conversations", "coffee-machine", "music"]
+  },
+  "metadata": {
+    "duration": 11.7,
+    "words": 27,
+    "backgroundNoise": "significant"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "child-001",
+  "text": "My story is about a magical dragon who lives in the clouds. He's purple and sparkly and he helps children find their way home when they're lost.",
+  "speaker": {
+    "age": 9,
+    "gender": "male",
+    "accent": "american-general",
+    "parentalConsent": true
+  },
+  "metadata": {
+    "duration": 11.5,
+    "words": 30,
+    "emotionalTone": "excited"
+  }
+}

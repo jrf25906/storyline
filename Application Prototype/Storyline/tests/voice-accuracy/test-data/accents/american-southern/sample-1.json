@@ -1,0 +1,14 @@
+{
+  "id": "southern-001",
+  "text": "Down here in Georgia, we've got stories passed down for generations. My grandaddy used to say every family's got a book in 'em.",
+  "speaker": {
+    "accent": "american-southern",
+    "region": "Georgia",
+    "dialectFeatures": ["drawl", "colloquialisms"]
+  },
+  "metadata": {
+    "duration": 10.1,
+    "words": 25,
+    "regionalExpressions": ["down here", "grandaddy", "in 'em"]
+  }
+}

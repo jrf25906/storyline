@@ -1,0 +1,18 @@
+{
+  "id": "emotional-001",
+  "text": "Writing about my mother's passing has been the hardest part of this memoir. I need to take breaks, but I know her story deserves to be told.",
+  "content": {
+    "type": "emotional",
+    "intensity": "high",
+    "themes": ["grief", "love", "memory"]
+  },
+  "criticalPhraseDetection": {
+    "required": true,
+    "supportLevel": "medium"
+  },
+  "metadata": {
+    "duration": 12.9,
+    "words": 30,
+    "emotionalTone": "vulnerable"
+  }
+}

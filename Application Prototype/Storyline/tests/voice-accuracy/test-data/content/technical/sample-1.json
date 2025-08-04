@@ -1,0 +1,13 @@
+{
+  "id": "technical-001",
+  "text": "The implementation uses a dual RAG architecture combining vector and graph databases. ChromaDB handles semantic search while Neo4j manages relationship queries.",
+  "content": {
+    "type": "technical",
+    "domain": "software-engineering"
+  },
+  "metadata": {
+    "duration": 9.8,
+    "words": 23,
+    "technicalTerms": ["RAG", "ChromaDB", "Neo4j"]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "teen-001",
+  "text": "High school feels like a maze sometimes. Between college prep and figuring out who I am, writing helps me process everything.",
+  "speaker": {
+    "age": 16,
+    "gender": "male",
+    "accent": "american-general",
+    "parentalConsent": true
+  },
+  "metadata": {
+    "duration": 9.7,
+    "words": 23,
+    "emotionalTone": "uncertain"
+  }
+}

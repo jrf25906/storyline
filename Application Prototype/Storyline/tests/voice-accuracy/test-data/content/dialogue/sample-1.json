@@ -1,0 +1,13 @@
+{
+  "id": "dialogue-001",
+  "text": "She looked at me and said, 'You can't keep running from your past.' I knew she was right, but admitting it was the hardest part.",
+  "content": {
+    "type": "dialogue",
+    "narrativeContext": "character-interaction"
+  },
+  "metadata": {
+    "duration": 10.2,
+    "words": 28,
+    "quotedSpeech": true
+  }
+}

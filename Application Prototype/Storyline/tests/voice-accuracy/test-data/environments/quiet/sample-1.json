@@ -1,0 +1,14 @@
+{
+  "id": "quiet-001",
+  "text": "In the silence of my study, I find the words flow more easily. The character development for chapter twelve needs careful attention to detail.",
+  "environment": {
+    "type": "quiet",
+    "noiseLevel": "25dB",
+    "location": "home-office"
+  },
+  "metadata": {
+    "duration": 10.3,
+    "words": 26,
+    "backgroundNoise": "minimal"
+  }
+}

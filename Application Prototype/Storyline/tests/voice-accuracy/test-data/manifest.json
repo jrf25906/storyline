@@ -1,0 +1,77 @@
+{
+  "version": "1.0.1",
+  "totalSamples": 34,
+  "lastUpdated": "2025-08-04T17:25:00Z",
+  "categories": {
+    "demographics": {
+      "adult": { "samples": 7, "ageRange": "25-55", "minAccuracy": 95 },
+      "elderly": { "samples": 3, "ageRange": "65+", "minAccuracy": 93 },
+      "child": { "samples": 1, "ageRange": "8-12", "minAccuracy": 92, "requiresConsent": true },
+      "teen": { "samples": 1, "ageRange": "13-18", "minAccuracy": 94 },
+      "male": { "samples": 4, "minAccuracy": 95 },
+      "female": { "samples": 5, "minAccuracy": 95 },
+      "nonbinary": { "samples": 1, "minAccuracy": 95 }
+    },
+    "environments": {
+      "quiet": { "samples": 1, "noiseLevel": "<30dB", "minAccuracy": 97 },
+      "moderate-noise": { "samples": 1, "noiseLevel": "30-50dB", "minAccuracy": 92 },
+      "noisy": { "samples": 3, "noiseLevel": "50-70dB", "minAccuracy": 85 },
+      "outdoor": { "samples": 1, "noiseLevel": "variable", "minAccuracy": 88 }
+    },
+    "content": {
+      "emotional": { "samples": 7, "minAccuracy": 94, "criticalPhraseAccuracy": 100 },
+      "narrative": { "samples": 1, "minAccuracy": 95 },
+      "dialogue": { "samples": 1, "minAccuracy": 93 },
+      "technical": { "samples": 1, "minAccuracy": 96 }
+    },
+    "accents": {
+      "american-general": { "samples": 3, "minAccuracy": 95 },
+      "british-rp": { "samples": 2, "minAccuracy": 94 },
+      "indian-english": { "samples": 1, "minAccuracy": 93 },
+      "american-southern": { "samples": 2, "minAccuracy": 94 },
+      "aave": { "samples": 1, "minAccuracy": 93 },
+      "nigerian-english": { "samples": 1, "minAccuracy": 93 },
+      "jamaican-english": { "samples": 1, "minAccuracy": 92 },
+      "arabic-english": { "samples": 1, "minAccuracy": 93 }
+    },
+    "speechVariations": {
+      "stuttering": { "samples": 1, "minAccuracy": 90 },
+      "rapidSpeech": { "samples": 1, "minAccuracy": 88 }
+    }
+  },
+  "criticalPhrases": [
+    "I need help",
+    "I'm in crisis", 
+    "Emergency",
+    "I'm having thoughts of",
+    "I feel unsafe",
+    "ending everything",
+    "end it all",
+    "can't go on",
+    "no point in living",
+    "ending my life",
+    "hurt myself",
+    "hurting myself",
+    "wish i wasn't here",
+    "better off without me",
+    "don't want to wake up",
+    "don't want to wake up tomorrow",
+    "cutting"
+  ],
+  "performanceTargets": {
+    "realTimeLatency": { "p50": 100, "p95": 200, "p99": 300 },
+    "accuracy": { "overall": 95, "demographic": 93, "environmental": 85 },
+    "biasThreshold": { "maxDifference": 2 },
+    "criticalPhraseDetection": { "accuracy": 100, "falsePositiveRate": 5 }
+  },
+  "audioGeneration": {
+    "status": "pending",
+    "note": "Use TTS service to generate corresponding WAV files for each JSON sample"
+  },
+  "testingNotes": {
+    "criticalSafety": "All crisis phrases must be detected with 100% accuracy",
+    "demographicBias": "Accuracy difference between demographics must not exceed 2%",
+    "environmentalDegradation": "Noisy environments may have lower accuracy but crisis detection must remain 100%",
+    "accessibilityRequirement": "Speech variations must be accommodated without discrimination"
+  }
+}

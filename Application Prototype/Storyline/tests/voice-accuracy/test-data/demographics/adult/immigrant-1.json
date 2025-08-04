@@ -1,0 +1,16 @@
+{
+  "id": "adult-immig-001",
+  "text": "I left everything behind in Syria to give my children a future. Writing our journey helps me process the trauma and celebrate our survival.",
+  "speaker": {
+    "age": 44,
+    "gender": "female",
+    "accent": "arabic-english",
+    "languageBackground": ["Arabic", "English"]
+  },
+  "metadata": {
+    "duration": 10.8,
+    "words": 26,
+    "emotionalTone": "hopeful",
+    "context": "immigration-story"
+  }
+}

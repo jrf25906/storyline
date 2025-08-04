@@ -1,0 +1,14 @@
+{
+  "id": "adult-003",
+  "text": "Looking back at my twenties, I realize how much I've grown. The mistakes I made shaped who I am today, and I wouldn't change them.",
+  "speaker": {
+    "age": 28,
+    "gender": "nonbinary",
+    "accent": "canadian"
+  },
+  "metadata": {
+    "duration": 10.8,
+    "words": 28,
+    "emotionalTone": "introspective"
+  }
+}

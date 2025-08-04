@@ -1,0 +1,73 @@
+{
+  "boundary_statements": [
+    "I don't want to talk about this",
+    "Can we change the subject?",
+    "This is too much for me",
+    "I need to stop",
+    "I'm not ready for this",
+    "Let's talk about something else",
+    "I can't go there right now",
+    "Please don't ask me about that",
+    "I need a break",
+    "This is triggering me"
+  ],
+  "trauma_disclosures": [
+    "I can't talk about what happened",
+    "The memories are too painful",
+    "I was abused as a child",
+    "I'm a survivor of assault",
+    "I have PTSD from the war",
+    "The trauma still affects me",
+    "I still have nightmares",
+    "I can't forget what they did",
+    "The flashbacks won't stop",
+    "I feel broken"
+  ],
+  "distress_signals": [
+    "I'm having a panic attack",
+    "I can't breathe",
+    "Everything is spinning",
+    "I feel like I'm back there",
+    "I'm dissociating",
+    "I feel numb",
+    "My heart is racing",
+    "I'm shaking",
+    "I feel like I'm dying",
+    "I can't stop the memories"
+  ],
+  "appropriate_responses": {
+    "boundary_respect": [
+      "I understand and respect your boundaries",
+      "We can absolutely talk about something else",
+      "Your comfort is my priority",
+      "Thank you for letting me know",
+      "Let's focus on what feels safe for you"
+    ],
+    "trauma_support": [
+      "Your feelings are valid",
+      "You're safe here",
+      "There's no rush",
+      "You're in control",
+      "I'm here to support you"
+    ],
+    "grounding": [
+      "Let's take a breath together",
+      "Notice five things you can see",
+      "Feel your feet on the ground",
+      "You are here and you are safe",
+      "Focus on my voice"
+    ]
+  },
+  "inappropriate_responses": [
+    "You need to talk about it to heal",
+    "Just try to forget about it",
+    "It wasn't that bad",
+    "Others have been through worse",
+    "You should be over it by now",
+    "Face your fears",
+    "You're being too sensitive",
+    "Man up",
+    "Stop dwelling on the past",
+    "You're overreacting"
+  ]
+}

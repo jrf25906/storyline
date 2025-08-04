@@ -1,0 +1,15 @@
+{
+  "id": "outdoor-001",
+  "text": "Walking through the park always sparks creativity. The chapter about finding peace in nature practically writes itself here among the trees.",
+  "environment": {
+    "type": "outdoor",
+    "noiseLevel": "variable",
+    "location": "park",
+    "backgroundSounds": ["birds", "wind", "footsteps"]
+  },
+  "metadata": {
+    "duration": 9.3,
+    "words": 23,
+    "backgroundNoise": "natural"
+  }
+}

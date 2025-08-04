@@ -1,0 +1,26 @@
+{
+  "name": "@storyline/root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test:ci",
+    "test:ci": "npm run test:services && npm run test:apps && npm run test:integration",
+    "test:services": "lerna run test --scope=@storyline/service-*",
+    "test:apps": "lerna run test --scope=@storyline/app-*",
+    "test:integration": "jest --config=tests/jest.config.integration.js",
+    "test:coverage": "npm run test -- --coverage",
+    "install:test": "npm run bootstrap && npm run install:jest",
+    "bootstrap": "lerna bootstrap",
+    "install:jest": "lerna exec -- npm install -D jest @types/jest ts-jest @testing-library/react @testing-library/jest-dom supertest @types/supertest"
+  },
+  "devDependencies": {
+    "lerna": "^7.4.2",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.11",
+    "ts-jest": "^29.1.1"
+  }
+}

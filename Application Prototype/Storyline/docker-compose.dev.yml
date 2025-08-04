@@ -1,0 +1,127 @@
+version: '3.8'
+
+services:
+  # Override for development - use nodemon and mount source
+  api:
+    build:
+      context: ./services/api
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+    volumes:
+      - ./services/api:/app
+      - /app/node_modules
+      - ./logs:/app/logs
+
+  auth:
+    build:
+      context: ./services/auth
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+    volumes:
+      - ./services/auth:/app
+      - /app/node_modules
+
+  ai-orchestrator:
+    build:
+      context: ./services/ai-orchestrator
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+      # Add API keys from .env
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+    volumes:
+      - ./services/ai-orchestrator:/app
+      - /app/node_modules
+
+  voice-processing:
+    build:
+      context: ./services/voice-processing
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+      # Add voice API keys from .env
+      ASSEMBLYAI_API_KEY: ${ASSEMBLYAI_API_KEY}
+      DEEPGRAM_API_KEY: ${DEEPGRAM_API_KEY}
+    volumes:
+      - ./services/voice-processing:/app
+      - /app/node_modules
+
+  memory:
+    build:
+      context: ./services/memory
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+    volumes:
+      - ./services/memory:/app
+      - /app/node_modules
+
+  # Development tools
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: storyline-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@storyline.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - storyline-network
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: storyline-redis-commander
+    environment:
+      REDIS_HOSTS: redis:redis:6379
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+    networks:
+      - storyline-network
+
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: storyline-chroma
+    ports:
+      - "8000:8000"
+    networks:
+      - storyline-network
+
+  neo4j:
+    image: neo4j:latest
+    container_name: storyline-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/password
+    networks:
+      - storyline-network
+
+  narrative-analysis:
+    build:
+      context: ./services/narrative-analysis
+      dockerfile: Dockerfile.dev
+    command: npm run dev
+    environment:
+      NODE_ENV: development
+      LOG_LEVEL: debug
+    volumes:
+      - ./services/narrative-analysis:/app
+      - /app/node_modules

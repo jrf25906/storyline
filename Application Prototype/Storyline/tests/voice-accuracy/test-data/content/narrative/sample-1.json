@@ -1,0 +1,15 @@
+{
+  "id": "narrative-001",
+  "text": "The year was 1985. I stood at the intersection of Fifth Avenue and 42nd Street, briefcase in hand, wondering if I was making the biggest mistake of my life.",
+  "content": {
+    "type": "narrative",
+    "structure": "opening",
+    "tense": "past",
+    "perspective": "first-person"
+  },
+  "metadata": {
+    "duration": 13.4,
+    "words": 32,
+    "narrativeElements": ["setting", "character", "conflict-introduction"]
+  }
+}

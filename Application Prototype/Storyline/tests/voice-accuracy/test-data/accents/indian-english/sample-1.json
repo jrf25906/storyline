@@ -1,0 +1,14 @@
+{
+  "id": "indian-001",
+  "text": "The festivals of my childhood in Mumbai are vivid memories. Diwali, Holi, and Ganesh Chaturthi shaped my understanding of community and celebration.",
+  "speaker": {
+    "accent": "indian-english",
+    "region": "Mumbai",
+    "languageBackground": ["Hindi", "English", "Marathi"]
+  },
+  "metadata": {
+    "duration": 11.3,
+    "words": 25,
+    "properNouns": ["Mumbai", "Diwali", "Holi", "Ganesh Chaturthi"]
+  }
+}

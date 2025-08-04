@@ -1,0 +1,14 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "packages": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ],
+  "command": {
+    "run": {
+      "stream": true
+    }
+  }
+}

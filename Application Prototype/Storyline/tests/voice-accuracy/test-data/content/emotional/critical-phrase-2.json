@@ -1,0 +1,18 @@
+{
+  "id": "critical-002",
+  "text": "I can't go on like this anymore. The pain is too much and I'm thinking about ending it all.",
+  "content": {
+    "type": "crisis",
+    "severity": "critical"
+  },
+  "criticalPhraseDetection": {
+    "required": true,
+    "expectedDetection": true,
+    "expectedResponse": "immediate-support"
+  },
+  "metadata": {
+    "duration": 6.8,
+    "words": 20,
+    "emotionalTone": "desperate"
+  }
+}

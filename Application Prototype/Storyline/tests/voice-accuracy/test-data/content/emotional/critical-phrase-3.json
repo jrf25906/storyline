@@ -1,0 +1,18 @@
+{
+  "id": "critical-003",
+  "text": "Everyone would be better off without me. I wish I wasn't here anymore.",
+  "content": {
+    "type": "crisis",
+    "severity": "critical"
+  },
+  "criticalPhraseDetection": {
+    "required": true,
+    "expectedDetection": true,
+    "expectedResponse": "immediate-support"
+  },
+  "metadata": {
+    "duration": 5.2,
+    "words": 14,
+    "emotionalTone": "hopeless"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "critical-001",
+  "text": "I'm having thoughts of ending everything. I need help right now.",
+  "content": {
+    "type": "crisis",
+    "severity": "critical"
+  },
+  "criticalPhraseDetection": {
+    "required": true,
+    "expectedDetection": true,
+    "expectedResponse": "immediate-support"
+  },
+  "metadata": {
+    "duration": 4.2,
+    "words": 11,
+    "emotionalTone": "distressed"
+  }
+}

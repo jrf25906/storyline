@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{document.title}}</title>
+    <style>{{{css}}}</style>
+</head>
+<body>
+    <div class="manuscript">
+        <header class="title-page">
+            <div class="manuscript-header">
+                {{#if author.name}}
+                <div class="author-info">
+                    <p>{{author.name}}</p>
+                    {{#if author.email}}<p>{{author.email}}</p>{{/if}}
+                </div>
+                {{/if}}
+                
+                <div class="word-count">
+                    <p>{{metadata.totalWords}} words</p>
+                </div>
+            </div>
+            
+            <div class="title-section">
+                <h1 class="manuscript-title">{{document.title}}</h1>
+                {{#if document.genre}}<p class="genre">{{document.genre}}</p>{{/if}}
+                {{#if author.name}}<p class="byline">by {{author.name}}</p>{{/if}}
+            </div>
+        </header>
+        
+        <main class="manuscript-body">
+            {{#if chapters}}
+                {{#each chapters}}
+                <div class="chapter" id="chapter-{{@index}}">
+                    {{#unless @first}}<div class="chapter-break"></div>{{/unless}}
+                    {{#if title}}
+                    <h2 class="chapter-title">{{title}}</h2>
+                    {{/if}}
+                    <div class="chapter-content">{{{content}}}</div>
+                </div>
+                {{/each}}
+            {{else}}
+                <div class="main-content">{{{document.content}}}</div>
+            {{/if}}
+        </main>
+        
+        {{#if document.characters}}
+        <section class="characters-section">
+            <div class="section-break"></div>
+            <h2 class="section-title">Character Notes</h2>
+            {{#each document.characters}}
+            <div class="character">
+                <h3 class="character-name">{{name}}</h3>
+                {{#if description}}<p class="character-description">{{description}}</p>{{/if}}
+                {{#if traits}}
+                <p class="character-traits"><strong>Traits:</strong> {{join traits}}</p>
+                {{/if}}
+            </div>
+            {{/each}}
+        </section>
+        {{/if}}
+    </div>
+</body>
+</html>
