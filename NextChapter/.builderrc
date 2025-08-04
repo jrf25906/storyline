@@ -1,6 +1,0 @@
-{
-  "apiKey": "bpk-1180d4cd172c47beaf9c49f09e39eebb",
-  "spaceId": "3e9f589f119645e6aba1102efadd26e9",
-  "devServerUrl": "http://localhost:8081",
-  "devCommand": "npm run start"
-}

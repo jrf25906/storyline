@@ -1,1 +1,0 @@
-export { useOffline as useNetworkStatus } from '../context/OfflineContext';
